@@ -1,6 +1,8 @@
 * Emacs Club Page
 
-** admin
+** misc/admin
    Emacs Club administrative documents
-** content
+** org_publish.el
+   Automates the publishing process of org files to html.
+** [everything else]
    Content for the emacs club website
