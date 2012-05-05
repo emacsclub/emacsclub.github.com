@@ -1,0 +1,73 @@
+#+SETUPFILE: ../../org-templates/meeting-notes.org
+#+INCLUDE:   "../../org-templates/analytics.org"
+#+AUTHOR: Matthew Croop
+
+Meeting Notes 2012-05-01
+
+* Setup
+  - Rafe renames the Moore Business Office the "Department of Money
+    and Verisimilitude."
+  - Levine 307 is already occupied by grading-people.
+    - *TAs*: Don't mind us, we're just sitting in the corner.
+    - *Andrew*: Using vim.
+  - *Rafe*: Vermin Supreme is running for president.
+  - Rafe drops food.
+    - *Rafe*: You didn't see that.
+  - Which package manager is best?
+    - ELPA is for hardcore Lisp hackers.
+    - *Mish*: The Ruby kids post to Marmalade.
+    - *John*: So ELPA.
+  - *Mish*: Did you get the dongle working?
+    - *Rafe*: I don't have a dongle. I am dongleless.
+  - Andrew recites the [[http://ifaq.wap.org/computers/abcsofunix.html][ABCs of Unix]].
+    - *Mish*: You should tweet that.
+    - *Andrew*: It's way more than 140 characters.
+    - *Mish*: No, the link.
+    - *Andrew*: It came up as a fortune.
+  - *John*: Does anyone want to develop Mimecraft with me?
+    - John mimes exploring.
+* Experiments and Fractals
+  - Adam Aviv arrives, bearing donuts and /[embargoed until after
+    publication of Adam's paper - ed.]/, to hijack our
+    meeting. He wants test subjects for his research.
+    - *Andrew*: What are we doing?
+    - Specifically, what do we have to do to get donuts?
+    - *Adam*: You'll be /[embargoed]/ a large number of times.
+  - Adam tells John his user number. John now needs to keep track of it.
+    - *John*: I'll open up an org file.
+    - *Adam*: No, just remember it.
+  - You have to use your dominant hand for the experiment. It
+    doesn't matter what hand you use for the donut-eating.
+  - Meanwhile, we also [[http://www.youtube.com/watch?v%3DfoxD6ZQlnlU][zoom in]] on fractals. The video goes on for 10
+    minutes.
+    - *Rafe*: Error, maximum recursion depth exceeded.
+  - Adam needs more volunteers.
+    - *Adam*: Wasserman! You're next.
+    - *Zach*: Ok.
+    - *John*: Zach, you're never going to beat my high score!
+  - Rafe proposes Fractal Night in Wu and Chen. It's like DMD Movie
+    Night, but with fractals.
+  - A familiar /[embargoed]/ is a friendly sight.
+    - *Zach*: That was my social security number. What's going on here?
+  - There is much complaining about the /[embargoed]/ keyboard.
+  - Adam gets a phone call.
+    - *Adam*: I'd love to join you for dinner! I'm collecting data
+      right now though.
+    - *Everyone*: It's a date!
+  - *Zach*: Am I done?
+    - *Adam*: Come with me.
+    - *Mish*: Come with me if you want to live.
+  - Mish keeps missing the sevens.
+    - *John*: PhD defense: Sevens are tough.
+* Macros
+  - Everyone ~M-100~'s Rafe's silly ~asdfasdfdsa~ macro. Emacs crashes.
+    - *John*: Moral of the story, you guys are idiots.
+  - Rafe picked up the Grand Unified Theory of keyboard macros from a book.
+  - *Rafe*: ~C-x C-k C-n~ and ~C-x C-k C-p~ take you forward and
+    backward in the macro kill ring, respect.
+    - The two shortcuts are given forward respect and backward
+      respect, respectively.
+  - Rafe's macro is straight outta Compton.
+* Timekeeping
+  * We watch [[http://www.standard-time.com/index2_en.php][the clock]].
+    - *Mish*: They're moving pretty slow. Broadway musicals do this faster.
