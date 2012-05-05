@@ -69,5 +69,5 @@ Meeting Notes 2012-05-01
       respect, respectively.
   - Rafe's macro is straight outta Compton.
 * Timekeeping
-  * We watch [[http://www.standard-time.com/index2_en.php][the clock]].
+  - We watch [[http://www.standard-time.com/index2_en.php][the clock]].
     - *Mish*: They're moving pretty slow. Broadway musicals do this faster.
