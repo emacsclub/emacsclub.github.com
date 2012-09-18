@@ -4,7 +4,7 @@
 #+KEYWORDS:  emacs tutorial introduction 
 #+LANGUAGE:  en
 #+SETUPFILE: ../org-templates/level-0.org
-#+OPTIONS:   author:nil email:nil toc:nil f:nil
+#+OPTIONS:   author:t email:nil toc:t f:nil
 #+INCLUDE: "../org-templates/analytics.org"
 
 #+begin_quote
@@ -58,9 +58,12 @@ Prima Tech 2000.
    - Before going online, check emacs for help. It is always better. 
    - If you don't know how to ask for help, use C-h ? or C-h C-h
 
-     C-h c, C-h i, C-h m, C-h t
+     - ~C-h c~ Defines a key combination (eg ~C-x C-f~)
+     - ~C-h i~ Opens the info pages (Fantastic source for Emacs and
+       Elisp documentation)
+     - ~C-h t~ Opens the tutorial
 
-*** Apropos Help (C-h a)
+*** Apropos Help (~C-h a~)
     
     Similar to searching an index. Provides info on any matching
     command. 
@@ -71,97 +74,139 @@ Prima Tech 2000.
     convenience. These are pdfs with a list of common commands for
     certain modes in emacs. In my Mac installation of emacs, I can
     find these refcards in 
-
-    /Applications/Emacs.app/Contents/Resources/etc/refcards
+    
+    ~/Applications/Emacs.app/Contents/Resources/etc/refcards~
     
     They are likely in a similar location in your installation. 
-
-** Questions
-
 
 * Editing
 ** Movement Commands
 
-   C-f, C-b, C-p, C-n
-   M-f, M-b
-   C-v, M-v
-   M-<, M->
-   C-a, C-e
+   - ~C-f~ ~C-b~ ~C-p~ ~C-n~ Move Forward, Backward, Previous-line, Next-line
+   - ~M-f~ ~M-b~ Move Forward by word, Backward by word
+   - ~C-v~ ~M-v~ Scroll Vertically down, Scroll Vertically up
+   - ~C-a~ ~C-e~ Go to beginning of line, end of line.
+   - ~M-<~ ~M->~ Go to beginning of buffer, end of buffer.
 
-** Deletion and the Kill Ring
+** Deleting text
    
-   C-d, Backspace, M-backspace
-   C-k, M-k
+   - ~C-d~ Delete character to the front of point.
+   - ~M-d~ Delete word to the front of point.
+   - ~<DEL>~ Delete character to the back of point (normal).
+   - ~M-<DEL>~ Delete word to the back of point.
+     
+** Killing and Yanking
+   Copy/paste doesn't work the exact same way in Emacs as it does in
+   most editors. At first this might be confusing, but later you will
+   begin to see the advantages of doing it this way.
 
-** Marking regions
+   - ~C-k~ Kill the line after cursor.
+   - ~C-y~ Yank the last thing that was killed.
+   - ~M-y~ After using ~C-y~, yanks the last thing that was killed
+     before that, and so on through the kill ring. Cycles through each
+     of the previous things that were killed one at a time.
 
-   C-@, C-SPACE
-   C-w, M-w
-   
-** Yanking
+*** Marking regions
 
-   C-y, M-y
+   - ~C-SPACE~ Set/unset the mark. After the first ~C-<SPACE>~, move
+     the cursor to where you want to highlight the appropriate region,
+     then use one of the kill commands below on this region.
+   - ~C-w~ ~M-w~ Kill the current region, "copy" the current region
+     into the kill ring.
 
 ** Undoing
-** Major Modes & Minor Modes
+   - ~C-_~ (That's Control + Underscore, so the keys are Ctrl, Shift,
+     and Minus "-") Undo's the last action
 
-  C-h m
-  C-c 
-
-** Working with Line Numbers
-
-  M-x goto-line (M-g g)
-  
 ** Files, Buffers, and Windows
 
 *** Files 
     Actual file on disk. This is only written to upon request. 
 
-    C-x C-f, C-x C-s, C-x s, C-x C-w, C-x C-c
+    - ~C-x C-f~ Find file. Will look for a file if it exists,
+      otherwise will create the file for you. 
+    - ~C-x C-s~ Save current buffer to file. 
+    - ~C-x s~ Prompt to save each buffer. 
+    - ~C-x C-w~ Write the current buffer to specified file (same as save-as).
     
 *** Buffer: 
     A copy of the file being edited in emacs. The actual file
     does not change until you ask emacs to save the buffer. You can
     save a buffer to a different file with 
-    C-x C-w (Save file as)
-    
-    C-x b, C-x C-b, C-x k, M-x kill-some-buffers
+
+    - ~C-x b~ Switch buffer to ... (default is the last buffer you had
+      open).
+    - ~C-x k~ Kill the current buffer. 
+    - ~C-x C-b~ Show list of all current buffers. You can navigate
+      this list to open, kill, save, etc.. on any or some buffers.
+    - ~M-x kill-some-buffers~ Prompts to kill each buffer currently open.
     
 *** Window 
-    Where buffers are shown.
+    Where buffers are shown. "Current window" refers to the one your
+    cursor is currently in.
     
-   - Working with multiple Windows
+   - Working with multiple windows
    - The difference between windows and frames
    
-   C-x 0/1/2/3, C-x o, C-M-v (scroll-other-window)
-
+     - ~C-x 0~ Delete the current window. 
+     - ~C-x 1~ Make the current window the only visible one
+       (full-screen it).
+     - ~C-x 2~ Split the current window into two horizontally.
+     - ~C-x 3~ Split the current window into two vertically.
+     - ~C-x o~ Move cursor to the next window (order is up to down,
+       left to right).
+     - ~C-M-v~ ~scroll-other-window~ Scroll the "other" window, really
+       useful when you have only two windows.
+   
 *** Frame 
-    Holds windows, only useful with GUIs.
+    Holds windows, only useful with Gris. Not much to be said. There
+    is no concept of a frame when you use Emacs in terminal.
 
-** Questions
+
+** Working with Line Numbers
+
+   - ~M-x goto-line~ ~M-g g~ Go to the specified line number (it will
+     prompt you for the line you want).
+  
+
+** Major Modes & Minor Modes
+
+   - ~C-h m~ Display help on current modes
+   - ~C-c~ The usual key combination prefix before minor-mode specific
+     commands. For instance ~C-c C-c~ in C will comment a region.
+
 
 
 * Advanced Editing
 ** Search and Replace
 
-   C-s, C-r 
-   M-x replace-string, query-replace-string, replace-regexp,
-   query-replace-regexp
+   - ~C-s~ Search for string forwards through current buffer. Each repeated
+     execution of ~C-s~ will repeat that search for the same string
+     until you press ~<RET>~ or ~C-g~.
+   - ~C-r~ Same as ~C-s~ but goes backwards through your buffer instead.
+   - ~M-x replace-string~ 
+   - ~M-x query-replace-string~ 
+   - ~M-x replace-regexp~
+   - ~M-x query-replace-regexp~   
+
+** Keyboard Macros
    
+   - ~C-x (~ Start recording macro
+   - ~C-x )~ Stop recording macro
+   - ~C-x e~ ~M-x call-last-kbd-macro~ Execute the last recorded macro.
+
+#+begin_quote
+Remember ~C-g~! It is useful if you want to cancel recording a macro. 
+#+end_quote   
+
+   - Example of macro: Indent every other line by two spaces.
+     
 ** Spell Checking
 
    - Installing ispell
    - Using ispell (M-x ispell-buffer)
 
      flyspell-mode
-
-** Keyboard Macros
-   
-   C-x (, C-x ), C-x e (call-last-kbd-macro)
-   C-g!!
-   - Do an example: Indent each line two spaces.
-     
-** Questions 
 
 
 * Emacs and Unix

@@ -28,6 +28,7 @@ at the University of Pennsylvania, Dept. of Computer Science
  - [[https://github.com/emacsclub/emacsclub/tree/master/admin/emails/newsletter][Newsletter]]
 
 * Learn
+  - [[file:emacs_intro.org][An Introduction to Emacs]]
   - [[http://www.cs.iupui.edu/~aharris/emchap/EmacsGuide.html][Awesome Emacs Tutorial]]
   - [[file:org_tutorial.org][Org-Mode Tutorial]]
   - [[file:flymake.org][Flymake Setup Tutorial]]
