@@ -7,47 +7,47 @@ emacs24 goodies
 * Get emacs 24
   - Linux
     - Debian and derivatives -- grab the debian ppa
-        #+BEGIN_SRC
+      #+BEGIN_SRC shell
 sudo add-apt-repository ppa:cassou/emacs
 sudo apt-get update
-        #+END_SRC
+      #+END_SRC
     - Fedora 17+ has emacs 24 in the repos
-        #+BEGIN_SRC
+      #+BEGIN_SRC shell
 sudo yum install emacs 
-        #+END_SRC
+      #+END_SRC
     - Build from source 
-        #+BEGIN_SRC
+      #+BEGIN_SRC shell
 bzr branch bzr://bzr.savannah.gnu.org/emacs/trunk emacs 
 # or wget from http://ftp.gnu.org/pub/gnu/emacs/
 cd !!:$
 ./autogen.sh
 ./configure # you may want to use --with-x-toolkit=gtk3 
 make
-        #+END_SRC
+      #+END_SRC
   - OSX
     - Either grab emacs for osx
-        #+BEGIN_SRC
+      #+BEGIN_SRC shell
 wget http://emacsformacosx.com/emacs-builds/Emacs-24.2-universal-10.6.8.dmg
-        #+END_SRC
+      #+END_SRC
     - Or use homebrew
-        #+BEGIN_SRC
+      #+BEGIN_SRC shell
 brew install emacs --cocoa --use-git-head --HEAD
-        #+END_SRC
+      #+END_SRC
     - Windows (?)
 
 * Install Prelude
   - Prelude is an enhanced Emacs configuration; More info can be found ‘[[http://batsov.com/prelude/][here]]
     while the repo lives on ‘[[https://github.com/bbatsov/prelude][github]]
   - First backup your previous configuration
-        #+BEGIN_SRC
+    #+BEGIN_SRC shell
   mv .emacs{,BK}
   mv .emacs.d{,_BK}
-        #+END_SRC
+    #+END_SRC
   - Grab prelude isntaller from github and execute
-        #+BEGIN_SRC
+    #+BEGIN_SRC shell
   curl -L https://github.com/bbatsov/prelude/raw/master/utils/installer.sh | sh
   ll .emacs
-        #+END_SRC
+    #+END_SRC
   - Now launch emacs 24
     - It should start downloading and compiling packages
     - If seems stuck: 1. Move your cursor or click 2. close and open

@@ -1,16 +1,16 @@
-<?xml version="1.0" encoding="iso-8859-1"?>
+<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
                "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<title>Emacs Club</title>
-<meta http-equiv="Content-Type" content="text/html;charset=iso-8859-1"/>
-<meta name="title" content="Emacs Club"/>
+<title>emacs24 goodies</title>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+<meta name="title" content="emacs24 goodies"/>
 <meta name="generator" content="Org-mode"/>
-<meta name="generated" content="2012-09-26 04:42:20 EDT"/>
-<meta name="author" content="Mishal Awadah"/>
-<meta name="description" content="The official website for the University of Pennsylvania Emacs Club"/>
-<meta name="keywords" content="emacs"/>
+<meta name="generated" content="2012-09-26 04:42:19 EDT"/>
+<meta name="author" content="Nikos Vasilakis"/>
+<meta name="description" content=""/>
+<meta name="keywords" content=""/>
 <style type="text/css">
  <!--/*--><![CDATA[/*><!--*/
   html { font-family: Times, serif; font-size: 12pt; }
@@ -87,7 +87,7 @@
 </head>
 <body>
 <div id="org-div-home-and-up" style="text-align:right;font-size:70%;white-space:nowrap;">
- <a accesskey="h" href="sitemap.html"> UP </a>
+ <a accesskey="h" href="index.html"> UP </a>
  |
  <a accesskey="H" href="index.html"> HOME </a>
 </div>
@@ -97,7 +97,7 @@
 </div>
 
 <div id="content">
-<h1 class="title">Emacs Club</h1>
+<h1 class="title">emacs24 goodies</h1>
 
 
 <script type="text/javascript">
@@ -116,25 +116,80 @@
 
 
 
-<div style="text-align: center">
-<p>at the University of Pennsylvania, Dept. of Computer Science
-</p>
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#sec-1">Get emacs 24</a></li>
+<li><a href="#sec-2">Install Prelude</a></li>
+<li><a href="#sec-3">Interlude &ndash; or what to do next</a></li>
+<li><a href="#sec-4">Postlude</a></li>
+</ul>
 </div>
-
-
-<div style="text-align: center">
-<p><img src="../img/zoned_gnu.jpeg" width="400" alt="../img/zoned_gnu.jpeg" />
-</p>
 </div>
-
 
 <div id="outline-container-1" class="outline-2">
-<h2 id="sec-1">Meetings</h2>
+<h2 id="sec-1">Get emacs 24</h2>
 <div class="outline-text-2" id="text-1">
 
-<p>  Every Tuesday at 6:00pm in Levine 307.
-</p><ul>
-<li><a href="meeting-notes/last_meeting.html">Last Meeting's Notes</a>
+<ul>
+<li>Linux
+<ul>
+<li>Debian and derivatives &ndash; grab the debian ppa
+
+
+
+<pre class="example">sudo add-apt-repository ppa:cassou/emacs
+sudo apt-get update
+</pre>
+
+</li>
+<li>Fedora 17+ has emacs 24 in the repos
+
+
+
+<pre class="example">sudo yum install emacs 
+</pre>
+
+</li>
+<li>Build from source 
+
+
+
+<pre class="example">bzr branch bzr://bzr.savannah.gnu.org/emacs/trunk emacs 
+# or wget from http://ftp.gnu.org/pub/gnu/emacs/
+cd !!:$
+./autogen.sh
+./configure # you may want to use --with-x-toolkit=gtk3 
+make
+</pre>
+
+</li>
+</ul>
+
+</li>
+<li>OSX
+<ul>
+<li>Either grab emacs for osx
+
+
+
+<pre class="example">wget http://emacsformacosx.com/emacs-builds/Emacs-24.2-universal-10.6.8.dmg
+</pre>
+
+</li>
+<li>Or use homebrew
+
+
+
+<pre class="example">brew install emacs --cocoa --use-git-head --HEAD
+</pre>
+
+</li>
+<li>Windows (?)
+</li>
+</ul>
+
 </li>
 </ul>
 
@@ -144,15 +199,42 @@
 </div>
 
 <div id="outline-container-2" class="outline-2">
-<h2 id="sec-2">Links</h2>
+<h2 id="sec-2">Install Prelude</h2>
 <div class="outline-text-2" id="text-2">
 
 <ul>
-<li><a href="meeting-notes/sitemap.html">Meeting Notes</a>
+<li>Prelude is an enhanced Emacs configuration; More info can be found ‘<a href="http://batsov.com/prelude/">here</a>
+    while the repo lives on ‘<a href="https://github.com/bbatsov/prelude">github</a>
 </li>
-<li><a href="https://github.com/emacsclub/emacsclub">Github Page</a>
+<li>First backup your previous configuration
+
+
+
+<pre class="example">mv .emacs{,BK}
+mv .emacs.d{,_BK}
+</pre>
+
 </li>
-<li><a href="http://lists.seas.upenn.edu/mailman/listinfo/emacsclub">Add yourself to the listserve</a>
+<li>Grab prelude isntaller from github and execute
+
+
+
+<pre class="example">curl -L https://github.com/bbatsov/prelude/raw/master/utils/installer.sh | sh
+ll .emacs
+</pre>
+
+</li>
+<li>Now launch emacs 24
+<ul>
+<li>It should start downloading and compiling packages
+</li>
+<li>If seems stuck: 1. Move your cursor or click 2. close and open
+      again
+</li>
+<li>(wait.. and go to step above if necessary)
+</li>
+</ul>
+
 </li>
 </ul>
 
@@ -162,56 +244,49 @@
 </div>
 
 <div id="outline-container-3" class="outline-2">
-<h2 id="sec-3">Learn</h2>
+<h2 id="sec-3">Interlude &ndash; or what to do next</h2>
 <div class="outline-text-2" id="text-3">
 
 <ul>
-<li><a href="emacs_intro.html">An Introduction to Emacs</a>
-</li>
-<li><a href="http://www.cs.iupui.edu/~aharris/emchap/EmacsGuide.html">Emacs Power Tutorial</a>
-</li>
-<li><a href="org_tutorial.html">Org-Mode Tutorial</a>
-</li>
-<li><a href="flymake.html">Flymake Setup Tutorial</a>
+<li>Launch and maybe install even more packages 
+<ul>
+<li>M-x list-packages shows all available packages
+<ul>
+<li>For instance, install solarized theme
 </li>
 </ul>
 
+</li>
+</ul>
+
+</li>
+<li>Put your own .el customizations in ~/.emacs.d/personal
+</li>
+</ul>
 
 </div>
 
 </div>
 
 <div id="outline-container-4" class="outline-2">
-<h2 id="sec-4">Favorites</h2>
+<h2 id="sec-4">Postlude</h2>
 <div class="outline-text-2" id="text-4">
 
+<ul>
+<li>Example high-octane .emacs file from Zach 
+    <a href="https://gist.github.com/3785014">https://gist.github.com/3785014</a>
+</li>
+<li>Keep sending interesting stuff
+</li>
+</ul>
 
-</div>
-
-<div id="outline-container-4-1" class="outline-3">
-<h3 id="sec-4-1"><a href="http://doxymacs.sourceforge.net/">Doxymacs</a></h3>
-<div class="outline-text-3" id="text-4-1">
-
-<p>   This will auto-generate <a href="http://www.stack.nl/~dimitri/doxygen/">Doxygen</a> style comments for your source code
-   by introspection. 
-</p></div>
-
-</div>
-
-<div id="outline-container-4-2" class="outline-3">
-<h3 id="sec-4-2"><a href="http://www.emacswiki.org/emacs/InteractivelyDoThings">Ido</a></h3>
-<div class="outline-text-3" id="text-4-2">
-
-<p>   This package makes searching for files infinitely easier. Here's a
-   great <a href="http://www.masteringemacs.org/articles/2010/10/10/introduction-to-ido-mode/">tutorial</a>. It's also included in the <a href="https://github.com/technomancy/emacs-starter-kit">Emacs Starter Kit</a>.
-</p>
-</div>
 </div>
 </div>
 </div>
 
 <div id="postamble">
-<p class="date">Date: 2012-09-26 04:42:20 EDT</p>
+<p class="date">Date: 2012-09-26 04:42:19 EDT</p>
+<p class="author">Author: Nikos Vasilakis</p>
 <p class="creator">Org version 7.8.11 with Emacs version 24</p>
 <a href="http://validator.w3.org/check?uri=referer">Validate XHTML 1.0</a>
 

@@ -1,5 +1,4 @@
 #+TITLE:     Emacs Club
-#+AUTHOR:    Mishal Awadah
 #+DESCRIPTION: The official website for the University of Pennsylvania Emacs Club
 #+KEYWORDS:  emacs
 #+LANGUAGE:  en
