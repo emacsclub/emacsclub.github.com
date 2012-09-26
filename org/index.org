@@ -25,11 +25,11 @@ at the University of Pennsylvania, Dept. of Computer Science
  - [[https://github.com/emacsclub/emacsclub][Github Page]]
  - [[http://lists.seas.upenn.edu/mailman/listinfo/emacsclub][Add yourself to the listserve]]
 
-* Learn
+* References
   - [[file:emacs_intro.org][An Introduction to Emacs]]
   - [[http://www.cs.iupui.edu/~aharris/emchap/EmacsGuide.html][Emacs Power Tutorial]]
   - [[file:org_tutorial.org][Org-Mode Tutorial]]
-  - [[file:flymake.org][Flymake Setup Tutorial]]
+  - [[file:emacs24.org][Set Up Prelude Packages]]
 
 * Favorites
 ** [[http://doxymacs.sourceforge.net/][Doxymacs]]
@@ -38,4 +38,6 @@ at the University of Pennsylvania, Dept. of Computer Science
 ** [[http://www.emacswiki.org/emacs/InteractivelyDoThings][Ido]]
    This package makes searching for files infinitely easier. Here's a
    great [[http://www.masteringemacs.org/articles/2010/10/10/introduction-to-ido-mode/][tutorial]]. It's also included in the [[https://github.com/technomancy/emacs-starter-kit][Emacs Starter Kit]].
+** [[file:flymake.org][Flymake]]
+   Generate on the fly compiler diagnostics and underline errors in code.
 
