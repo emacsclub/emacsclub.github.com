@@ -19,17 +19,16 @@ at the University of Pennsylvania, Dept. of Computer Science
 
 * Meetings
   Every Tuesday at 6:00pm in Levine 307.
-  - [[file:meeting-notes/2012-09-11.org][Last Meeting's Notes]]
+  - [[file:meeting-notes/last_meeting.org][Last Meeting's Notes]]
 
 * Links
  - [[file:meeting-notes/sitemap.org][Meeting Notes]]
  - [[https://github.com/emacsclub/emacsclub][Github Page]]
  - [[http://lists.seas.upenn.edu/mailman/listinfo/emacsclub][Add yourself to the listserve]]
- - [[https://github.com/emacsclub/emacsclub/tree/master/admin/emails/newsletter][Newsletter]]
 
 * Learn
   - [[file:emacs_intro.org][An Introduction to Emacs]]
-  - [[http://www.cs.iupui.edu/~aharris/emchap/EmacsGuide.html][Awesome Emacs Tutorial]]
+  - [[http://www.cs.iupui.edu/~aharris/emchap/EmacsGuide.html][Emacs Power Tutorial]]
   - [[file:org_tutorial.org][Org-Mode Tutorial]]
   - [[file:flymake.org][Flymake Setup Tutorial]]
 
