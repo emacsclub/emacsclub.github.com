@@ -1,4 +1,6 @@
 #+TITLE: Meeting Notes Directory
+#+SETUPFILE: ../org-templates/level-0.org
+#+INCLUDE: "../org-templates/analytics.org"
 
    + [[file:2012-01-19.org][Meeting Notes 2012-01-19]]
    + [[file:2012-01-31.org][Meeting Notes 2012-01-31]]
