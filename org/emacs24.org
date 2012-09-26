@@ -1,0 +1,62 @@
+#+SETUPFILE: ../../org-templates/meeting-notes.org
+#+INCLUDE:   "../../org-templates/analytics.org"
+#+AUTHOR: Nikos Vasilakis
+
+emacs24 goodies
+* Get emacs 24
+  - Linux
+    - Debian and derivatives -- grab the debian ppa
+        #+BEGIN_SRC
+sudo add-apt-repository ppa:cassou/emacs
+sudo apt-get update
+        #+END_SRC
+    - Fedora 17+ has emacs 24 in the repos
+        #+BEGIN_SRC
+sudo yum install emacs 
+        #+END_SRC
+    - Build from source 
+        #+BEGIN_SRC
+bzr branch bzr://bzr.savannah.gnu.org/emacs/trunk emacs 
+# or wget from http://ftp.gnu.org/pub/gnu/emacs/
+cd !!:$
+./autogen.sh
+./configure # you may want to use --with-x-toolkit=gtk3 
+make
+        #+END_SRC
+  - OSX
+    - Either grab emacs for osx
+        #+BEGIN_SRC
+wget http://emacsformacosx.com/emacs-builds/Emacs-24.2-universal-10.6.8.dmg
+        #+END_SRC
+    - Or use homebrew
+        #+BEGIN_SRC
+brew install emacs --cocoa --use-git-head --HEAD
+        #+END_SRC
+    - Windows (?)
+
+* Install Prelude
+  - First backup your previous configuration
+        #+BEGIN_SRC
+  mv .emacs{,BK}
+  mv .emacs.d{,_BK}
+        #+END_SRC
+  - Grab prelude isntaller from github and execute
+        #+BEGIN_SRC
+  curl -L https://github.com/bbatsov/prelude/raw/master/utils/installer.sh | sh
+  ll .emacs
+        #+END_SRC
+  - Now launch emacs 24
+    - It should start downloading and compiling packages
+    - If seems stuck: 1. Move your cursor or click 2. close and open
+      again
+    - (wait.. and go to step above if necessary)
+
+* Interlude -- or what to do next
+  - Launch and maybe install even more packages 
+    - M-x list-packages shows all available packages
+      - For instance, install solarized theme
+  - Put your own .el customizations in ~/.emacs.d/personal
+* Postlude
+  - Example high-octane .emacs file from Zach 
+    https://gist.github.com/3785014
+  - Keep sending interesting stuff
