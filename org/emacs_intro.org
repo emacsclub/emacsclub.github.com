@@ -87,6 +87,7 @@ Prima Tech 2000.
    - ~C-v~ ~M-v~ Scroll Vertically down, Scroll Vertically up
    - ~C-a~ ~C-e~ Go to beginning of line, end of line.
    - ~M-<~ ~M->~ Go to beginning of buffer, end of buffer.
+   - ~C-l~ Center the cursor
 
 ** Deleting text
    
