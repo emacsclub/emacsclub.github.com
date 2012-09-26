@@ -1,5 +1,6 @@
-#+SETUPFILE: ../../org-templates/meeting-notes.org
-#+INCLUDE:   "../../org-templates/analytics.org"
+#+SETUPFILE: ../org-templates/level-0.org
+#+OPTIONS:   author:t email:nil toc:t f:nil
+#+INCLUDE: "../org-templates/analytics.org"
 #+AUTHOR: Nikos Vasilakis
 
 emacs24 goodies
