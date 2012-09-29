@@ -1,0 +1,115 @@
+#+TITLE:     Matlab Dev in Emacs
+#+AUTHOR:    Mishal Awadah
+#+DESCRIPTION: Setup matlab in emacs.
+#+KEYWORDS: matlab emacs matlab-mode mode shell path
+#+LANGUAGE:  en
+#+LINK_UP:   index.html
+#+LINK_HOME: index.html
+#+SETUPFILE: "../org-templates/level-0.org"
+#+OPTIONS:   author:t email:nil toc:t f:nil
+#+INCLUDE: "../org-templates/analytics.org"
+
+
+* Intro
+  This will show you how to set up a Matlab environment in
+  Emacs. You'll have the matlab shell, some semblance of intelligent
+  auto-completion, and full editor support for the language and then
+  some. 
+
+* The Setup
+
+** Requirements
+
+    - Cedet :: Code-analyzer package.
+    - Auto-Complete :: Code completion support. Not strictly required,
+                       but a nice bonus.
+
+** Matlab-Mode
+
+   For the full gist, go to [[http://blogs.mathworks.com/community/2009/09/14/matlab-emacs-integration-is-back/][Matlab-Emacs]]. 
+
+   1. Download [[http://sourceforge.net/projects/matlab-emacs/][matlab-mode]] by clicking the download tarball link.
+      #+begin_src shell
+curl/wget http://matlab-emacs.cvs.sourceforge.net/viewvc/matlab-emacs/?view=tar
+tar -zxvf matlab-emacs.tar.gz
+      #+end_src
+
+   2. Place it in a plugins folder of your choice, if using [[emacs24.org][Prelude]] a
+      simple way is: 
+
+      #+begin_src shell      
+mkdir ~/.emacs.d/personal/plugins
+cp -r ~/Downloads/matlab-emacs ~/.emacs.d/personal/plugins/
+      #+end_src
+
+   3. Add the appropriate glue to your ~init.el~. If using [[emacs24.org][Prelude]]
+      this is in ~\~/emacs.d/personal/~.
+
+      #+begin_src elisp
+
+;; Matlab support
+;; You don't need this line if you placed it in prelude/personal
+(add-to-list 'load-path "~/emacs/plugins/matlab-emacs")
+(load-library "matlab-load")
+(matlab-cedet-setup)
+(add-hook 'matlab-mode
+          (lambda ()
+            (auto-complete-mode 1)
+            ))
+      #+end_src
+
+   4. Configure your path correctly. 
+
+      The Matlab binary is installed somewhere else than ~/bin~ likely,
+      so you'll have to let Emacs have access to it. This is what you
+      would do if you installed Matlab on Mac OS X.
+
+      #+begin_src shell
+
+sudo ln -s /Applications/MATLAB_R2012a_Student.app/bin/matlab /usr/bin/matlab
+      #+end_src
+
+   5. Configure Matlab's path.
+
+      You might need to let Matlab know where to look for your files,
+      which is easily done through the Matlab IDE (don't worry never
+      again). This is so you can use the Matlab shell in Emacs.
+
+      To configure your Matlab path, go to
+
+      #+begin_quote
+      *File* > *Set Path*
+      #+end_quote
+
+      From there, use *Add Folder...* to add your main development folder
+      that stores all your Matlab Projects. If you have lots and lots
+      of projects, this will not scale well and you will need to find
+      out how to dynamically load directories into Matlab. If you're
+      in Machine Learning, just add your whole 520 folder, or add your projects
+      one at a time to be more careful about namespace issues.
+
+   6. Restart emacs. You should be good to go.
+
+* Commands
+
+** ~M-x matlab-shell~ 
+   
+   Starts the interactive matlab shell. This
+   gives you the exact same power you had from the Matlab shell in
+   the Matlab IDE. Things like figures, docs, that need their own
+   window should pop out fine from the Matlab process which is running
+   alongside Emacs.
+
+** ~C-M-<RET>~ 
+   
+   Evaluates the Matlab cell around point. The downside to this over a
+   file/script though, is you get no debugging support if something goes
+   wrong in the cell.
+
+
+* References
+
+  - 
+     http://blogs.mathworks.com/community/2009/09/14/matlab-emacs-integration-is-back/
+  - http://matlab-emacs.sourceforge.net/faq.shtml
+  - http://sourceforge.net/projects/matlab-emacs/

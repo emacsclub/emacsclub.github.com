@@ -3,9 +3,10 @@
    + [[file:emacs_intro.org][An Introduction to Emacs]]
    + [[file:index.org][Emacs Club]]
    + [[file:flymake.org][Flymake Tutorial]]
+   + [[file:matlab.org][Matlab Dev in Emacs]]
    + [[file:org_tutorial.org][Org-mode Tutorial / Cheat Sheet]]
+   + [[file:basic_template.org][Title]]
    + [[file:emacs24.org][emacs24 goodies]]
-   + [[file:matlab.org][matlab]]
    + meeting-notes
      + [[file:meeting-notes/2012-01-19.org][Meeting Notes 2012-01-19]]
      + [[file:meeting-notes/2012-01-31.org][Meeting Notes 2012-01-31]]

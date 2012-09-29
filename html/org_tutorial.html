@@ -7,7 +7,7 @@
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
 <meta name="title" content="Org-mode Tutorial / Cheat Sheet"/>
 <meta name="generator" content="Org-mode"/>
-<meta name="generated" content="2012-09-18 16:55:32 EDT"/>
+<meta name="generated" content="2012-09-28 23:21:37 EDT"/>
 <meta name="author" content="Mishal Awadah"/>
 <meta name="description" content=""/>
 <meta name="keywords" content=""/>
@@ -123,71 +123,6 @@
 </div>
 
 
-<div id="table-of-contents">
-<h2>Table of Contents</h2>
-<div id="text-table-of-contents">
-<ul>
-<li><a href="#sec-1">Headings</a>
-<ul>
-<li><a href="#sec-1-1">Subheadings</a></li>
-</ul>
-</li>
-<li><a href="#sec-2">"TODO"s (<code>C-c C-t</code>)</a>
-<ul>
-<li><a href="#sec-2-1">The TODO cycle</a></li>
-</ul>
-</li>
-<li><a href="#sec-3">Bullets and numbered lists</a>
-<ul>
-<li><a href="#sec-3-1">Numbered example</a></li>
-<li><a href="#sec-3-2">Unnumbered example</a></li>
-</ul>
-</li>
-<li><a href="#sec-4">Text Formatting</a></li>
-<li><a href="#sec-5">Tables</a></li>
-<li><a href="#sec-6">Literal Examples</a>
-<ul>
-<li><a href="#sec-6-1">Source Code</a>
-<ul>
-<li><a href="#sec-6-1-1">Useful options and commands.</a></li>
-</ul>
-</li>
-<li><a href="#sec-6-2">Easy templates</a></li>
-</ul>
-</li>
-<li><a href="#sec-7">Linking</a>
-<ul>
-<li><a href="#sec-7-1">Linking files together</a></li>
-<li><a href="#sec-7-2">Linking sections within a document</a></li>
-</ul>
-</li>
-<li><a href="#sec-8">Exporting (<code>C-c C-e</code>)</a>
-<ul>
-<li><a href="#sec-8-1">Export Options (<code>C-c C-e t</code>)</a>
-<ul>
-<li><a href="#sec-8-1-1">Title</a></li>
-<li><a href="#sec-8-1-2">Table of Contents</a></li>
-</ul>
-</li>
-<li><a href="#sec-8-2">Including Other Files</a></li>
-<li><a href="#sec-8-3">HTML Export</a>
-<ul>
-<li><a href="#sec-8-3-1">Stylesheet</a></li>
-<li><a href="#sec-8-3-2">Table Formatting</a></li>
-<li><a href="#sec-8-3-3">Site Navigation</a></li>
-<li><a href="#sec-8-3-4">Hyperlinks</a></li>
-</ul></li>
-</ul>
-</li>
-<li><a href="#sec-9">Publishing</a>
-<ul>
-<li><a href="#sec-9-1">Publishing Script</a></li>
-</ul>
-</li>
-</ul>
-</div>
-</div>
-
 <div id="outline-container-1" class="outline-2">
 <h2 id="sec-1">Headings</h2>
 <div class="outline-text-2" id="text-1">
@@ -249,21 +184,22 @@
 </div>
 
 <div id="outline-container-3" class="outline-2">
-<h2 id="sec-3">Bullets and numbered lists</h2>
+<h2 id="sec-3">Lists</h2>
 <div class="outline-text-2" id="text-3">
 
 <p>  You can create bullets with the - (dash), numbered bullets or lists with
-  #. (number[dot]). Tabbing multiple times changes the indentation of the bullet,
+  <code>#.</code> (number[dot]). Tabbing multiple times changes the indentation of the bullet,
   but only if there is no text yet.  Tabbing multiple levels can get
-  confusing, but if you remember to &lt;TAB&gt; before typing '-' or '#.', things
+  confusing, but if you remember to <code>&lt;TAB&gt;</code> before typing <code>-</code> or <code>#.</code>, things
   tend to work out. 
 </p>
 
 </div>
 
 <div id="outline-container-3-1" class="outline-3">
-<h3 id="sec-3-1">Numbered example</h3>
+<h3 id="sec-3-1">Ordered Lists</h3>
 <div class="outline-text-3" id="text-3-1">
+
 
 <ol>
 <li>item 1
@@ -284,14 +220,17 @@
 </li>
 </ol>
 
+
 </div>
 
 </div>
 
 <div id="outline-container-3-2" class="outline-3">
-<h3 id="sec-3-2">Unnumbered example</h3>
+<h3 id="sec-3-2">Unordered Lists</h3>
 <div class="outline-text-3" id="text-3-2">
 
+<p>   Start with <code>-</code>, <code>+</code>, or <code>*</code>.
+</p>
 <ul>
 <li>hello
 </li>
@@ -312,6 +251,44 @@
 
 </li>
 </ul>
+
+
+</div>
+
+</div>
+
+<div id="outline-container-3-3" class="outline-3">
+<h3 id="sec-3-3">Description Lists</h3>
+<div class="outline-text-3" id="text-3-3">
+
+<p>   Start with <code>-</code>, <code>+</code>, or <code>*</code> and followed by <code>::</code>
+</p>
+
+
+
+<pre class="example">Matlab is a funny language. 
+ - Scope :: Scope doesn't work as expected, and messes everything up
+   when loops mix variables up in recursive functions.
+ - Namespaces :: You wish. 
+ - Header Files :: Nope.
+</pre>
+
+
+<p>
+gives 
+</p>
+<p>
+Matlab is a funny language. 
+</p><dl>
+<dt>Scope</dt><dd>Scope doesn't work as expected, and messes everything up
+   when loops mix variables up in recursive functions.
+</dd>
+<dt>Namespaces</dt><dd>You wish. 
+</dd>
+<dt>Header Files</dt><dd>Nope.
+</dd>
+</dl>
+
 
 
 </div>
@@ -415,8 +392,8 @@
 
 
 
-<pre class="src src-c"><span class="linenr">1:  </span><span style="color: #228b22;">int</span> <span style="color: #0000ff;">main</span>() { 
-<span class="linenr">2:  </span><span style="color: #7f007f;">return</span> 0; 
+<pre class="example"><span class="linenr">1:  </span>int main() { 
+<span class="linenr">2:  </span>return 0; 
 <span class="linenr">3:  </span>}
 </pre>
 
@@ -851,53 +828,53 @@ p.footnote          footnote definition paragraph, containing a footnote
 
 
 
-<pre class="src src-emacs-lisp"><span style="color: #8c8c8c;">(</span><span style="color: #7f007f;">defconst</span> <span style="color: #a0522d;">home</span> <span style="color: #8c8c8c;">(</span>file-name-directory <span style="color: #8c8c8c;">(</span>or load-file-name buffer-file-name<span style="color: #8c8c8c;">)))</span>
+<pre class="example">(defconst home (file-name-directory (or load-file-name buffer-file-name)))
 
-<span style="color: #8c8c8c;">(</span><span style="color: #7f007f;">require</span> '<span style="color: #008b8b;">org-publish</span><span style="color: #8c8c8c;">)</span>
-<span style="color: #8c8c8c;">(</span>setq org-publish-project-alist
-      `<span style="color: #8c8c8c;">(</span>
-        <span style="color: #b22222;">;; </span><span style="color: #b22222;">add all the components here</span>
-        <span style="color: #b22222;">;; </span><span style="color: #b22222;">*notes* - publishes org files to html</span>
-        <span style="color: #8c8c8c;">(</span><span style="color: #8b2252;">"main-page"</span>
-         <span style="color: #7a378b;">:base-directory</span> ,<span style="color: #8c8c8c;">(</span>concat home <span style="color: #8b2252;">"org/"</span><span style="color: #8c8c8c;">)</span>
-         <span style="color: #7a378b;">:base-extension</span> <span style="color: #8b2252;">"org"</span>  <span style="color: #b22222;">; </span><span style="color: #b22222;">Filename suffix without dot</span>
-         <span style="color: #7a378b;">:publishing-directory</span> ,<span style="color: #8c8c8c;">(</span>concat home <span style="color: #8b2252;">"html/"</span><span style="color: #8c8c8c;">)</span>
-         <span style="color: #7a378b;">:recursive</span> t           <span style="color: #b22222;">; </span><span style="color: #b22222;">DONT include subdirectories</span>
-         <span style="color: #7a378b;">:publishing-function</span> org-publish-org-to-html
-         <span style="color: #7a378b;">:headline-levels</span> 4             <span style="color: #b22222;">; </span><span style="color: #b22222;">Just the default for this project.</span>
-         <span style="color: #7a378b;">:style</span> <span style="color: #8b2252;">"&lt;link rel=\"stylesheet\" type=\"text/css\" href=\"../css/stylesheet.css\" /&gt;"</span>
-         <span style="color: #7a378b;">:auto-preamble</span> t
-         <span style="color: #7a378b;">:auto-sitemap</span> t                <span style="color: #b22222;">; </span><span style="color: #b22222;">generate automagically</span>
-         <span style="color: #7a378b;">:sitemap-sort-folders</span> last
-         <span style="color: #7a378b;">:sitemap-title</span> <span style="color: #8b2252;">"Main Sitemap"</span>
-         <span style="color: #8c8c8c;">)</span>
+(require 'org-publish)
+(setq org-publish-project-alist
+      `(
+        ;; add all the components here
+        ;; *notes* - publishes org files to html
+        ("main-page"
+         :base-directory ,(concat home "org/")
+         :base-extension "org"  ; Filename suffix without dot
+         :publishing-directory ,(concat home "html/")
+         :recursive t           ; DONT include subdirectories
+         :publishing-function org-publish-org-to-html
+         :headline-levels 4             ; Just the default for this project.
+         :style "&lt;link rel=\"stylesheet\" type=\"text/css\" href=\"../css/stylesheet.css\" /&gt;"
+         :auto-preamble t
+         :auto-sitemap t                ; generate automagically
+         :sitemap-sort-folders last
+         :sitemap-title "Main Sitemap"
+         )
 
-        <span style="color: #b22222;">;; </span><span style="color: #b22222;">The meeting notes to be published</span>
-        <span style="color: #8c8c8c;">(</span><span style="color: #8b2252;">"meeting-notes"</span>
-         <span style="color: #7a378b;">:base-directory</span> ,<span style="color: #8c8c8c;">(</span>concat home <span style="color: #8b2252;">"org/meeting-notes/"</span><span style="color: #8c8c8c;">)</span>
-         <span style="color: #7a378b;">:base-extension</span> <span style="color: #8b2252;">"org"</span>
-         <span style="color: #7a378b;">:publishing-directory</span> ,<span style="color: #8c8c8c;">(</span>concat home <span style="color: #8b2252;">"html/meeting-notes/"</span><span style="color: #8c8c8c;">)</span>
-         <span style="color: #7a378b;">:recursive</span> nil
-         <span style="color: #7a378b;">:publishing-function</span> org-publish-org-to-html
-         <span style="color: #7a378b;">:headline-levels</span> 4
-         <span style="color: #7a378b;">:style</span> <span style="color: #8b2252;">"&lt;link rel=\"stylesheet\" type=\"text/css\" href=\"../../css/stylesheet.css\" /&gt;"</span>
-         <span style="color: #7a378b;">:auto-preamble</span> t
-         <span style="color: #7a378b;">:auto-sitemap</span> t
-         <span style="color: #7a378b;">:sitemap-title</span> <span style="color: #8b2252;">"Meeting Notes Directory"</span>
-         <span style="color: #8c8c8c;">)</span>
+        ;; The meeting notes to be published
+        ("meeting-notes"
+         :base-directory ,(concat home "org/meeting-notes/")
+         :base-extension "org"
+         :publishing-directory ,(concat home "html/meeting-notes/")
+         :recursive nil
+         :publishing-function org-publish-org-to-html
+         :headline-levels 4
+         :style "&lt;link rel=\"stylesheet\" type=\"text/css\" href=\"../../css/stylesheet.css\" /&gt;"
+         :auto-preamble t
+         :auto-sitemap t
+         :sitemap-title "Meeting Notes Directory"
+         )
 
-        <span style="color: #b22222;">;; </span><span style="color: #b22222;">*static* - copies files to directories</span>
-        <span style="color: #8c8c8c;">(</span><span style="color: #8b2252;">"org-static"</span>
-         <span style="color: #7a378b;">:base-directory</span> ,<span style="color: #8c8c8c;">(</span>concat home <span style="color: #8b2252;">"org/"</span><span style="color: #8c8c8c;">)</span>
-         <span style="color: #7a378b;">:base-extension</span> <span style="color: #8b2252;">"css</span><span style="color: #8b2252; font-weight: bold;">\\</span><span style="color: #8b2252; font-weight: bold;">|</span><span style="color: #8b2252;">js</span><span style="color: #8b2252; font-weight: bold;">\\</span><span style="color: #8b2252; font-weight: bold;">|</span><span style="color: #8b2252;">png</span><span style="color: #8b2252; font-weight: bold;">\\</span><span style="color: #8b2252; font-weight: bold;">|</span><span style="color: #8b2252;">jpg</span><span style="color: #8b2252; font-weight: bold;">\\</span><span style="color: #8b2252; font-weight: bold;">|</span><span style="color: #8b2252;">gif</span><span style="color: #8b2252; font-weight: bold;">\\</span><span style="color: #8b2252; font-weight: bold;">|</span><span style="color: #8b2252;">pdf</span><span style="color: #8b2252; font-weight: bold;">\\</span><span style="color: #8b2252; font-weight: bold;">|</span><span style="color: #8b2252;">mp3</span><span style="color: #8b2252; font-weight: bold;">\\</span><span style="color: #8b2252; font-weight: bold;">|</span><span style="color: #8b2252;">ogg</span><span style="color: #8b2252; font-weight: bold;">\\</span><span style="color: #8b2252; font-weight: bold;">|</span><span style="color: #8b2252;">swf"</span>
-         <span style="color: #7a378b;">:publishing-directory</span> ,<span style="color: #8c8c8c;">(</span>concat home <span style="color: #8b2252;">"html/"</span><span style="color: #8c8c8c;">)</span>
-         <span style="color: #7a378b;">:recursive</span> t
-         <span style="color: #7a378b;">:publishing-function</span> org-publish-attachment
-         <span style="color: #8c8c8c;">)</span>
+        ;; *static* - copies files to directories
+        ("org-static"
+         :base-directory ,(concat home "org/")
+         :base-extension "css\\|js\\|png\\|jpg\\|gif\\|pdf\\|mp3\\|ogg\\|swf"
+         :publishing-directory ,(concat home "html/")
+         :recursive t
+         :publishing-function org-publish-attachment
+         )
 
-        <span style="color: #b22222;">;; </span><span style="color: #b22222;">*publish* with M-x org-publish-project RET emacsclub RET</span>
-        <span style="color: #8c8c8c;">(</span><span style="color: #8b2252;">"emacsclub"</span> <span style="color: #7a378b;">:components</span> <span style="color: #8c8c8c;">(</span><span style="color: #8b2252;">"main-page"</span> <span style="color: #8b2252;">"meeting-notes"</span> <span style="color: #8b2252;">"org-static"</span><span style="color: #8c8c8c;">))</span>
-        <span style="color: #8c8c8c;">))</span>
+        ;; *publish* with M-x org-publish-project RET emacsclub RET
+        ("emacsclub" :components ("main-page" "meeting-notes" "org-static"))
+        ))
 
 </pre>
 
@@ -909,9 +886,9 @@ p.footnote          footnote definition paragraph, containing a footnote
 </div>
 
 <div id="postamble">
-<p class="date">Date: 2012-09-18 16:55:32 EDT</p>
+<p class="date">Date: 2012-09-28 23:21:37 EDT</p>
 <p class="author">Author: Mishal Awadah</p>
-<p class="creator">Org version 7.8.09 with Emacs version 23</p>
+<p class="creator">Org version 7.8.11 with Emacs version 24</p>
 <a href="http://validator.w3.org/check?uri=referer">Validate XHTML 1.0</a>
 
 </div>

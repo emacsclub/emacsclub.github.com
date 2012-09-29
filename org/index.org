@@ -41,3 +41,6 @@ at the University of Pennsylvania, Dept. of Computer Science
 ** [[file:flymake.org][Flymake]]
    Generate on the fly compiler diagnostics and underline errors in code.
 
+* Extras
+
+  - [[http://orgmode.org/talks.html][Org Mode Talks]] Some love from Google and others.
