@@ -5,31 +5,31 @@
 Meeting Notes 2012-09-25
 
 * Food and attendance
-** We have 14 people here. This might be a record for a non-{tutorial,interest} meeting.
-** Nicos emails beforehand to tell us he's "brining a power strip." Could be handy if we run out of Potbelly.
-** 10 sandwiches from Potbelly may not be enough for this crowd. Pizza might be the new Potbelly.
+  - We have 14 people here. This might be a record for a non-{tutorial,interest} meeting.
+  - Nicos emails beforehand to tell us he's "brining a power strip." Could be handy if we run out of Potbelly.
+  - 10 sandwiches from Potbelly may not be enough for this crowd. Pizza might be the new Potbelly.
 * Emacs prelude
-** Like starter kit, but better for Emacs 24?
-** Emacs takes a long time to start up and throws errors the first few times after Prelude is installed. Why the first *few* times? ¯\_(ツ)_/¯
-** Prelude by default comes with guru-mode, which complains every time you use the arrow keys. Good choice for beginners.
-*** Benjamin wants to know how to unbind the arrow keys. This is a solved problem with a mechanical keyboard -- just pull the keys out
-** Zach should make his instructions on Prelude available online for reference
-** Prelude installs clojure-mode and goodies the first time a file with a .clj extension is opened. Nifty.
-** Someone wants to know how to paste in Putty:
-   - Benjamin: You kiss your computer screen three times...
-** Apparently, Prelude's smex equivalent is vastly superior to normal smex
-** Orren tries to install prelude using wget without having wget installed
-   - Andrew: You don't have wget installed.
-   - Orren: But it did a thing!
+  - Like starter kit, but better for Emacs 24?
+  - Emacs takes a long time to start up and throws errors the first few times after Prelude is installed. Why the first *few* times? ¯\_(ツ)_/¯
+  - Prelude by default comes with guru-mode, which complains every time you use the arrow keys. Good choice for beginners.
+    - Benjamin wants to know how to unbind the arrow keys. This is a solved problem with a mechanical keyboard -- just pull the keys out
+  - Zach should make his instructions on Prelude available online for reference
+  - Prelude installs clojure-mode and goodies the first time a file with a .clj extension is opened. Nifty.
+  - Someone wants to know how to paste in Putty:
+     - Benjamin: You kiss your computer screen three times...
+  - Apparently, Prelude's smex equivalent is vastly superior to normal smex
+  - Orren tries to install prelude using wget without having wget installed
+    - Andrew: You don't have wget installed.
+    - Orren: But it did a thing!
 * Color themes
-** Benjamin wants a light color theme -- suggestions include solarized-light and tomorrow.
-*** End result? Light themes that look "nice" are too hard to read. Benjamin is sticking with the default theme.
-** Are dark themes better for your eyes?
-*** Answer: nobody has any clue
+  - Benjamin wants a light color theme -- suggestions include solarized-light and tomorrow.
+    - End result? Light themes that look "nice" are too hard to read. Benjamin is sticking with the default theme.
+  - Are dark themes better for your eyes?
+    - Answer: nobody has any clue
 * Control vs. caps lock -- welcome to the Thunderdome
-** Benjamin wants to know what everyone's preferences are for using control vs. something else with Emacs.
-*** Only Zach and Rafe *don't* use caps lock
-** An existential debate on the usefulness of caps lock arises:
-   - Rafe: When do you ever use caps lock?
-   - Benjamin: When I'm really angry.
+  - Benjamin wants to know what everyone's preferences are for using control vs. something else with Emacs.
+  - Only Zach and Rafe *don't* use caps lock
+  - An existential debate on the usefulness of caps lock arises:
+    - Rafe: When do you ever use caps lock?
+    - Benjamin: When I'm really angry.
 * Finally: as Zach leaves, he mentions dongles. This meeting can finally rest in peace.
