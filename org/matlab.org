@@ -43,7 +43,7 @@ cp -r ~/Downloads/matlab-emacs ~/.emacs.d/personal/plugins/
       #+end_src
 
    3. Add the appropriate glue to your ~init.el~. If using [[emacs24.org][Prelude]]
-      this is in ~\~/emacs.d/personal/~.
+      this is in ~~/.emacs.d/personal/~.
 
       #+begin_src elisp
 

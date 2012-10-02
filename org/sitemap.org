@@ -2,6 +2,7 @@
 
    + [[file:emacs_intro.org][An Introduction to Emacs]]
    + [[file:index.org][Emacs Club]]
+   + [[file:emerge.org][Emerge]]
    + [[file:flymake.org][Flymake Tutorial]]
    + [[file:matlab.org][Matlab Dev in Emacs]]
    + [[file:org_tutorial.org][Org-mode Tutorial / Cheat Sheet]]

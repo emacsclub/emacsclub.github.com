@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+               "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<title>Emerge</title>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+<meta name="title" content="Emerge"/>
+<meta name="generator" content="Org-mode"/>
+<meta name="generated" content="2012-10-02 14:07:39 EDT"/>
+<meta name="author" content="Mishal Awadah"/>
+<meta name="description" content="Using emerge to resolve merge conflicts."/>
+<meta name="keywords" content="emerge git mergetool merge conflict diff"/>
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  html { font-family: Times, serif; font-size: 12pt; }
+  .title  { text-align: center; }
+  .todo   { color: red; }
+  .done   { color: green; }
+  .tag    { background-color: #add8e6; font-weight:normal }
+  .target { }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .right  {margin-left:auto; margin-right:0px;  text-align:right;}
+  .left   {margin-left:0px;  margin-right:auto; text-align:left;}
+  .center {margin-left:auto; margin-right:auto; text-align:center;}
+  p.verse { margin-left: 3% }
+  pre {
+	border: 1pt solid #AEBDCC;
+	background-color: #F3F5F7;
+	padding: 5pt;
+	font-family: courier, monospace;
+        font-size: 90%;
+        overflow:auto;
+  }
+  table { border-collapse: collapse; }
+  td, th { vertical-align: top;  }
+  th.right  { text-align:center;  }
+  th.left   { text-align:center;   }
+  th.center { text-align:center; }
+  td.right  { text-align:right;  }
+  td.left   { text-align:left;   }
+  td.center { text-align:center; }
+  dt { font-weight: bold; }
+  div.figure { padding: 0.5em; }
+  div.figure p { text-align: center; }
+  div.inlinetask {
+    padding:10px;
+    border:2px solid gray;
+    margin:10px;
+    background: #ffffcc;
+  }
+  textarea { overflow-x: auto; }
+  .linenr { font-size:smaller }
+  .code-highlighted {background-color:#ffff00;}
+  .org-info-js_info-navigation { border-style:none; }
+  #org-info-js_console-label { font-size:10px; font-weight:bold;
+                               white-space:nowrap; }
+  .org-info-js_search-highlight {background-color:#ffff00; color:#000000;
+                                 font-weight:bold; }
+  /*]]>*/-->
+</style><link rel="stylesheet" type="text/css" href="../css/stylesheet.css" />
+<link rel="stylesheet" type="text/css" href="../css/stylesheet.css" />
+<script type="text/javascript">
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+
+</head>
+<body>
+<div id="org-div-home-and-up" style="text-align:right;font-size:70%;white-space:nowrap;">
+ <a accesskey="h" href="index.html"> UP </a>
+ |
+ <a accesskey="H" href="index.html"> HOME </a>
+</div>
+
+<div id="preamble">
+
+</div>
+
+<div id="content">
+<h1 class="title">Emerge</h1>
+
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-30426956-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+
+
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#sec-1">Intro</a></li>
+<li><a href="#sec-2">Configure git</a></li>
+<li><a href="#sec-3">Resolve merge conflicts with 'mergetool'</a></li>
+<li><a href="#sec-4">Using Emerge</a>
+<ul>
+<li><a href="#sec-4-1">Fast Mode</a></li>
+<li><a href="#sec-4-2">Edit Mode</a></li>
+<li><a href="#sec-4-3">References</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-1" class="outline-2">
+<h2 id="sec-1">Intro</h2>
+<div class="outline-text-2" id="text-1">
+
+<p>  This will show you how to configure git with emerge and how to use
+  emerge to resolve git merge conflicts. Emerge can be thought of as
+  an industrial strength merge-conflict resolution tool, and is
+  especially useful when merging a large new change with an existing
+  commit or branch. 
+</p>
+</div>
+
+</div>
+
+<div id="outline-container-2" class="outline-2">
+<h2 id="sec-2">Configure git</h2>
+<div class="outline-text-2" id="text-2">
+
+<p>  This will make emerge your default mergetool
+</p>
+
+
+<pre class="example">&gt;&gt; git config --global merge.tool emerge  
+</pre>
+
+
+</div>
+
+</div>
+
+<div id="outline-container-3" class="outline-2">
+<h2 id="sec-3">Resolve merge conflicts with 'mergetool'</h2>
+<div class="outline-text-2" id="text-3">
+
+<p>  When you have a conflict arise after a <code>git-pull</code>, for example here
+  my .gitignore has a merge conflict.
+</p>
+
+
+<pre class="example">&gt;&gt; git pull
+... 
+Auto-merging .gitignore
+CONFLICT (content): Merge conflict in .gitignore
+Automatic merge failed; fix conflicts and then commit the result.
+</pre>
+
+<p>
+  Fire up the mergetool right after this with
+</p>
+
+
+<pre class="example">  &gt;&gt; git mergetool
+Merging:
+.gitignore
+
+Normal merge conflict for '.gitignore':
+  {local}: modified file
+  {remote}: modified file
+Hit return to start merge resolution tool (emerge): 
+</pre>
+
+
+</div>
+
+</div>
+
+<div id="outline-container-4" class="outline-2">
+<h2 id="sec-4">Using Emerge</h2>
+<div class="outline-text-2" id="text-4">
+
+
+
+</div>
+
+<div id="outline-container-4-1" class="outline-3">
+<h3 id="sec-4-1">Fast Mode</h3>
+<div class="outline-text-3" id="text-4-1">
+
+<p>   The default mode for resolving conflicts in emerge is called
+   "fast-mode" and is indicated by a capital <code>F</code> in the minor mode
+   list. For this mode, each difference, or conflict, is represented
+   in the main buffer by 
+</p>
+
+
+<pre class="example">vvvvvvvvvvvvvvvvvvvv
+ text that differs
+ ^^^^^^^^^^^^^^^^^^^^
+</pre>
+
+
+<p>
+   The top two buffers represent the two versions of this file that
+   differ. The left is 'A', and the right is 'B'. For any of the
+   differences, hit <code>a</code> or <code>b</code> to select that version as the correct
+   one to substitute for the difference. Use <code>n</code> 'next' and <code>p</code>
+   'previous' to cycle through the differences in a file. At the end
+   of your session, just save the file and quit. 
+</p>
+</div>
+
+</div>
+
+<div id="outline-container-4-2" class="outline-3">
+<h3 id="sec-4-2">Edit Mode</h3>
+<div class="outline-text-3" id="text-4-2">
+
+
+<p>   
+   Sometimes, simply selecting one version or the other isn't enough,
+   and you need to manually merge the two by editing the file. To do
+   this, you need to enter 'edit mode' which is done by hitting the
+   <code>E</code> key. Once in edit mode, all the shortcuts mentioned in
+   'fast-mode' above no longer apply, but all the usual Emacs
+   shortcuts and commands are now back. Use edit mode to manually fix
+   the difference, then get back into fast mode using the command <code>C-c    C-c f</code>. 
+</p>
+</div>
+
+</div>
+
+<div id="outline-container-4-3" class="outline-3">
+<h3 id="sec-4-3">References</h3>
+<div class="outline-text-3" id="text-4-3">
+
+<p>   Here's a list of useful Emerge commands
+   <a href="http://www.gnu.org/software/emacs/manual/html_node/emacs/Merge-Commands.html#Merge-Commands">http://www.gnu.org/software/emacs/manual/html<sub>node</sub>/emacs/Merge-Commands.html#Merge-Commands</a>.
+</p>
+<p>
+   Here's the main Emerge docs page
+   <a href="http://www.gnu.org/software/emacs/manual/html_node/emacs/Emerge.html#Emerge">http://www.gnu.org/software/emacs/manual/html<sub>node</sub>/emacs/Emerge.html#Emerge</a>
+</p></div>
+</div>
+</div>
+</div>
+
+<div id="postamble">
+<p class="date">Date: 2012-10-02 14:07:39 EDT</p>
+<p class="author">Author: Mishal Awadah</p>
+<p class="creator">Org version 7.8.11 with Emacs version 24</p>
+<a href="http://validator.w3.org/check?uri=referer">Validate XHTML 1.0</a>
+
+</div>
+</body>
+</html>
