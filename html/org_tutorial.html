@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
                "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<html xmlns="http://www.w3.org/1999/xhtml"
+lang="en" xml:lang="en">
 <head>
 <title>Org-mode Tutorial / Cheat Sheet</title>
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
-<meta name="title" content="Org-mode Tutorial / Cheat Sheet"/>
 <meta name="generator" content="Org-mode"/>
-<meta name="generated" content="2012-09-18 16:55:32 EDT"/>
+<meta name="generated" content="2012-10-02 18:15:17 EDT"/>
 <meta name="author" content="Mishal Awadah"/>
 <meta name="description" content=""/>
 <meta name="keywords" content=""/>
@@ -44,12 +44,6 @@
   dt { font-weight: bold; }
   div.figure { padding: 0.5em; }
   div.figure p { text-align: center; }
-  div.inlinetask {
-    padding:10px;
-    border:2px solid gray;
-    margin:10px;
-    background: #ffffcc;
-  }
   textarea { overflow-x: auto; }
   .linenr { font-size:smaller }
   .code-highlighted {background-color:#ffff00;}
@@ -86,17 +80,13 @@
 
 </head>
 <body>
+<div id="content">
 <div id="org-div-home-and-up" style="text-align:right;font-size:70%;white-space:nowrap;">
  <a accesskey="h" href="index.html"> UP </a>
  |
  <a accesskey="H" href="index.html"> HOME </a>
 </div>
 
-<div id="preamble">
-
-</div>
-
-<div id="content">
 <h1 class="title">Org-mode Tutorial / Cheat Sheet</h1>
 
 
@@ -127,61 +117,61 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#sec-1">Headings</a>
+<li><a href="#sec-1">Headings </a>
 <ul>
-<li><a href="#sec-1-1">Subheadings</a></li>
+<li><a href="#sec-1_1">Subheadings </a></li>
 </ul>
 </li>
-<li><a href="#sec-2">"TODO"s (<code>C-c C-t</code>)</a>
+<li><a href="#sec-2">"TODO"s (<code>C-c C-t</code>) </a>
 <ul>
-<li><a href="#sec-2-1">The TODO cycle</a></li>
+<li><a href="#sec-2_1">The TODO cycle </a></li>
 </ul>
 </li>
-<li><a href="#sec-3">Bullets and numbered lists</a>
+<li><a href="#sec-3">Bullets and numbered lists </a>
 <ul>
-<li><a href="#sec-3-1">Numbered example</a></li>
-<li><a href="#sec-3-2">Unnumbered example</a></li>
+<li><a href="#sec-3_1">Numbered example </a></li>
+<li><a href="#sec-3_2">Unnumbered example </a></li>
 </ul>
 </li>
-<li><a href="#sec-4">Text Formatting</a></li>
-<li><a href="#sec-5">Tables</a></li>
-<li><a href="#sec-6">Literal Examples</a>
+<li><a href="#sec-4">Text Formatting </a></li>
+<li><a href="#sec-5">Tables </a></li>
+<li><a href="#sec-6">Literal Examples </a>
 <ul>
-<li><a href="#sec-6-1">Source Code</a>
+<li><a href="#sec-6_1">Source Code </a>
 <ul>
-<li><a href="#sec-6-1-1">Useful options and commands.</a></li>
+<li><a href="#sec-6_1_1">Useful options and commands. </a></li>
 </ul>
 </li>
-<li><a href="#sec-6-2">Easy templates</a></li>
+<li><a href="#sec-6_2">Easy templates </a></li>
 </ul>
 </li>
-<li><a href="#sec-7">Linking</a>
+<li><a href="#sec-7">Linking </a>
 <ul>
-<li><a href="#sec-7-1">Linking files together</a></li>
-<li><a href="#sec-7-2">Linking sections within a document</a></li>
+<li><a href="#sec-7_1">Linking files together </a></li>
+<li><a href="#sec-7_2">Linking sections within a document </a></li>
 </ul>
 </li>
-<li><a href="#sec-8">Exporting (<code>C-c C-e</code>)</a>
+<li><a href="#sec-8">Exporting (<code>C-c C-e</code>) </a>
 <ul>
-<li><a href="#sec-8-1">Export Options (<code>C-c C-e t</code>)</a>
+<li><a href="#sec-8_1">Export Options (<code>C-c C-e t</code>) </a>
 <ul>
-<li><a href="#sec-8-1-1">Title</a></li>
-<li><a href="#sec-8-1-2">Table of Contents</a></li>
+<li><a href="#sec-8_1_1">Title </a></li>
+<li><a href="#sec-8_1_2">Table of Contents </a></li>
 </ul>
 </li>
-<li><a href="#sec-8-2">Including Other Files</a></li>
-<li><a href="#sec-8-3">HTML Export</a>
+<li><a href="#sec-8_2">Including Other Files </a></li>
+<li><a href="#sec-8_3">HTML Export </a>
 <ul>
-<li><a href="#sec-8-3-1">Stylesheet</a></li>
-<li><a href="#sec-8-3-2">Table Formatting</a></li>
-<li><a href="#sec-8-3-3">Site Navigation</a></li>
-<li><a href="#sec-8-3-4">Hyperlinks</a></li>
+<li><a href="#sec-8_3_1">Stylesheet </a></li>
+<li><a href="#sec-8_3_2">Table Formatting </a></li>
+<li><a href="#sec-8_3_3">Site Navigation </a></li>
+<li><a href="#sec-8_3_4">Hyperlinks </a></li>
 </ul></li>
 </ul>
 </li>
-<li><a href="#sec-9">Publishing</a>
+<li><a href="#sec-9">Publishing </a>
 <ul>
-<li><a href="#sec-9-1">Publishing Script</a></li>
+<li><a href="#sec-9_1">Publishing Script </a></li>
 </ul>
 </li>
 </ul>
@@ -189,25 +179,25 @@
 </div>
 
 <div id="outline-container-1" class="outline-2">
-<h2 id="sec-1">Headings</h2>
+<h2 id="sec-1">Headings </h2>
 <div class="outline-text-2" id="text-1">
 
-<p>  It's all about headings in org. 
-  Headings such as this are created with <code>*</code> (stars). The number of stars defines 
-  the depth of the heading. Pressing <code>&lt;TAB&gt;</code> on headings will minimize/maximize 
-  them. Pressing tab multiple times in a row on headings with subheadings will
-  maximize each subheading by depth corresponding to the number of times 
-  you pressed <code>&lt;TAB&gt;</code>.
+<p>It's all about headings in org. 
+Headings such as this are created with <code>*</code> (stars). The number of stars defines 
+the depth of the heading. Pressing <code>&lt;TAB&gt;</code> on headings will minimize/maximize 
+them. Pressing tab multiple times in a row on headings with subheadings will
+maximize each subheading by depth corresponding to the number of times 
+you pressed <code>&lt;TAB&gt;</code>.
 </p>
 
 </div>
 
-<div id="outline-container-1-1" class="outline-3">
-<h3 id="sec-1-1">Subheadings</h3>
-<div class="outline-text-3" id="text-1-1">
+<div id="outline-container-1_1" class="outline-3">
+<h3 id="sec-1_1">Subheadings </h3>
+<div class="outline-text-3" id="text-1_1">
 
-<p>   Subheadings can nest within other headings such as this one. This is really
-   convenient for organizing stuff.
+<p>Subheadings can nest within other headings such as this one. This is really
+convenient for organizing stuff.
 </p>
 </div>
 </div>
@@ -215,25 +205,25 @@
 </div>
 
 <div id="outline-container-2" class="outline-2">
-<h2 id="sec-2">"TODO"s (<code>C-c C-t</code>)</h2>
+<h2 id="sec-2">"TODO"s (<code>C-c C-t</code>) </h2>
 <div class="outline-text-2" id="text-2">
 
-<p>  TODO's are created by starting headers with the keyword TODO or DONE. 
-  You can also create one with <code>C-c C-t</code> on a header. 
-  They are meant to represent tasks you wish to create within your 
-  organizational document. These can be helpful when planning out projects
-  or assignments. 
+<p>TODO's are created by starting headers with the keyword TODO or DONE. 
+You can also create one with <code>C-c C-t</code> on a header. 
+They are meant to represent tasks you wish to create within your 
+organizational document. These can be helpful when planning out projects
+or assignments. 
 </p>
 
 </div>
 
-<div id="outline-container-2-1" class="outline-3">
-<h3 id="sec-2-1">The TODO cycle</h3>
-<div class="outline-text-3" id="text-2-1">
+<div id="outline-container-2_1" class="outline-3">
+<h3 id="sec-2_1">The TODO cycle </h3>
+<div class="outline-text-3" id="text-2_1">
 
-<p>   You can
-   turn an existing header into a TODO item by cycling its TODO status. The 
-   shortcut for this is <code>C-c C-t</code> (t for todo). 
+<p>You can
+turn an existing header into a TODO item by cycling its TODO status. The 
+shortcut for this is <code>C-c C-t</code> (t for todo). 
 </p>
 <blockquote>
 
@@ -249,38 +239,41 @@
 </div>
 
 <div id="outline-container-3" class="outline-2">
-<h2 id="sec-3">Bullets and numbered lists</h2>
+<h2 id="sec-3">Bullets and numbered lists </h2>
 <div class="outline-text-2" id="text-3">
 
-<p>  You can create bullets with the - (dash), numbered bullets or lists with
-  #. (number[dot]). Tabbing multiple times changes the indentation of the bullet,
-  but only if there is no text yet.  Tabbing multiple levels can get
-  confusing, but if you remember to &lt;TAB&gt; before typing '-' or '#.', things
-  tend to work out. 
+<p>You can create bullets with the - (dash), numbered bullets or lists with
+#. (number[dot]). Tabbing multiple times changes the indentation of the bullet,
+but only if there is no text yet.  Tabbing multiple levels can get
+confusing, but if you remember to &lt;TAB&gt; before typing '-' or '#.', things
+tend to work out. 
 </p>
 
 </div>
 
-<div id="outline-container-3-1" class="outline-3">
-<h3 id="sec-3-1">Numbered example</h3>
-<div class="outline-text-3" id="text-3-1">
+<div id="outline-container-3_1" class="outline-3">
+<h3 id="sec-3_1">Numbered example </h3>
+<div class="outline-text-3" id="text-3_1">
 
 <ol>
-<li>item 1
+<li>
+item 1
 </li>
-<li>item 2 
+<li>
+item 2 
 <ol>
-<li>sub 1
+<li>
+sub 1
 </li>
-<li>sub 2
+<li>
+sub 2
 <ol>
-<li>subsub 1
+<li>
+subsub 1
 </li>
 </ol>
-
 </li>
 </ol>
-
 </li>
 </ol>
 
@@ -288,28 +281,32 @@
 
 </div>
 
-<div id="outline-container-3-2" class="outline-3">
-<h3 id="sec-3-2">Unnumbered example</h3>
-<div class="outline-text-3" id="text-3-2">
+<div id="outline-container-3_2" class="outline-3">
+<h3 id="sec-3_2">Unnumbered example </h3>
+<div class="outline-text-3" id="text-3_2">
 
 <ul>
-<li>hello
+<li>
+hello
 </li>
-<li>item 2
+<li>
+item 2
 </li>
-<li>item 3
+<li>
+item 3
 <ul>
-<li>subitem 1
+<li>
+subitem 1
 </li>
-<li>sub
+<li>
+sub
 <ul>
-<li>subsub
+<li>
+subsub
 </li>
 </ul>
-
 </li>
 </ul>
-
 </li>
 </ul>
 
@@ -320,12 +317,12 @@
 </div>
 
 <div id="outline-container-4" class="outline-2">
-<h2 id="sec-4">Text Formatting</h2>
+<h2 id="sec-4">Text Formatting </h2>
 <div class="outline-text-2" id="text-4">
 
-<p>  Individual words can be <b>bolded</b> with stars, <i>italicized</i> with forward
-  slashes, and <span style="text-decoration:underline;">underlined</span> with underscores. Also, there is 
-  <code>verbatim</code> and <del>strike-through</del>. 
+<p>Individual words can be <b>bolded</b> with stars, <i>italicized</i> with forward
+slashes, and <span style="text-decoration:underline;">underlined</span> with underscores. Also, there is 
+<code>verbatim</code> and <del>strike-through</del>. 
 </p>
 
 
@@ -334,22 +331,23 @@
 </pre>
 
 
+
 </div>
 
 </div>
 
 <div id="outline-container-5" class="outline-2">
-<h2 id="sec-5">Tables</h2>
+<h2 id="sec-5">Tables </h2>
 <div class="outline-text-2" id="text-5">
 
 
 <p>
-  Tables can be created from any line that starts with '<code>|</code>' (pipe). 
-  A line that starts with '<code>|-</code>' (pipe dash) is considered a horizontal 
-  seperator; <code>&lt;TAB&gt;</code> after inserting it to expand the separator.  
+Tables can be created from any line that starts with '<code>|</code>' (pipe). 
+A line that starts with '<code>|-</code>' (pipe dash) is considered a horizontal 
+seperator; <code>&lt;TAB&gt;</code> after inserting it to expand the separator.  
 </p>
 
-<table border="2" cellspacing="0" cellpadding="6">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
 <caption></caption>
 <colgroup><col class="left" /><col class="left" /><col class="left" /><col class="left" /><col class="left" />
 </colgroup>
@@ -364,14 +362,17 @@
 
 
 <p>
-  Some tips: 
+Some tips: 
 </p><ul>
-<li><code>&lt;TAB&gt;</code> realigns the columns, and moves to the next column. 
-        If at end of line, it will create a new row. 
+<li>
+<code>&lt;TAB&gt;</code> realigns the columns, and moves to the next column. 
+If at end of line, it will create a new row. 
 </li>
-<li><code>C-c C-c</code> will realign the columns without moving or creating new ones.
+<li>
+<code>C-c C-c</code> will realign the columns without moving or creating new ones.
 </li>
-<li><code>&lt;RET&gt;</code> moves to the next row. 
+<li>
+<code>&lt;RET&gt;</code> moves to the next row. 
 </li>
 </ul>
 
@@ -381,20 +382,20 @@
 </div>
 
 <div id="outline-container-6" class="outline-2">
-<h2 id="sec-6">Literal Examples</h2>
+<h2 id="sec-6">Literal Examples </h2>
 <div class="outline-text-2" id="text-6">
 
-<p>  Literal examples are snippets of text or source code that need to be 
-  unformatted on org export. Put this text between <code>#+begin-example</code> and 
-  <code>+end_example</code>.
+<p>Literal examples are snippets of text or source code that need to be 
+unformatted on org export. Put this text between <code>#+begin-example</code> and 
+<code>+end_example</code>.
 </p>
 </div>
 
-<div id="outline-container-6-1" class="outline-3">
-<h3 id="sec-6-1">Source Code</h3>
-<div class="outline-text-3" id="text-6-1">
+<div id="outline-container-6_1" class="outline-3">
+<h3 id="sec-6_1">Source Code </h3>
+<div class="outline-text-3" id="text-6_1">
 
-<p>   Org-mode is great for inserting snippets of code. This can be done with the
+<p>Org-mode is great for inserting snippets of code. This can be done with the
 </p>
 
 
@@ -404,71 +405,77 @@
 </pre>
 
 
+
 <p>
-   [major-mode-name] adds a lot of extra functionality to these code blocks
-   within your org file. It's also good for whoever is reading to know what 
-   the language is.
+[major-mode-name] adds a lot of extra functionality to these code blocks
+within your org file. It's also good for whoever is reading to know what 
+the language is.
 </p>
-<p>   
-   For example: 
+<p>
+For example: 
 </p>
 
 
 
-<pre class="src src-c"><span class="linenr">1:  </span><span style="color: #228b22;">int</span> <span style="color: #0000ff;">main</span>() { 
-<span class="linenr">2:  </span><span style="color: #7f007f;">return</span> 0; 
-<span class="linenr">3:  </span>}
+<pre class="example"><span class="linenr">1:  </span>int main() { 
+<span class="linenr">2:  </span>    return 0; 
+<span class="linenr">3:  </span>    }
 </pre>
 
 
 
+
 </div>
 
-<div id="outline-container-6-1-1" class="outline-4">
-<h4 id="sec-6-1-1">Useful options and commands.</h4>
-<div class="outline-text-4" id="text-6-1-1">
+<div id="outline-container-6_1_1" class="outline-4">
+<h4 id="sec-6_1_1">Useful options and commands. </h4>
+<div class="outline-text-4" id="text-6_1_1">
 
 
 <p>
-    Options: 
+Options: 
 </p><ul>
-<li><code>-n</code> : add line numbers to the source code.
+<li>
+<code>-n</code> : add line numbers to the source code.
 </li>
-<li><code>+n</code> : add line numbers but continue from last SRC snippet.
+<li>
+<code>+n</code> : add line numbers but continue from last SRC snippet.
 </li>
-<li><code>-r</code> : remove labels from source code
+<li>
+<code>-r</code> : remove labels from source code
+
+</li>
+</ul>
+
+<p>Commands: 
+</p><ul>
+<li>
+<code>C-c [']</code> : Allows you to edit the source code at point in its native mode. 
+Opens a new buffer where you exit after editing by the command again. 
+</li>
+<li>
+<code>C-c l</code> : calls org-store-link when editing with ~C-c '~. This creates 
+a label at the line currently being edited. It can be retrieved 
+later with <code>C-c C-l</code>. 
 </li>
 </ul>
 
 
-<p>    
-    Commands: 
-</p><ul>
-<li><code>C-c [']</code> : Allows you to edit the source code at point in its native mode. 
-      Opens a new buffer where you exit after editing by the command again. 
-</li>
-<li><code>C-c l</code> : calls org-store-link when editing with ~C-c '~. This creates 
-      a label at the line currently being edited. It can be retrieved 
-      later with <code>C-c C-l</code>. 
-</li>
-</ul>
-
-
 </div>
 </div>
 
 </div>
 
-<div id="outline-container-6-2" class="outline-3">
-<h3 id="sec-6-2">Easy templates</h3>
-<div class="outline-text-3" id="text-6-2">
+<div id="outline-container-6_2" class="outline-3">
+<h3 id="sec-6_2">Easy templates </h3>
+<div class="outline-text-3" id="text-6_2">
 
-<p>   It gets tiring to use the long tags if you're doing this a lot. 
-   These are shortcuts to generate the above snippet borders. To insert, 
-   type a '&lt;' followed by a template selector and then &lt;TAB&gt;. 
+<p>It gets tiring to use the long tags if you're doing this a lot. 
+These are shortcuts to generate the above snippet borders. To insert, 
+type a '&lt;' followed by a template selector and then &lt;TAB&gt;. 
 </p>
 <p>
-   Template selectors: 
+Template selectors: 
 </p>
 
 
@@ -488,41 +495,43 @@ I    #+include: line
 </pre>
 
 
+
 </div>
 </div>
 
 </div>
 
 <div id="outline-container-7" class="outline-2">
-<h2 id="sec-7">Linking</h2>
+<h2 id="sec-7">Linking </h2>
 <div class="outline-text-2" id="text-7">
 
 
 </div>
 
-<div id="outline-container-7-1" class="outline-3">
-<h3 id="sec-7-1">Linking files together</h3>
-<div class="outline-text-3" id="text-7-1">
+<div id="outline-container-7_1" class="outline-3">
+<h3 id="sec-7_1">Linking files together </h3>
+<div class="outline-text-3" id="text-7_1">
 
-<p>   You can link files together with 
+<p>You can link files together with 
 </p>
 
 
 <pre class="example">[[file:filename][name-of-link]]
 </pre>
 
+
 <p>
-   This will preserve links after export to HTML as well. 
+This will preserve links after export to HTML as well. 
 </p></div>
 
 </div>
 
-<div id="outline-container-7-2" class="outline-3">
-<h3 id="sec-7-2">Linking sections within a document</h3>
-<div class="outline-text-3" id="text-7-2">
+<div id="outline-container-7_2" class="outline-3">
+<h3 id="sec-7_2">Linking sections within a document </h3>
+<div class="outline-text-3" id="text-7_2">
 
-<p>  You can create a link to a section within your document with the section name
-  in brackets. The second option lets you call the link something else. 
+<p>You can create a link to a section within your document with the section name
+in brackets. The second option lets you call the link something else. 
 </p>
 
 
@@ -530,48 +539,50 @@ I    #+include: line
 [[section-title][link-title]]
 </pre>
 
+
 </div>
 </div>
 
 </div>
 
 <div id="outline-container-8" class="outline-2">
-<h2 id="sec-8">Exporting (<code>C-c C-e</code>)</h2>
+<h2 id="sec-8">Exporting (<code>C-c C-e</code>) </h2>
 <div class="outline-text-2" id="text-8">
 
-<p>  You can export org files to any of the supported formats with 
-  <code>C-c C-e [option]</code>. 
+<p>You can export org files to any of the supported formats with 
+<code>C-c C-e [option]</code>. 
 </p>
-<p>  
-  <code>C-c C-e</code> will show you the options available in a separate buffer. Common 
-  ones are text, html, and latex. You can get PDFs by converting to latex, but
-  you need to have a LaTeX environment installed on your system to use this.
+<p>
+<code>C-c C-e</code> will show you the options available in a separate buffer. Common 
+ones are text, html, and latex. You can get PDFs by converting to latex, but
+you need to have a LaTeX environment installed on your system to use this.
 </p>
 
 </div>
 
-<div id="outline-container-8-1" class="outline-3">
-<h3 id="sec-8-1">Export Options (<code>C-c C-e t</code>)</h3>
-<div class="outline-text-3" id="text-8-1">
+<div id="outline-container-8_1" class="outline-3">
+<h3 id="sec-8_1">Export Options (<code>C-c C-e t</code>) </h3>
+<div class="outline-text-3" id="text-8_1">
 
-<p>   When org files are exported, certain variables are set automatically but
-   can be manually set by you. To change a variable's value, use 
+<p>When org files are exported, certain variables are set automatically but
+can be manually set by you. To change a variable's value, use 
 </p>
 
 
 <pre class="example">#+VARIABLE-NAME: value
 </pre>
 
+
 <p>
-   anywhere in your document. At the top is probably best. 
-</p>
-<p>   
-   To paste a template of all export options in your 
-   org document so that you can set them immediately, use 
-   (org-insert-export-options-template), or <code>C-c C-e t</code>. 
+anywhere in your document. At the top is probably best. 
 </p>
 <p>
-   This will print
+To paste a template of all export options in your 
+org document so that you can set them immediately, use 
+(org-insert-export-options-template), or <code>C-c C-e t</code>. 
+</p>
+<p>
+This will print
 </p>
 
 
@@ -587,7 +598,7 @@ I    #+include: line
 #+TEXT:        Several lines may be given.
 #+OPTIONS:     H:2 num:t toc:t \n:nil @:t ::t |:t ^:t f:t TeX:t ...
 #+BIND:        lisp-var lisp-val, e.g.: org-export-latex-low-levels itemize
-               You need to confirm using these, or configure org-export-allow-BIND
+                           You need to confirm using these, or configure org-export-allow-BIND
 #+LINK_UP:     the ``up'' link of an exported page
 #+LINK_HOME:   the ``home'' link of an exported page
 #+LATEX_HEADER: extra line(s) for the LaTeX header, like \usepackage{xyz}
@@ -597,15 +608,16 @@ I    #+include: line
 </pre>
 
 
+
 <p>
-   within your document, 
-   but with your actual variable values instead of descriptions. Change any of 
-   the variables to the value of your choice. These descriptions
-   are provided here for your reference. 
+within your document, 
+but with your actual variable values instead of descriptions. Change any of 
+the variables to the value of your choice. These descriptions
+are provided here for your reference. 
 </p>
 <p>
-   The <code>#+OPTIONS</code> variable is very useful for specific tweaks and will effect 
-   both HTML and LaTeX exports. 
+The <code>#+OPTIONS</code> variable is very useful for specific tweaks and will effect 
+both HTML and LaTeX exports. 
 </p>
 
 
@@ -640,9 +652,10 @@ d:         turn on/off inclusion of drawers
 </pre>
 
 
+
 <p>
-   Variables are set with <code>nil</code> or <code>t</code>, and sometimes take an argument. 
-   For example
+Variables are set with <code>nil</code> or <code>t</code>, and sometimes take an argument. 
+For example
 </p>
 
 
@@ -653,15 +666,16 @@ d:         turn on/off inclusion of drawers
 
 
 
+
 </div>
 
-<div id="outline-container-8-1-1" class="outline-4">
-<h4 id="sec-8-1-1">Title</h4>
-<div class="outline-text-4" id="text-8-1-1">
+<div id="outline-container-8_1_1" class="outline-4">
+<h4 id="sec-8_1_1">Title </h4>
+<div class="outline-text-4" id="text-8_1_1">
 
-<p>    The title is taken from the first non-comment line in the file. If there is
-    none, ie your file starts with a heading, it uses the filename. 
-    The title can be manually set using
+<p>The title is taken from the first non-comment line in the file. If there is
+none, ie your file starts with a heading, it uses the filename. 
+The title can be manually set using
 </p>
 
 
@@ -670,20 +684,21 @@ d:         turn on/off inclusion of drawers
 </pre>
 
 
-</div>
 
 </div>
 
-<div id="outline-container-8-1-2" class="outline-4">
-<h4 id="sec-8-1-2">Table of Contents</h4>
-<div class="outline-text-4" id="text-8-1-2">
+</div>
 
-<p>    Normally inserted after the first headline, you can set manually by
-    inserting <code>TABLE-OF-CONTENTS</code> inside square-brackets ([]) seperately on 
-    a line.
+<div id="outline-container-8_1_2" class="outline-4">
+<h4 id="sec-8_1_2">Table of Contents </h4>
+<div class="outline-text-4" id="text-8_1_2">
+
+<p>Normally inserted after the first headline, you can set manually by
+inserting <code>TABLE-OF-CONTENTS</code> inside square-brackets ([]) seperately on 
+a line.
 </p>
-<p>    
-    Some useful options are: 
+<p>
+Some useful options are: 
 </p>
 
 
@@ -693,17 +708,18 @@ d:         turn on/off inclusion of drawers
 
 
 
+
 </div>
 </div>
 
 </div>
 
-<div id="outline-container-8-2" class="outline-3">
-<h3 id="sec-8-2">Including Other Files</h3>
-<div class="outline-text-3" id="text-8-2">
+<div id="outline-container-8_2" class="outline-3">
+<h3 id="sec-8_2">Including Other Files </h3>
+<div class="outline-text-3" id="text-8_2">
 
-<p>   You can include files in an org document, which will be rendered on export.
-   This is done using the single line command
+<p>You can include files in an org document, which will be rendered on export.
+This is done using the single line command
 </p>
 
 
@@ -712,27 +728,28 @@ d:         turn on/off inclusion of drawers
 </pre>
 
 
-<p>   
-   type can be either (quote, example, or src). 
-   if type is src, then src-language can be any major-mode language.  
+
+<p>
+type can be either (quote, example, or src). 
+if type is src, then src-language can be any major-mode language.  
 </p></div>
 
 </div>
 
-<div id="outline-container-8-3" class="outline-3">
-<h3 id="sec-8-3">HTML Export</h3>
-<div class="outline-text-3" id="text-8-3">
+<div id="outline-container-8_3" class="outline-3">
+<h3 id="sec-8_3">HTML Export </h3>
+<div class="outline-text-3" id="text-8_3">
 
 
 </div>
 
-<div id="outline-container-8-3-1" class="outline-4">
-<h4 id="sec-8-3-1">Stylesheet</h4>
-<div class="outline-text-4" id="text-8-3-1">
+<div id="outline-container-8_3_1" class="outline-4">
+<h4 id="sec-8_3_1">Stylesheet </h4>
+<div class="outline-text-4" id="text-8_3_1">
 
 
-<p>    
-    You can include a stylesheet by using
+<p>
+You can include a stylesheet by using
 </p>
 
 
@@ -741,9 +758,10 @@ d:         turn on/off inclusion of drawers
 </pre>
 
 
+
 <p>
-    The styles used by org-mode to export specific parts of your document
-    can be set in your stylesheet with the following variables: 
+The styles used by org-mode to export specific parts of your document
+can be set in your stylesheet with the following variables: 
 </p>
 
 
@@ -777,16 +795,17 @@ p.footnote          footnote definition paragraph, containing a footnote
 </pre>
 
 
-</div>
 
 </div>
 
-<div id="outline-container-8-3-2" class="outline-4">
-<h4 id="sec-8-3-2">Table Formatting</h4>
-<div class="outline-text-4" id="text-8-3-2">
+</div>
 
-<p>  When exporting, tables are drawn without cell borders or frames. Here are 
-  useful table formatting commands which you place immediately before a table.
+<div id="outline-container-8_3_2" class="outline-4">
+<h4 id="sec-8_3_2">Table Formatting </h4>
+<div class="outline-text-4" id="text-8_3_2">
+
+<p>When exporting, tables are drawn without cell borders or frames. Here are 
+useful table formatting commands which you place immediately before a table.
 </p>
 
 
@@ -794,34 +813,36 @@ p.footnote          footnote definition paragraph, containing a footnote
 <pre class="example">#+CAPTION: This is a table with lines around and between cells
 </pre>
 
-</div>
 
 </div>
 
-<div id="outline-container-8-3-3" class="outline-4">
-<h4 id="sec-8-3-3">Site Navigation</h4>
-<div class="outline-text-4" id="text-8-3-3">
+</div>
 
-<p>    You can verily easily add "Up" and "Home" buttons on each page with 
+<div id="outline-container-8_3_3" class="outline-4">
+<h4 id="sec-8_3_3">Site Navigation </h4>
+<div class="outline-text-4" id="text-8_3_3">
+
+<p>You can verily easily add "Up" and "Home" buttons on each page with 
 </p>
 
 
 
-<pre class="example">#+LINK_UP: 
+<pre class="example">    #+LINK_UP: 
 #+LINK_HOME: index.html
 </pre>
 
 
-</div>
 
 </div>
 
-<div id="outline-container-8-3-4" class="outline-4">
-<h4 id="sec-8-3-4">Hyperlinks</h4>
-<div class="outline-text-4" id="text-8-3-4">
+</div>
 
-<p>    Hyperlinks are managed by links and automatically converted to their 
-    html counterparts. See <a href="#Linking-Files">Linking Files</a>. 
+<div id="outline-container-8_3_4" class="outline-4">
+<h4 id="sec-8_3_4">Hyperlinks </h4>
+<div class="outline-text-4" id="text-8_3_4">
+
+<p>Hyperlinks are managed by links and automatically converted to their 
+html counterparts. See <a href="#Linking==Files">Linking Files</a>. 
 </p>
 </div>
 </div>
@@ -830,90 +851,89 @@ p.footnote          footnote definition paragraph, containing a footnote
 </div>
 
 <div id="outline-container-9" class="outline-2">
-<h2 id="sec-9">Publishing</h2>
+<h2 id="sec-9">Publishing </h2>
 <div class="outline-text-2" id="text-9">
 
-<p>  Publishing is simply automating your export pipeline. When you have
-  many files that require export, it is a good idea to create a
-  publishing script for this. 
+<p>Publishing is simply automating your export pipeline. When you have
+many files that require export, it is a good idea to create a
+publishing script for this. 
 </p>
 
 </div>
 
-<div id="outline-container-9-1" class="outline-3">
-<h3 id="sec-9-1">Publishing Script</h3>
-<div class="outline-text-3" id="text-9-1">
+<div id="outline-container-9_1" class="outline-3">
+<h3 id="sec-9_1">Publishing Script </h3>
+<div class="outline-text-3" id="text-9_1">
 
-<p>   To enable project publishing with org-mode, create a local file in
-   the project directory with the instructions. In our example we have
-   named it <code>org_publish.el</code>. 
+<p>To enable project publishing with org-mode, create a local file in
+the project directory with the instructions. In our example we have
+named it <code>org_publish.el</code>. 
 </p>
 
 
 
-<pre class="src src-emacs-lisp"><span style="color: #8c8c8c;">(</span><span style="color: #7f007f;">defconst</span> <span style="color: #a0522d;">home</span> <span style="color: #8c8c8c;">(</span>file-name-directory <span style="color: #8c8c8c;">(</span>or load-file-name buffer-file-name<span style="color: #8c8c8c;">)))</span>
+<pre class="example">(defconst home (file-name-directory (or load-file-name buffer-file-name)))
 
-<span style="color: #8c8c8c;">(</span><span style="color: #7f007f;">require</span> '<span style="color: #008b8b;">org-publish</span><span style="color: #8c8c8c;">)</span>
-<span style="color: #8c8c8c;">(</span>setq org-publish-project-alist
-      `<span style="color: #8c8c8c;">(</span>
-        <span style="color: #b22222;">;; </span><span style="color: #b22222;">add all the components here</span>
-        <span style="color: #b22222;">;; </span><span style="color: #b22222;">*notes* - publishes org files to html</span>
-        <span style="color: #8c8c8c;">(</span><span style="color: #8b2252;">"main-page"</span>
-         <span style="color: #7a378b;">:base-directory</span> ,<span style="color: #8c8c8c;">(</span>concat home <span style="color: #8b2252;">"org/"</span><span style="color: #8c8c8c;">)</span>
-         <span style="color: #7a378b;">:base-extension</span> <span style="color: #8b2252;">"org"</span>  <span style="color: #b22222;">; </span><span style="color: #b22222;">Filename suffix without dot</span>
-         <span style="color: #7a378b;">:publishing-directory</span> ,<span style="color: #8c8c8c;">(</span>concat home <span style="color: #8b2252;">"html/"</span><span style="color: #8c8c8c;">)</span>
-         <span style="color: #7a378b;">:recursive</span> t           <span style="color: #b22222;">; </span><span style="color: #b22222;">DONT include subdirectories</span>
-         <span style="color: #7a378b;">:publishing-function</span> org-publish-org-to-html
-         <span style="color: #7a378b;">:headline-levels</span> 4             <span style="color: #b22222;">; </span><span style="color: #b22222;">Just the default for this project.</span>
-         <span style="color: #7a378b;">:style</span> <span style="color: #8b2252;">"&lt;link rel=\"stylesheet\" type=\"text/css\" href=\"../css/stylesheet.css\" /&gt;"</span>
-         <span style="color: #7a378b;">:auto-preamble</span> t
-         <span style="color: #7a378b;">:auto-sitemap</span> t                <span style="color: #b22222;">; </span><span style="color: #b22222;">generate automagically</span>
-         <span style="color: #7a378b;">:sitemap-sort-folders</span> last
-         <span style="color: #7a378b;">:sitemap-title</span> <span style="color: #8b2252;">"Main Sitemap"</span>
-         <span style="color: #8c8c8c;">)</span>
+(require 'org-publish)
+(setq org-publish-project-alist
+      `(
+        ;; add all the components here
+        ;; *notes* - publishes org files to html
+        ("main-page"
+         :base-directory ,(concat home "org/")
+         :base-extension "org"  ; Filename suffix without dot
+         :publishing-directory ,(concat home "html/")
+         :recursive t           ; DONT include subdirectories
+         :publishing-function org-publish-org-to-html
+         :headline-levels 4             ; Just the default for this project.
+         :style "&lt;link rel=\"stylesheet\" type=\"text/css\" href=\"../css/stylesheet.css\" /&gt;"
+         :auto-preamble t
+         :auto-sitemap t                ; generate automagically
+         :sitemap-sort-folders last
+         :sitemap-title "Main Sitemap"
+         )
 
-        <span style="color: #b22222;">;; </span><span style="color: #b22222;">The meeting notes to be published</span>
-        <span style="color: #8c8c8c;">(</span><span style="color: #8b2252;">"meeting-notes"</span>
-         <span style="color: #7a378b;">:base-directory</span> ,<span style="color: #8c8c8c;">(</span>concat home <span style="color: #8b2252;">"org/meeting-notes/"</span><span style="color: #8c8c8c;">)</span>
-         <span style="color: #7a378b;">:base-extension</span> <span style="color: #8b2252;">"org"</span>
-         <span style="color: #7a378b;">:publishing-directory</span> ,<span style="color: #8c8c8c;">(</span>concat home <span style="color: #8b2252;">"html/meeting-notes/"</span><span style="color: #8c8c8c;">)</span>
-         <span style="color: #7a378b;">:recursive</span> nil
-         <span style="color: #7a378b;">:publishing-function</span> org-publish-org-to-html
-         <span style="color: #7a378b;">:headline-levels</span> 4
-         <span style="color: #7a378b;">:style</span> <span style="color: #8b2252;">"&lt;link rel=\"stylesheet\" type=\"text/css\" href=\"../../css/stylesheet.css\" /&gt;"</span>
-         <span style="color: #7a378b;">:auto-preamble</span> t
-         <span style="color: #7a378b;">:auto-sitemap</span> t
-         <span style="color: #7a378b;">:sitemap-title</span> <span style="color: #8b2252;">"Meeting Notes Directory"</span>
-         <span style="color: #8c8c8c;">)</span>
+        ;; The meeting notes to be published
+        ("meeting-notes"
+         :base-directory ,(concat home "org/meeting-notes/")
+         :base-extension "org"
+         :publishing-directory ,(concat home "html/meeting-notes/")
+         :recursive nil
+         :publishing-function org-publish-org-to-html
+         :headline-levels 4
+         :style "&lt;link rel=\"stylesheet\" type=\"text/css\" href=\"../../css/stylesheet.css\" /&gt;"
+         :auto-preamble t
+         :auto-sitemap t
+         :sitemap-title "Meeting Notes Directory"
+         )
 
-        <span style="color: #b22222;">;; </span><span style="color: #b22222;">*static* - copies files to directories</span>
-        <span style="color: #8c8c8c;">(</span><span style="color: #8b2252;">"org-static"</span>
-         <span style="color: #7a378b;">:base-directory</span> ,<span style="color: #8c8c8c;">(</span>concat home <span style="color: #8b2252;">"org/"</span><span style="color: #8c8c8c;">)</span>
-         <span style="color: #7a378b;">:base-extension</span> <span style="color: #8b2252;">"css</span><span style="color: #8b2252; font-weight: bold;">\\</span><span style="color: #8b2252; font-weight: bold;">|</span><span style="color: #8b2252;">js</span><span style="color: #8b2252; font-weight: bold;">\\</span><span style="color: #8b2252; font-weight: bold;">|</span><span style="color: #8b2252;">png</span><span style="color: #8b2252; font-weight: bold;">\\</span><span style="color: #8b2252; font-weight: bold;">|</span><span style="color: #8b2252;">jpg</span><span style="color: #8b2252; font-weight: bold;">\\</span><span style="color: #8b2252; font-weight: bold;">|</span><span style="color: #8b2252;">gif</span><span style="color: #8b2252; font-weight: bold;">\\</span><span style="color: #8b2252; font-weight: bold;">|</span><span style="color: #8b2252;">pdf</span><span style="color: #8b2252; font-weight: bold;">\\</span><span style="color: #8b2252; font-weight: bold;">|</span><span style="color: #8b2252;">mp3</span><span style="color: #8b2252; font-weight: bold;">\\</span><span style="color: #8b2252; font-weight: bold;">|</span><span style="color: #8b2252;">ogg</span><span style="color: #8b2252; font-weight: bold;">\\</span><span style="color: #8b2252; font-weight: bold;">|</span><span style="color: #8b2252;">swf"</span>
-         <span style="color: #7a378b;">:publishing-directory</span> ,<span style="color: #8c8c8c;">(</span>concat home <span style="color: #8b2252;">"html/"</span><span style="color: #8c8c8c;">)</span>
-         <span style="color: #7a378b;">:recursive</span> t
-         <span style="color: #7a378b;">:publishing-function</span> org-publish-attachment
-         <span style="color: #8c8c8c;">)</span>
+        ;; *static* - copies files to directories
+        ("org-static"
+         :base-directory ,(concat home "org/")
+         :base-extension "css\\|js\\|png\\|jpg\\|gif\\|pdf\\|mp3\\|ogg\\|swf"
+         :publishing-directory ,(concat home "html/")
+         :recursive t
+         :publishing-function org-publish-attachment
+         )
 
-        <span style="color: #b22222;">;; </span><span style="color: #b22222;">*publish* with M-x org-publish-project RET emacsclub RET</span>
-        <span style="color: #8c8c8c;">(</span><span style="color: #8b2252;">"emacsclub"</span> <span style="color: #7a378b;">:components</span> <span style="color: #8c8c8c;">(</span><span style="color: #8b2252;">"main-page"</span> <span style="color: #8b2252;">"meeting-notes"</span> <span style="color: #8b2252;">"org-static"</span><span style="color: #8c8c8c;">))</span>
-        <span style="color: #8c8c8c;">))</span>
+        ;; *publish* with M-x org-publish-project RET emacsclub RET
+        ("emacsclub" :components ("main-page" "meeting-notes" "org-static"))
+        ))
 
 </pre>
 
 
 
-</div>
-</div>
-</div>
-</div>
 
+</div>
+</div>
+</div>
 <div id="postamble">
-<p class="date">Date: 2012-09-18 16:55:32 EDT</p>
-<p class="author">Author: Mishal Awadah</p>
-<p class="creator">Org version 7.8.09 with Emacs version 23</p>
-<a href="http://validator.w3.org/check?uri=referer">Validate XHTML 1.0</a>
-
+<p class="author"> Author: Mishal Awadah
+</p>
+<p class="date"> Date: 2012-10-02 18:15:17 EDT</p>
+<p class="creator">HTML generated by org-mode 7.3 in emacs 24</p>
+</div>
 </div>
 </body>
 </html>

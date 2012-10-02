@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
                "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<html xmlns="http://www.w3.org/1999/xhtml"
+lang="en" xml:lang="en">
 <head>
 <title>Flymake Tutorial</title>
 <meta http-equiv="Content-Type" content="text/html;charset=iso-8859-1"/>
-<meta name="title" content="Flymake Tutorial"/>
 <meta name="generator" content="Org-mode"/>
-<meta name="generated" content="2012-09-18 16:55:32 EDT"/>
+<meta name="generated" content="2012-10-02 18:15:18 EDT"/>
 <meta name="author" content="Mishal Awadah"/>
 <meta name="description" content=""/>
 <meta name="keywords" content=""/>
@@ -44,12 +44,6 @@
   dt { font-weight: bold; }
   div.figure { padding: 0.5em; }
   div.figure p { text-align: center; }
-  div.inlinetask {
-    padding:10px;
-    border:2px solid gray;
-    margin:10px;
-    background: #ffffcc;
-  }
   textarea { overflow-x: auto; }
   .linenr { font-size:smaller }
   .code-highlighted {background-color:#ffff00;}
@@ -86,17 +80,13 @@
 
 </head>
 <body>
+<div id="content">
 <div id="org-div-home-and-up" style="text-align:right;font-size:70%;white-space:nowrap;">
  <a accesskey="h" href="index.html"> UP </a>
  |
  <a accesskey="H" href="index.html"> HOME </a>
 </div>
 
-<div id="preamble">
-
-</div>
-
-<div id="content">
 <h1 class="title">Flymake Tutorial</h1>
 
 
@@ -121,73 +111,74 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#sec-1">Requirements</a></li>
-<li><a href="#sec-2">Setup</a>
+<li><a href="#sec-1">Requirements </a></li>
+<li><a href="#sec-2">Setup </a>
 <ul>
-<li><a href="#sec-2-1">C Files</a></li>
-<li><a href="#sec-2-2">Init file configuration</a></li>
+<li><a href="#sec-2_1">C Files </a></li>
+<li><a href="#sec-2_2">Init file configuration </a></li>
 </ul>
 </li>
-<li><a href="#sec-3">References</a></li>
+<li><a href="#sec-3">References </a></li>
 </ul>
 </div>
 </div>
 
 <div id="outline-container-1" class="outline-2">
-<h2 id="sec-1">Requirements</h2>
+<h2 id="sec-1">Requirements </h2>
 <div class="outline-text-2" id="text-1">
 
-<p>  You will need Flymake to be installed in Emacs, which is already
-  the case if you have Emacs version 23 or higher.
+<p>You will need Flymake to be installed in Emacs, which is already
+the case if you have Emacs version 23 or higher.
 </p></div>
 
 </div>
 
 <div id="outline-container-2" class="outline-2">
-<h2 id="sec-2">Setup</h2>
+<h2 id="sec-2">Setup </h2>
 <div class="outline-text-2" id="text-2">
 
 
 
 </div>
 
-<div id="outline-container-2-1" class="outline-3">
-<h3 id="sec-2-1">C Files</h3>
-<div class="outline-text-3" id="text-2-1">
+<div id="outline-container-2_1" class="outline-3">
+<h3 id="sec-2_1">C Files </h3>
+<div class="outline-text-3" id="text-2_1">
 
-<p>   You need to have a C file you will be editing, with its respective
-   Makefile already in the directory. Your Makefile should include 
-   the following for flymake to use
+<p>You need to have a C file you will be editing, with its respective
+Makefile already in the directory. Your Makefile should include 
+the following for flymake to use
 </p>
 
 
 
-<pre class="src src-BSDmakefile-mode">.PHONY: check-syntax
+<pre class="example">.PHONY: check-syntax
 
 check-syntax:
     $(CC) $(CFLAGS) -Wall -Wextra -0pedantic -fsyntax-only $(SRCS)
 </pre>
 
 
-<p>       
-   Make sure you use a <code>&lt;TAB&gt;</code> under the target!
+
+<p>
+Make sure you use a <code>&lt;TAB&gt;</code> under the target!
 </p>
 </div>
 
 </div>
 
-<div id="outline-container-2-2" class="outline-3">
-<h3 id="sec-2-2">Init file configuration</h3>
-<div class="outline-text-3" id="text-2-2">
+<div id="outline-container-2_2" class="outline-3">
+<h3 id="sec-2_2">Init file configuration </h3>
+<div class="outline-text-3" id="text-2_2">
 
-<p>   Place the following code in your emacs init file 
+<p>Place the following code in your emacs init file 
 </p>
 
 
 
-<pre class="src src-elisp-mode">;; Customize how flymake displays the errors
-'(flymake-errline ((((class color)) (:underline <span style="color: #8b2252;">"OrangeRed"</span>))))
-'(flymake-warnline ((((class color)) (:underline <span style="color: #8b2252;">"yellow"</span>))))
+<pre class="example">;; Customize how flymake displays the errors
+'(flymake-errline ((((class color)) (:underline "OrangeRed"))))
+'(flymake-warnline ((((class color)) (:underline "yellow"))))
 
 ;; Define our own flymake error function
 (defun my-flymake-show-next-error ()
@@ -199,13 +190,14 @@ check-syntax:
 (add-hook 'c-mode-common-hook
   (lambda ()
     (flymake-mode t)
-    (global-set-key <span style="color: #8b2252;">"\C-c\C-v"</span> 'my-flymake-show-next-error)))
+    (global-set-key "\C-c\C-v" 'my-flymake-show-next-error)))
 </pre>
 
 
+
 <p>
-   This will set <code>C-c C-v</code> to show the next error in your c files,
-   and makes the errors display a little more clearly. 
+This will set <code>C-c C-v</code> to show the next error in your c files,
+and makes the errors display a little more clearly. 
 </p>
 </div>
 </div>
@@ -213,25 +205,24 @@ check-syntax:
 </div>
 
 <div id="outline-container-3" class="outline-2">
-<h2 id="sec-3">References</h2>
+<h2 id="sec-3">References </h2>
 <div class="outline-text-2" id="text-3">
 
 
 <ul>
-<li><a href="http://www.credmp.org/?p=53">http://www.credmp.org/?p=53</a>
+<li>
+<a href="http://www.credmp.org/?p=53">http://www.credmp.org/?p=53</a>
 </li>
 </ul>
 
 </div>
 </div>
-</div>
-
 <div id="postamble">
-<p class="date">Date: 2012-09-18 16:55:32 EDT</p>
-<p class="author">Author: Mishal Awadah</p>
-<p class="creator">Org version 7.8.09 with Emacs version 23</p>
-<a href="http://validator.w3.org/check?uri=referer">Validate XHTML 1.0</a>
-
+<p class="author"> Author: Mishal Awadah
+</p>
+<p class="date"> Date: 2012-10-02 18:15:18 EDT</p>
+<p class="creator">HTML generated by org-mode 7.3 in emacs 24</p>
+</div>
 </div>
 </body>
 </html>
