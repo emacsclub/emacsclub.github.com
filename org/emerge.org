@@ -1,0 +1,83 @@
+#+TITLE:     Emerge
+#+AUTHOR:    Mishal Awadah
+#+DESCRIPTION: Using emerge to resolve merge conflicts.
+#+KEYWORDS: emerge git mergetool merge conflict diff
+#+LANGUAGE:  en
+#+LINK_UP:   index.html
+#+LINK_HOME: index.html
+#+SETUPFILE: "../org-templates/level-0.org"
+#+OPTIONS:   author:t email:nil toc:t f:nil
+#+INCLUDE: "../org-templates/analytics.org"
+
+* Intro 
+  This will show you how to configure git with emerge and how to use
+  emerge to resolve git merge conflicts. Emerge can be thought of as
+  an industrial strength merge-conflict resolution tool, and is
+  especially useful when merging a large new change with an existing
+  commit or branch. 
+
+* Configure git
+  This will make emerge your default mergetool
+  #+begin_src shell
+  >> git config --global merge.tool emerge  
+  #+end_src
+
+* Resolve merge conflicts with 'mergetool'
+  When you have a conflict arise after a ~git-pull~, for example here
+  my .gitignore has a merge conflict.
+  #+begin_example
+  >> git pull
+  ... 
+  Auto-merging .gitignore
+  CONFLICT (content): Merge conflict in .gitignore
+  Automatic merge failed; fix conflicts and then commit the result.
+  #+end_example
+  Fire up the mergetool right after this with
+  #+begin_src shell
+  >> git mergetool
+Merging:
+.gitignore
+
+Normal merge conflict for '.gitignore':
+  {local}: modified file
+  {remote}: modified file
+Hit return to start merge resolution tool (emerge): 
+  #+end_src
+
+* Using Emerge
+
+** Fast Mode
+   The default mode for resolving conflicts in emerge is called
+   "fast-mode" and is indicated by a capital ~F~ in the minor mode
+   list. For this mode, each difference, or conflict, is represented
+   in the main buffer by 
+#+begin_example
+    vvvvvvvvvvvvvvvvvvvv
+     text that differs
+     ^^^^^^^^^^^^^^^^^^^^
+#+end_example
+
+   The top two buffers represent the two versions of this file that
+   differ. The left is 'A', and the right is 'B'. For any of the
+   differences, hit ~a~ or ~b~ to select that version as the correct
+   one to substitute for the difference. Use ~n~ 'next' and ~p~
+   'previous' to cycle through the differences in a file. At the end
+   of your session, just save the file and quit. 
+
+** Edit Mode
+   
+   Sometimes, simply selecting one version or the other isn't enough,
+   and you need to manually merge the two by editing the file. To do
+   this, you need to enter 'edit mode' which is done by hitting the
+   ~E~ key. Once in edit mode, all the shortcuts mentioned in
+   'fast-mode' above no longer apply, but all the usual Emacs
+   shortcuts and commands are now back. Use edit mode to manually fix
+   the difference, then get back into fast mode using the command ~C-c
+   C-c f~. 
+
+** References 
+   Here's a list of useful Emerge commands
+   [[http://www.gnu.org/software/emacs/manual/html_node/emacs/Merge-Commands.html#Merge-Commands]].
+
+   Here's the main Emerge docs page
+   [[http://www.gnu.org/software/emacs/manual/html_node/emacs/Emerge.html#Emerge]]

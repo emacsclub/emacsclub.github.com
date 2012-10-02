@@ -11,4 +11,6 @@
 
 ## Remove footnotes; they popped up after introducing analytics.
 #+OPTIONS: f:nil
- 
+
+## Don't make author's on pages where one isn't specified.
+#+OPTIONS:   author:nil email:nil toc:nil

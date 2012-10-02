@@ -1,0 +1,355 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+               "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+lang="en" xml:lang="en">
+<head>
+<title>Matlab Dev in Emacs</title>
+<meta http-equiv="Content-Type" content="text/html;charset=iso-8859-1"/>
+<meta name="generator" content="Org-mode"/>
+<meta name="generated" content="2012-10-02 19:11:01 EDT"/>
+<meta name="author" content="Mishal Awadah"/>
+<meta name="description" content="Setup matlab in emacs."/>
+<meta name="keywords" content="matlab emacs matlab-mode mode shell path"/>
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  html { font-family: Times, serif; font-size: 12pt; }
+  .title  { text-align: center; }
+  .todo   { color: red; }
+  .done   { color: green; }
+  .tag    { background-color: #add8e6; font-weight:normal }
+  .target { }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .right  {margin-left:auto; margin-right:0px;  text-align:right;}
+  .left   {margin-left:0px;  margin-right:auto; text-align:left;}
+  .center {margin-left:auto; margin-right:auto; text-align:center;}
+  p.verse { margin-left: 3% }
+  pre {
+	border: 1pt solid #AEBDCC;
+	background-color: #F3F5F7;
+	padding: 5pt;
+	font-family: courier, monospace;
+        font-size: 90%;
+        overflow:auto;
+  }
+  table { border-collapse: collapse; }
+  td, th { vertical-align: top;  }
+  th.right  { text-align:center;  }
+  th.left   { text-align:center;   }
+  th.center { text-align:center; }
+  td.right  { text-align:right;  }
+  td.left   { text-align:left;   }
+  td.center { text-align:center; }
+  dt { font-weight: bold; }
+  div.figure { padding: 0.5em; }
+  div.figure p { text-align: center; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size:smaller }
+  .code-highlighted {background-color:#ffff00;}
+  .org-info-js_info-navigation { border-style:none; }
+  #org-info-js_console-label { font-size:10px; font-weight:bold;
+                               white-space:nowrap; }
+  .org-info-js_search-highlight {background-color:#ffff00; color:#000000;
+                                 font-weight:bold; }
+  /*]]>*/-->
+</style><link rel="stylesheet" type="text/css" href="../css/stylesheet.css" />
+<link rel="stylesheet" type="text/css" href="../css/stylesheet.css" />
+<script type="text/javascript">
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+
+</head>
+<body>
+<div id="content">
+<div id="org-div-home-and-up" style="text-align:right;font-size:70%;white-space:nowrap;">
+ <a accesskey="h" href="index.html"> UP </a>
+ |
+ <a accesskey="H" href="index.html"> HOME </a>
+</div>
+
+<h1 class="title">Matlab Dev in Emacs</h1>
+
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-30426956-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+
+
+
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#sec-1">Intro </a></li>
+<li><a href="#sec-2">The Setup </a>
+<ul>
+<li><a href="#sec-2_1">Requirements </a></li>
+<li><a href="#sec-2_2">Matlab-Mode </a></li>
+</ul>
+</li>
+<li><a href="#sec-3">Commands </a>
+<ul>
+<li><a href="#sec-3_1"><code>M-x matlab-shell</code> </a></li>
+<li><a href="#sec-3_2"><code>C-M-&lt;RET&gt;</code> </a></li>
+</ul>
+</li>
+<li><a href="#sec-4">References </a></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-1" class="outline-2">
+<h2 id="sec-1">Intro </h2>
+<div class="outline-text-2" id="text-1">
+
+<p>This will show you how to set up a Matlab environment in
+Emacs. You'll have the matlab shell, some semblance of intelligent
+auto-completion, and full editor support for the language and then
+some. 
+</p>
+</div>
+
+</div>
+
+<div id="outline-container-2" class="outline-2">
+<h2 id="sec-2">The Setup </h2>
+<div class="outline-text-2" id="text-2">
+
+
+
+</div>
+
+<div id="outline-container-2_1" class="outline-3">
+<h3 id="sec-2_1">Requirements </h3>
+<div class="outline-text-3" id="text-2_1">
+
+
+<dl>
+<dt>Cedet</dt><dd>
+Code-analyzer package.
+</dd>
+<dt>Auto-Complete</dt><dd>
+Code completion support. Not strictly required,
+but a nice bonus.
+</dd>
+</dl>
+
+
+</div>
+
+</div>
+
+<div id="outline-container-2_2" class="outline-3">
+<h3 id="sec-2_2">Matlab-Mode </h3>
+<div class="outline-text-3" id="text-2_2">
+
+
+<p>
+For the full gist, go to <a href="http://blogs.mathworks.com/community/2009/09/14/matlab-emacs-integration-is-back/">Matlab-Emacs</a>. 
+</p>
+<ol>
+<li>
+Download <a href="http://sourceforge.net/projects/matlab-emacs/">matlab-mode</a> by clicking the download tarball link.
+
+
+
+<pre class="example">curl/wget http://matlab-emacs.cvs.sourceforge.net/viewvc/matlab-emacs/?view=tar
+tar -zxvf matlab-emacs.tar.gz
+</pre>
+
+
+
+</li>
+<li>
+Place it in a plugins folder of your choice, if using <a href="#emacs24.org">Prelude</a> a
+simple way is: 
+
+
+
+
+<pre class="example">mkdir ~/.emacs.d/personal/plugins
+cp -r ~/Downloads/matlab-emacs ~/.emacs.d/personal/plugins/
+</pre>
+
+
+
+</li>
+<li>
+Add the appropriate glue to your <code>init.el</code>. If using <a href="#emacs24.org">Prelude</a>
+this is in ~~/.emacs.d/personal/~.
+
+
+
+
+<pre class="example">
+;; Matlab support
+;; You don't need this line if you placed it in prelude/personal
+(add-to-list 'load-path "~/emacs/plugins/matlab-emacs")
+(load-library "matlab-load")
+(matlab-cedet-setup)
+(add-hook 'matlab-mode
+          (lambda ()
+            (auto-complete-mode 1)
+            ))
+</pre>
+
+
+
+</li>
+<li>
+Configure your path correctly. 
+
+<p>
+The Matlab binary is installed somewhere else than <code>/bin</code> likely,
+so you'll have to let Emacs have access to it. This is what you
+would do if you installed Matlab on Mac OS X.
+</p>
+
+
+
+<pre class="example">
+sudo ln -s /Applications/MATLAB_R2012a_Student.app/bin/matlab /usr/bin/matlab
+</pre>
+
+
+
+</li>
+<li>
+Configure Matlab's path.
+
+<p>
+You might need to let Matlab know where to look for your files,
+which is easily done through the Matlab IDE (don't worry never
+again). This is so you can use the Matlab shell in Emacs.
+</p>
+<p>
+To configure your Matlab path, go to
+</p>
+<blockquote>
+
+<p><b>File</b> &gt; <b>Set Path</b>
+</p>
+</blockquote>
+
+
+<p>
+From there, use <b>Add Folder&hellip;</b> to add your main development folder
+that stores all your Matlab Projects. If you have lots and lots
+of projects, this will not scale well and you will need to find
+out how to dynamically load directories into Matlab. If you're
+in Machine Learning, just add your whole 520 folder, or add your projects
+one at a time to be more careful about namespace issues.
+</p>
+</li>
+<li>
+Restart emacs. You should be good to go.
+</li>
+</ol>
+
+
+</div>
+</div>
+
+</div>
+
+<div id="outline-container-3" class="outline-2">
+<h2 id="sec-3">Commands </h2>
+<div class="outline-text-2" id="text-3">
+
+
+
+</div>
+
+<div id="outline-container-3_1" class="outline-3">
+<h3 id="sec-3_1"><code>M-x matlab-shell</code> </h3>
+<div class="outline-text-3" id="text-3_1">
+
+
+<p>
+Starts the interactive matlab shell. This
+gives you the exact same power you had from the Matlab shell in
+the Matlab IDE. Things like figures, docs, that need their own
+window should pop out fine from the Matlab process which is running
+alongside Emacs.
+</p>
+</div>
+
+</div>
+
+<div id="outline-container-3_2" class="outline-3">
+<h3 id="sec-3_2"><code>C-M-&lt;RET&gt;</code> </h3>
+<div class="outline-text-3" id="text-3_2">
+
+
+<p>
+Evaluates the Matlab cell around point. The downside to this over a
+file/script though, is you get no debugging support if something goes
+wrong in the cell.
+</p>
+
+</div>
+</div>
+
+</div>
+
+<div id="outline-container-4" class="outline-2">
+<h2 id="sec-4">References </h2>
+<div class="outline-text-2" id="text-4">
+
+
+<ul>
+<li>
+
+<p>
+<a href="http://blogs.mathworks.com/community/2009/09/14/matlab-emacs-integration-is-back/">http://blogs.mathworks.com/community/2009/09/14/matlab-emacs-integration-is-back/</a>
+</p></li>
+<li>
+<a href="http://matlab-emacs.sourceforge.net/faq.shtml">http://matlab-emacs.sourceforge.net/faq.shtml</a>
+</li>
+<li>
+<a href="http://sourceforge.net/projects/matlab-emacs/">http://sourceforge.net/projects/matlab-emacs/</a>
+</li>
+</ul>
+
+</div>
+</div>
+<div id="postamble">
+<p class="author"> Author: Mishal Awadah
+</p>
+<p class="date"> Date: 2012-10-02 19:11:01 EDT</p>
+<p class="creator">HTML generated by org-mode 7.3 in emacs 24</p>
+</div>
+</div>
+</body>
+</html>

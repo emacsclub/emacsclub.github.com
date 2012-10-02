@@ -40,26 +40,50 @@ Common tasks in org-mode
    Non-TODO -> TODO -> DONE -> Non-TODO ... (with ~C-c C-t~).
    #+end_quote
    
-* Bullets and numbered lists
+* Lists
   You can create bullets with the - (dash), numbered bullets or lists with
-  #. (number[dot]). Tabbing multiple times changes the indentation of the bullet,
+  ~#.~ (number[dot]). Tabbing multiple times changes the indentation of the bullet,
   but only if there is no text yet.  Tabbing multiple levels can get
-  confusing, but if you remember to <TAB> before typing '-' or '#.', things
+  confusing, but if you remember to ~<TAB>~ before typing ~-~ or ~#.~, things
   tend to work out. 
 
-** Numbered example
+** Ordered Lists
+
   1. item 1
   2. item 2 
 	  1. sub 1
 	  2. sub 2
 		 1. subsub 1
-** Unnumbered example
+
+** Unordered Lists
+   Start with ~-~, ~+~, or ~*~.
+
  - hello
  - item 2
  - item 3
 	 - subitem 1
 	 - sub
 		 - subsub
+
+** Description Lists
+   Start with ~-~, ~+~, or ~*~ and followed by ~::~
+
+#+begin_src org
+Matlab is a funny language. 
+ - Scope :: Scope doesn't work as expected, and messes everything up
+   when loops mix variables up in recursive functions.
+ - Namespaces :: You wish. 
+ - Header Files :: Nope.
+#+end_src
+
+gives 
+
+Matlab is a funny language. 
+ - Scope :: Scope doesn't work as expected, and messes everything up
+   when loops mix variables up in recursive functions.
+ - Namespaces :: You wish. 
+ - Header Files :: Nope.
+   
          
 * Text Formatting
   Individual words can be *bolded* with stars, /italicized/ with forward
