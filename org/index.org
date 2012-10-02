@@ -31,6 +31,7 @@ at the University of Pennsylvania, Dept. of Computer Science
   - [[file:org_tutorial.org][Org-Mode Tutorial]]
   - [[file:emacs24.org][Set Up Prelude Packages]]
   - [[file:matlab.org][Matlab in Emacs]]
+  - [[file:emerge.org][Git Merge Conflict Resolution with Emerge]]
 
 * Favorites
 ** [[http://doxymacs.sourceforge.net/][Doxymacs]]
