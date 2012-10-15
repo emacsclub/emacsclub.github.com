@@ -22,7 +22,7 @@
      + [[file:meeting-notes/2012-04-10.org][Meeting Notes 2012-04-10]]
      + [[file:meeting-notes/2012-04-24.org][Meeting Notes 2012-04-24]]
      + [[file:meeting-notes/2012-05-01.org][Meeting Notes 2012-05-01]]
-     + [[file:meeting-notes/last_meeting.org][Meeting Notes 2012-09-25]]
      + [[file:meeting-notes/2012-09-11.org][Meeting Notes 2012-09-11]]
+     + [[file:meeting-notes/last_meeting.org][Meeting Notes 2012-09-25]]
      + [[file:meeting-notes/2012-09-25.org][Meeting Notes 2012-09-25]]
      + [[file:meeting-notes/sitemap.org][Meeting Notes Directory]]
