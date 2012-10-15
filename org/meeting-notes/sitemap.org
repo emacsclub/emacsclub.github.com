@@ -13,7 +13,6 @@
    + [[file:2012-04-10.org][Meeting Notes 2012-04-10]]
    + [[file:2012-04-24.org][Meeting Notes 2012-04-24]]
    + [[file:2012-05-01.org][Meeting Notes 2012-05-01]]
-   + [[file:last_meeting.org][Meeting Notes 2012-09-11]]
+   + [[file:last_meeting.org][Meeting Notes 2012-09-25]]
    + [[file:2012-09-11.org][Meeting Notes 2012-09-11]]
    + [[file:2012-09-25.org][Meeting Notes 2012-09-25]]
-   + [[file:2012-10-02.org][Meeting Notes 2012-10-02]]

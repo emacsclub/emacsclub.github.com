@@ -17,7 +17,7 @@ at the University of Pennsylvania, Dept. of Computer Science
 #+end_center
 
 * Meetings
-  Every Tuesday at 6:00pm in Levine 307.
+  Every Tuesday at 6:00pm.
   - [[file:meeting-notes/last_meeting.org][Last Meeting's Notes]]
 
 * Links
