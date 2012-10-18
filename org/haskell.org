@@ -81,3 +81,7 @@
    editing with the shortcut =C-c C-l=. This is very useful for
    dynamically interacting with your code within Emacs. 
 
+* References
+  - The Haskell Platform: http://www.haskell.org/platform/
+  - Official Haskell Mode Page:
+    http://www.haskell.org/haskellwiki/Haskell_mode_for_Emacs
