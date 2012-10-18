@@ -6,7 +6,7 @@
 #+LINK_UP:   index.html
 #+LINK_HOME: index.html
 #+SETUPFILE: ../org-templates/level-0.org
-#+OPTIONS:   author:t email:nil toc:t f:nil
+#+OPTIONS:   author:t email:nil toc:t f:nil num:1
 #+INCLUDE: "../org-templates/analytics.org"
 
 * [[http://www.haskell.org/platform/][The Haskell Platform]]
@@ -51,25 +51,25 @@
    (load "~/emacs/plugins/haskell-mode/haskell-site-file")
    #+end_src
 
-** Configure Haskell-Mode
-   Like many major modes in Emacs, Haskell-mode is extremely
-   configurable. Look at the details of what you can configure at the
-   full how-to [[http://www.haskell.org/haskellwiki/Emacs/Installing_haskell-mode][here]].
+* Configure Haskell-Mode
+  Like many major modes in Emacs, Haskell-mode is extremely
+  configurable. Look at the details of what you can configure at the
+  full how-to [[http://www.haskell.org/haskellwiki/Emacs/Installing_haskell-mode][here]].
 
-   The recommended configuration is to enable doc-mode and
-   indentation. This will give you access to built-in documentation of
-   Haskell library functions, as well as smart indentation of your
-   Haskell code just as Emacs does with most languages. 
-   
-   To configure this, add the following lines to your emacs
-   configuration file (=~/.emacs= or =~/.emacs.d/init.el=):
+  The recommended configuration is to enable doc-mode and
+  indentation. This will give you access to built-in documentation of
+  Haskell library functions, as well as smart indentation of your
+  Haskell code just as Emacs does with most languages. 
+  
+  To configure this, add the following lines to your emacs
+  configuration file (=~/.emacs= or =~/.emacs.d/init.el=):
 
-   #+begin_src elisp
-   (add-hook 'haskell-mode-hook 'turn-on-haskell-doc-mode)
-   (add-hook 'haskell-mode-hook 'turn-on-haskell-indentation)
-   #+end_src
+  #+begin_src elisp
+  (add-hook 'haskell-mode-hook 'turn-on-haskell-doc-mode)
+  (add-hook 'haskell-mode-hook 'turn-on-haskell-indentation)
+  #+end_src
 
-   And you're done!
+  And you're done!
 
 * Using haskell-mode
   Haskell-mode's most useful features are all passively enabled, and

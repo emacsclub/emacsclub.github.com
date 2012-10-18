@@ -7,7 +7,7 @@
 <meta http-equiv="Content-Type" content="text/html;charset=iso-8859-1"/>
 <meta name="title" content="Getting Started with Haskell"/>
 <meta name="generator" content="Org-mode"/>
-<meta name="generated" content="2012-10-18 17:51:46 EDT"/>
+<meta name="generated" content="2012-10-18 18:07:37 EDT"/>
 <meta name="author" content="Mishal Awadah"/>
 <meta name="description" content=""/>
 <meta name="keywords" content="haskell-mode haskell emacs major mode setup configuration init"/>
@@ -120,26 +120,26 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#sec-1">The Haskell Platform</a></li>
-<li><a href="#sec-2">Install haskell-mode</a>
+<li><a href="#sec-1">1 The Haskell Platform</a></li>
+<li><a href="#sec-2">2 Install haskell-mode</a>
 <ul>
 <li><a href="#sec-2-1">Using the Emacs Package Manager</a></li>
 <li><a href="#sec-2-2">Manually</a></li>
-<li><a href="#sec-2-3">Configure Haskell-Mode</a></li>
 </ul>
 </li>
-<li><a href="#sec-3">Using haskell-mode</a>
+<li><a href="#sec-3">3 Configure Haskell-Mode</a></li>
+<li><a href="#sec-4">4 Using haskell-mode</a>
 <ul>
-<li><a href="#sec-3-1">The Haskell Interpreter <code>C-c C-l</code></a></li>
+<li><a href="#sec-4-1">The Haskell Interpreter <code>C-c C-l</code></a></li>
 </ul>
 </li>
-<li><a href="#sec-4">References</a></li>
+<li><a href="#sec-5">5 References</a></li>
 </ul>
 </div>
 </div>
 
 <div id="outline-container-1" class="outline-2">
-<h2 id="sec-1"><a href="http://www.haskell.org/platform/">The Haskell Platform</a></h2>
+<h2 id="sec-1"><span class="section-number-2">1</span> <a href="http://www.haskell.org/platform/">The Haskell Platform</a></h2>
 <div class="outline-text-2" id="text-1">
 
 
@@ -151,7 +151,7 @@
 </div>
 
 <div id="outline-container-2" class="outline-2">
-<h2 id="sec-2">Install haskell-mode</h2>
+<h2 id="sec-2"><span class="section-number-2">2</span> Install haskell-mode</h2>
 <div class="outline-text-2" id="text-2">
 
 
@@ -171,7 +171,7 @@
 </div>
 
 <div id="outline-container-2-1" class="outline-3">
-<h3 id="sec-2-1">Using the Emacs Package Manager</h3>
+<h3 id="sec-2-1"><span class="section-number-3"></span> Using the Emacs Package Manager</h3>
 <div class="outline-text-3" id="text-2-1">
 
 <p>   If you have Emacs 24, or have installed the Emacs package manager,
@@ -191,7 +191,7 @@
 </div>
 
 <div id="outline-container-2-2" class="outline-3">
-<h3 id="sec-2-2">Manually</h3>
+<h3 id="sec-2-2"><span class="section-number-3"></span> Manually</h3>
 <div class="outline-text-3" id="text-2-2">
 
 <p>   If you don't have the package manager, you'll need to get
@@ -215,26 +215,27 @@
 
 
 </div>
+</div>
 
 </div>
 
-<div id="outline-container-2-3" class="outline-3">
-<h3 id="sec-2-3">Configure Haskell-Mode</h3>
-<div class="outline-text-3" id="text-2-3">
+<div id="outline-container-3" class="outline-2">
+<h2 id="sec-3"><span class="section-number-2">3</span> Configure Haskell-Mode</h2>
+<div class="outline-text-2" id="text-3">
 
-<p>   Like many major modes in Emacs, Haskell-mode is extremely
-   configurable. Look at the details of what you can configure at the
-   full how-to <a href="http://www.haskell.org/haskellwiki/Emacs/Installing_haskell-mode">here</a>.
+<p>  Like many major modes in Emacs, Haskell-mode is extremely
+  configurable. Look at the details of what you can configure at the
+  full how-to <a href="http://www.haskell.org/haskellwiki/Emacs/Installing_haskell-mode">here</a>.
 </p>
 <p>
-   The recommended configuration is to enable doc-mode and
-   indentation. This will give you access to built-in documentation of
-   Haskell library functions, as well as smart indentation of your
-   Haskell code just as Emacs does with most languages. 
+  The recommended configuration is to enable doc-mode and
+  indentation. This will give you access to built-in documentation of
+  Haskell library functions, as well as smart indentation of your
+  Haskell code just as Emacs does with most languages. 
 </p>
-<p>   
-   To configure this, add the following lines to your emacs
-   configuration file (<code>~/.emacs</code> or <code>~/.emacs.d/init.el</code>):
+<p>  
+  To configure this, add the following lines to your emacs
+  configuration file (<code>~/.emacs</code> or <code>~/.emacs.d/init.el</code>):
 </p>
 
 
@@ -245,16 +246,15 @@
 
 
 <p>
-   And you're done!
+  And you're done!
 </p>
 </div>
-</div>
 
 </div>
 
-<div id="outline-container-3" class="outline-2">
-<h2 id="sec-3">Using haskell-mode</h2>
-<div class="outline-text-2" id="text-3">
+<div id="outline-container-4" class="outline-2">
+<h2 id="sec-4"><span class="section-number-2">4</span> Using haskell-mode</h2>
+<div class="outline-text-2" id="text-4">
 
 <p>  Haskell-mode's most useful features are all passively enabled, and
   you should feel at home programming in Haskell with just the <code>TAB</code>
@@ -263,9 +263,9 @@
 
 </div>
 
-<div id="outline-container-3-1" class="outline-3">
-<h3 id="sec-3-1">The Haskell Interpreter <code>C-c C-l</code></h3>
-<div class="outline-text-3" id="text-3-1">
+<div id="outline-container-4-1" class="outline-3">
+<h3 id="sec-4-1"><span class="section-number-3"></span> The Haskell Interpreter <code>C-c C-l</code></h3>
+<div class="outline-text-3" id="text-4-1">
 
 <p>   Launch a Haskell interpreter that loads the current file you are
    editing with the shortcut <code>C-c C-l</code>. This is very useful for
@@ -276,9 +276,9 @@
 
 </div>
 
-<div id="outline-container-4" class="outline-2">
-<h2 id="sec-4">References</h2>
-<div class="outline-text-2" id="text-4">
+<div id="outline-container-5" class="outline-2">
+<h2 id="sec-5"><span class="section-number-2">5</span> References</h2>
+<div class="outline-text-2" id="text-5">
 
 <ul>
 <li>The Haskell Platform: <a href="http://www.haskell.org/platform/">http://www.haskell.org/platform/</a>
@@ -293,7 +293,7 @@
 </div>
 
 <div id="postamble">
-<p class="date">Date: 2012-10-18 17:51:46 EDT</p>
+<p class="date">Date: 2012-10-18 18:07:37 EDT</p>
 <p class="author">Author: Mishal Awadah</p>
 <p class="creator">Org version 7.8.11 with Emacs version 24</p>
 <a href="http://validator.w3.org/check?uri=referer">Validate XHTML 1.0</a>
