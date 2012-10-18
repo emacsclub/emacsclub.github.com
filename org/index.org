@@ -32,6 +32,7 @@ at the University of Pennsylvania, Dept. of Computer Science
   - [[file:emacs24.org][Set Up Prelude Packages]]
   - [[file:matlab.org][Matlab in Emacs]]
   - [[file:emerge.org][Git Merge Conflict Resolution with Emerge]]
+  - [[file:haskell.org][Haskell in Emacs]]
 
 * Favorites
 ** [[http://doxymacs.sourceforge.net/][Doxymacs]]
