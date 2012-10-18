@@ -4,6 +4,7 @@
    + [[file:index.org][Emacs Club]]
    + [[file:emerge.org][Emerge]]
    + [[file:flymake.org][Flymake Tutorial]]
+   + [[file:haskell.org][Getting Started with Haskell]]
    + [[file:matlab.org][Matlab Dev in Emacs]]
    + [[file:org_tutorial.org][Org-mode Tutorial / Cheat Sheet]]
    + [[file:basic_template.org][Title]]
