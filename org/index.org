@@ -22,7 +22,7 @@ at the University of Pennsylvania, Dept. of Computer Science
 
 * Links
  - [[file:meeting-notes/sitemap.org][Meeting Notes]]
- - [[https://github.com/emacsclub/emacsclub][Github Page]]
+ - [[https://github.com/emacsclub/emacsclub.github.com][Github Page]]
  - [[http://lists.seas.upenn.edu/mailman/listinfo/emacsclub][Add yourself to the listserve]]
 
 * References
