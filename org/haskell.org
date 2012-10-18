@@ -1,0 +1,83 @@
+#+TITLE:     Getting Started with Haskell
+#+AUTHOR:    Mishal Awadah
+#+DESCRIPTION: 
+#+KEYWORDS: haskell-mode haskell emacs major mode setup configuration init
+#+LANGUAGE:  en
+#+LINK_UP:   index.html
+#+LINK_HOME: index.html
+#+SETUPFILE: ../org-templates/level-0.org
+#+OPTIONS:   author:t email:nil toc:t f:nil
+#+INCLUDE: "../org-templates/analytics.org"
+
+* [[http://www.haskell.org/platform/][The Haskell Platform]]
+
+  Install the platform for your respective operating system [[http://www.haskell.org/platform/][here]].
+
+* Install haskell-mode
+
+  The haskell-mode package is a set of major modes for Emacs for
+  writing Haskell code and working with Haskell projects. Features
+  syntax highlighting, intelligent indentation, interaction with
+  inferior Haskell interpreter, code browsing, and Cabal project
+  integration. It support Hugs, GHCi, Cabal and hslint, hoogle,
+  cabal-dev, and other utilities.
+
+  Find out more about it here
+  http://www.haskell.org/haskellwiki/Haskell_mode_for_Emacs
+
+** Using the Emacs Package Manager
+   If you have Emacs 24, or have installed the Emacs package manager,
+   you can simply use that to get haskell-mode. This is the best way
+   to get haskell-mode, especially if you have semantic setup on your
+   Emacs installation, as you will get Haskell library auto-completion too.
+
+   #+begin_example
+   M-x package-install <RET> haskell-mode <RET>
+   #+end_example
+
+** Manually
+   If you don't have the package manager, you'll need to get
+   haskell-mode yourself and tell Emacs about it manually. 
+
+   Download haskell-mode from the [[https://github.com/haskell/haskell-mode][github source]] and place it in
+   your emacs configuration directory (default is ~/emacs.d/ but you
+   can put it anywhere really). You will reference this below.
+
+   Then, add the following line to your emacs configuration file, the
+   default is =~/.emacs=, or =~/.emacs.d/init.el= depending on your
+   setup. Here, I've placed the package under =~/emacs/plugins/=
+
+   #+begin_src elisp
+   (load "~/emacs/plugins/haskell-mode/haskell-site-file")
+   #+end_src
+
+** Configure Haskell-Mode
+   Like many major modes in Emacs, Haskell-mode is extremely
+   configurable. Look at the details of what you can configure at the
+   full how-to [[http://www.haskell.org/haskellwiki/Emacs/Installing_haskell-mode][here]].
+
+   The recommended configuration is to enable doc-mode and
+   indentation. This will give you access to built-in documentation of
+   Haskell library functions, as well as smart indentation of your
+   Haskell code just as Emacs does with most languages. 
+   
+   To configure this, add the following lines to your emacs
+   configuration file (=~/.emacs= or =~/.emacs.d/init.el=):
+
+   #+begin_src elisp
+   (add-hook 'haskell-mode-hook 'turn-on-haskell-doc-mode)
+   (add-hook 'haskell-mode-hook 'turn-on-haskell-indentation)
+   #+end_src
+
+   And you're done!
+
+* Using haskell-mode
+  Haskell-mode's most useful features are all passively enabled, and
+  you should feel at home programming in Haskell with just the =TAB=
+  key. 
+
+** The Haskell Interpreter =C-c C-l=
+   Launch a Haskell interpreter that loads the current file you are
+   editing with the shortcut =C-c C-l=. This is very useful for
+   dynamically interacting with your code within Emacs. 
+
