@@ -1,4 +1,9 @@
-Meeting Notes 10-16-12
+#+SETUPFILE: ../../org-templates/meeting-notes.org
+#+INCLUDE:   "../../org-templates/analytics.org"
+#+AUTHOR: Andrew Braunstein
+#+OPTIONS num:nil
+
+Meeting Notes 2012-10-16
 
 * Perry Metzger
   - We should get him to talk
@@ -33,4 +38,4 @@ Meeting Notes 10-16-12
 * Hongling shows off auctex
   - It's awesome
 
-* Mish shows of yasnippets
+* Mish shows off yasnippets
