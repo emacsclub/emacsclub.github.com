@@ -1,0 +1,36 @@
+Meeting Notes 10-16-12
+
+* Perry Metzger
+  - We should get him to talk
+
+* Elisp
+  - elisp hw from ocaml
+  - maybe not the best idea
+    - Antony "shit may hit the fan"
+
+* No meeting next week (fall break)
+
+* Andrew will get food for the week after
+
+* More pages on the website for specific courses at penn
+  - 240 "c"
+  - Machine Learning "matlab"
+  - DP site will link
+  - 120 and higher
+
+* o-blog
+  - Org mode -> blog
+  - Try this out for the emacs club website
+  - Bootstrap support
+  - More robust than simple org mode export
+
+* exec-path-from-shell
+  - Make sure your emacs path is your OSX path
+  - package-install is broken, need to list packages to install
+
+* Mish guarantees a good time
+
+* Hongling shows off auctex
+  - It's awesome
+
+* Mish shows of yasnippets

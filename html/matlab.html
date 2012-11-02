@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
                "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml"
-lang="en" xml:lang="en">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
 <title>Matlab Dev in Emacs</title>
 <meta http-equiv="Content-Type" content="text/html;charset=iso-8859-1"/>
+<meta name="title" content="Matlab Dev in Emacs"/>
 <meta name="generator" content="Org-mode"/>
-<meta name="generated" content="2012-10-02 19:11:01 EDT"/>
+<meta name="generated" content="2012-11-02 15:53:56 EDT"/>
 <meta name="author" content="Mishal Awadah"/>
 <meta name="description" content="Setup matlab in emacs."/>
 <meta name="keywords" content="matlab emacs matlab-mode mode shell path"/>
@@ -44,6 +44,12 @@ lang="en" xml:lang="en">
   dt { font-weight: bold; }
   div.figure { padding: 0.5em; }
   div.figure p { text-align: center; }
+  div.inlinetask {
+    padding:10px;
+    border:2px solid gray;
+    margin:10px;
+    background: #ffffcc;
+  }
   textarea { overflow-x: auto; }
   .linenr { font-size:smaller }
   .code-highlighted {background-color:#ffff00;}
@@ -80,13 +86,17 @@ lang="en" xml:lang="en">
 
 </head>
 <body>
-<div id="content">
 <div id="org-div-home-and-up" style="text-align:right;font-size:70%;white-space:nowrap;">
  <a accesskey="h" href="index.html"> UP </a>
  |
  <a accesskey="H" href="index.html"> HOME </a>
 </div>
 
+<div id="preamble">
+
+</div>
+
+<div id="content">
 <h1 class="title">Matlab Dev in Emacs</h1>
 
 
@@ -111,57 +121,55 @@ lang="en" xml:lang="en">
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#sec-1">Intro </a></li>
-<li><a href="#sec-2">The Setup </a>
+<li><a href="#sec-1">Intro</a></li>
+<li><a href="#sec-2">The Setup</a>
 <ul>
-<li><a href="#sec-2_1">Requirements </a></li>
-<li><a href="#sec-2_2">Matlab-Mode </a></li>
+<li><a href="#sec-2-1">Requirements</a></li>
+<li><a href="#sec-2-2">Matlab-Mode</a></li>
 </ul>
 </li>
-<li><a href="#sec-3">Commands </a>
+<li><a href="#sec-3">Commands</a>
 <ul>
-<li><a href="#sec-3_1"><code>M-x matlab-shell</code> </a></li>
-<li><a href="#sec-3_2"><code>C-M-&lt;RET&gt;</code> </a></li>
+<li><a href="#sec-3-1"><code>M-x matlab-shell</code></a></li>
+<li><a href="#sec-3-2"><code>C-M-&lt;RET&gt;</code></a></li>
 </ul>
 </li>
-<li><a href="#sec-4">References </a></li>
+<li><a href="#sec-4">References</a></li>
 </ul>
 </div>
 </div>
 
 <div id="outline-container-1" class="outline-2">
-<h2 id="sec-1">Intro </h2>
+<h2 id="sec-1">Intro</h2>
 <div class="outline-text-2" id="text-1">
 
-<p>This will show you how to set up a Matlab environment in
-Emacs. You'll have the matlab shell, some semblance of intelligent
-auto-completion, and full editor support for the language and then
-some. 
+<p>  This will show you how to set up a Matlab environment in
+  Emacs. You'll have the matlab shell, some semblance of intelligent
+  auto-completion, and full editor support for the language and then
+  some. 
 </p>
 </div>
 
 </div>
 
 <div id="outline-container-2" class="outline-2">
-<h2 id="sec-2">The Setup </h2>
+<h2 id="sec-2">The Setup</h2>
 <div class="outline-text-2" id="text-2">
 
 
 
 </div>
 
-<div id="outline-container-2_1" class="outline-3">
-<h3 id="sec-2_1">Requirements </h3>
-<div class="outline-text-3" id="text-2_1">
+<div id="outline-container-2-1" class="outline-3">
+<h3 id="sec-2-1">Requirements</h3>
+<div class="outline-text-3" id="text-2-1">
 
 
 <dl>
-<dt>Cedet</dt><dd>
-Code-analyzer package.
+<dt>Cedet</dt><dd>Code-analyzer package.
 </dd>
-<dt>Auto-Complete</dt><dd>
-Code completion support. Not strictly required,
-but a nice bonus.
+<dt>Auto-Complete</dt><dd>Code completion support. Not strictly required,
+                       but a nice bonus.
 </dd>
 </dl>
 
@@ -170,17 +178,16 @@ but a nice bonus.
 
 </div>
 
-<div id="outline-container-2_2" class="outline-3">
-<h3 id="sec-2_2">Matlab-Mode </h3>
-<div class="outline-text-3" id="text-2_2">
+<div id="outline-container-2-2" class="outline-3">
+<h3 id="sec-2-2">Matlab-Mode</h3>
+<div class="outline-text-3" id="text-2-2">
 
 
 <p>
-For the full gist, go to <a href="http://blogs.mathworks.com/community/2009/09/14/matlab-emacs-integration-is-back/">Matlab-Emacs</a>. 
+   For the full gist, go to <a href="http://blogs.mathworks.com/community/2009/09/14/matlab-emacs-integration-is-back/">Matlab-Emacs</a>. 
 </p>
 <ol>
-<li>
-Download <a href="http://sourceforge.net/projects/matlab-emacs/">matlab-mode</a> by clicking the download tarball link.
+<li>Download <a href="http://sourceforge.net/projects/matlab-emacs/">matlab-mode</a> by clicking the download tarball link.
 
 
 
@@ -189,11 +196,9 @@ tar -zxvf matlab-emacs.tar.gz
 </pre>
 
 
-
 </li>
-<li>
-Place it in a plugins folder of your choice, if using <a href="#emacs24.org">Prelude</a> a
-simple way is: 
+<li>Place it in a plugins folder of your choice, if using <a href="#emacs24.org">Prelude</a> a
+      simple way is: 
 
 
 
@@ -203,11 +208,9 @@ cp -r ~/Downloads/matlab-emacs ~/.emacs.d/personal/plugins/
 </pre>
 
 
-
 </li>
-<li>
-Add the appropriate glue to your <code>init.el</code>. If using <a href="#emacs24.org">Prelude</a>
-this is in ~~/.emacs.d/personal/~.
+<li>Add the appropriate glue to your <code>init.el</code>. If using <a href="#emacs24.org">Prelude</a>
+      this is in ~~/.emacs.d/personal/~.
 
 
 
@@ -225,15 +228,13 @@ this is in ~~/.emacs.d/personal/~.
 </pre>
 
 
-
 </li>
-<li>
-Configure your path correctly. 
+<li>Configure your path correctly. 
 
 <p>
-The Matlab binary is installed somewhere else than <code>/bin</code> likely,
-so you'll have to let Emacs have access to it. This is what you
-would do if you installed Matlab on Mac OS X.
+      The Matlab binary is installed somewhere else than <code>/bin</code> likely,
+      so you'll have to let Emacs have access to it. This is what you
+      would do if you installed Matlab on Mac OS X.
 </p>
 
 
@@ -243,18 +244,16 @@ sudo ln -s /Applications/MATLAB_R2012a_Student.app/bin/matlab /usr/bin/matlab
 </pre>
 
 
-
 </li>
-<li>
-Configure Matlab's path.
+<li>Configure Matlab's path.
 
 <p>
-You might need to let Matlab know where to look for your files,
-which is easily done through the Matlab IDE (don't worry never
-again). This is so you can use the Matlab shell in Emacs.
+      You might need to let Matlab know where to look for your files,
+      which is easily done through the Matlab IDE (don't worry never
+      again). This is so you can use the Matlab shell in Emacs.
 </p>
 <p>
-To configure your Matlab path, go to
+      To configure your Matlab path, go to
 </p>
 <blockquote>
 
@@ -264,16 +263,15 @@ To configure your Matlab path, go to
 
 
 <p>
-From there, use <b>Add Folder&hellip;</b> to add your main development folder
-that stores all your Matlab Projects. If you have lots and lots
-of projects, this will not scale well and you will need to find
-out how to dynamically load directories into Matlab. If you're
-in Machine Learning, just add your whole 520 folder, or add your projects
-one at a time to be more careful about namespace issues.
+      From there, use <b>Add Folder&hellip;</b> to add your main development folder
+      that stores all your Matlab Projects. If you have lots and lots
+      of projects, this will not scale well and you will need to find
+      out how to dynamically load directories into Matlab. If you're
+      in Machine Learning, just add your whole 520 folder, or add your projects
+      one at a time to be more careful about namespace issues.
 </p>
 </li>
-<li>
-Restart emacs. You should be good to go.
+<li>Restart emacs. You should be good to go.
 </li>
 </ol>
 
@@ -284,38 +282,38 @@ Restart emacs. You should be good to go.
 </div>
 
 <div id="outline-container-3" class="outline-2">
-<h2 id="sec-3">Commands </h2>
+<h2 id="sec-3">Commands</h2>
 <div class="outline-text-2" id="text-3">
 
 
 
 </div>
 
-<div id="outline-container-3_1" class="outline-3">
-<h3 id="sec-3_1"><code>M-x matlab-shell</code> </h3>
-<div class="outline-text-3" id="text-3_1">
+<div id="outline-container-3-1" class="outline-3">
+<h3 id="sec-3-1"><code>M-x matlab-shell</code></h3>
+<div class="outline-text-3" id="text-3-1">
 
 
-<p>
-Starts the interactive matlab shell. This
-gives you the exact same power you had from the Matlab shell in
-the Matlab IDE. Things like figures, docs, that need their own
-window should pop out fine from the Matlab process which is running
-alongside Emacs.
+<p>   
+   Starts the interactive matlab shell. This
+   gives you the exact same power you had from the Matlab shell in
+   the Matlab IDE. Things like figures, docs, that need their own
+   window should pop out fine from the Matlab process which is running
+   alongside Emacs.
 </p>
 </div>
 
 </div>
 
-<div id="outline-container-3_2" class="outline-3">
-<h3 id="sec-3_2"><code>C-M-&lt;RET&gt;</code> </h3>
-<div class="outline-text-3" id="text-3_2">
+<div id="outline-container-3-2" class="outline-3">
+<h3 id="sec-3-2"><code>C-M-&lt;RET&gt;</code></h3>
+<div class="outline-text-3" id="text-3-2">
 
 
-<p>
-Evaluates the Matlab cell around point. The downside to this over a
-file/script though, is you get no debugging support if something goes
-wrong in the cell.
+<p>   
+   Evaluates the Matlab cell around point. The downside to this over a
+   file/script though, is you get no debugging support if something goes
+   wrong in the cell.
 </p>
 
 </div>
@@ -324,32 +322,31 @@ wrong in the cell.
 </div>
 
 <div id="outline-container-4" class="outline-2">
-<h2 id="sec-4">References </h2>
+<h2 id="sec-4">References</h2>
 <div class="outline-text-2" id="text-4">
 
 
 <ul>
 <li>
-
 <p>
-<a href="http://blogs.mathworks.com/community/2009/09/14/matlab-emacs-integration-is-back/">http://blogs.mathworks.com/community/2009/09/14/matlab-emacs-integration-is-back/</a>
+     <a href="http://blogs.mathworks.com/community/2009/09/14/matlab-emacs-integration-is-back/">http://blogs.mathworks.com/community/2009/09/14/matlab-emacs-integration-is-back/</a>
 </p></li>
-<li>
-<a href="http://matlab-emacs.sourceforge.net/faq.shtml">http://matlab-emacs.sourceforge.net/faq.shtml</a>
+<li><a href="http://matlab-emacs.sourceforge.net/faq.shtml">http://matlab-emacs.sourceforge.net/faq.shtml</a>
 </li>
-<li>
-<a href="http://sourceforge.net/projects/matlab-emacs/">http://sourceforge.net/projects/matlab-emacs/</a>
+<li><a href="http://sourceforge.net/projects/matlab-emacs/">http://sourceforge.net/projects/matlab-emacs/</a>
 </li>
 </ul>
 
 </div>
 </div>
-<div id="postamble">
-<p class="author"> Author: Mishal Awadah
-</p>
-<p class="date"> Date: 2012-10-02 19:11:01 EDT</p>
-<p class="creator">HTML generated by org-mode 7.3 in emacs 24</p>
 </div>
+
+<div id="postamble">
+<p class="date">Date: 2012-11-02 15:53:56 EDT</p>
+<p class="author">Author: Mishal Awadah</p>
+<p class="creator">Org version 7.8.11 with Emacs version 24</p>
+<a href="http://validator.w3.org/check?uri=referer">Validate XHTML 1.0</a>
+
 </div>
 </body>
 </html>

@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
                "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml"
-lang="en" xml:lang="en">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
 <title>An Introduction to Emacs</title>
 <meta http-equiv="Content-Type" content="text/html;charset=iso-8859-1"/>
+<meta name="title" content="An Introduction to Emacs"/>
 <meta name="generator" content="Org-mode"/>
-<meta name="generated" content="2012-10-02 19:11:02 EDT"/>
+<meta name="generated" content="2012-11-02 15:53:57 EDT"/>
 <meta name="author" content="Mishal Awadah"/>
 <meta name="description" content="A brief but thorough introduction to Emacs for enthusiastic learners."/>
 <meta name="keywords" content="emacs tutorial introduction "/>
@@ -44,6 +44,12 @@ lang="en" xml:lang="en">
   dt { font-weight: bold; }
   div.figure { padding: 0.5em; }
   div.figure p { text-align: center; }
+  div.inlinetask {
+    padding:10px;
+    border:2px solid gray;
+    margin:10px;
+    background: #ffffcc;
+  }
   textarea { overflow-x: auto; }
   .linenr { font-size:smaller }
   .code-highlighted {background-color:#ffff00;}
@@ -80,13 +86,17 @@ lang="en" xml:lang="en">
 
 </head>
 <body>
-<div id="content">
 <div id="org-div-home-and-up" style="text-align:right;font-size:70%;white-space:nowrap;">
  <a accesskey="h" href="index.html"> UP </a>
  |
  <a accesskey="H" href="index.html"> HOME </a>
 </div>
 
+<div id="preamble">
+
+</div>
+
+<div id="content">
 <h1 class="title">An Introduction to Emacs</h1>
 
 
@@ -118,52 +128,52 @@ Prima Tech 2000.
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#sec-1">Why choose emacs </a></li>
-<li><a href="#sec-2">Emacs Conventions </a>
+<li><a href="#sec-1">Why choose emacs</a></li>
+<li><a href="#sec-2">Emacs Conventions</a>
 <ul>
-<li><a href="#sec-2_1">Control combinations </a></li>
-<li><a href="#sec-2_2">Meta combinations </a></li>
-<li><a href="#sec-2_3">Help and Documentation </a>
+<li><a href="#sec-2-1">Control combinations</a></li>
+<li><a href="#sec-2-2">Meta combinations</a></li>
+<li><a href="#sec-2-3">Help and Documentation</a>
 <ul>
-<li><a href="#sec-2_3_1">Apropos Help (<code>C-h a</code>) </a></li>
-<li><a href="#sec-2_3_2">Refcards </a></li>
+<li><a href="#sec-2-3-1">Apropos Help (<code>C-h a</code>)</a></li>
+<li><a href="#sec-2-3-2">Refcards</a></li>
 </ul></li>
 </ul>
 </li>
-<li><a href="#sec-3">Editing </a>
+<li><a href="#sec-3">Editing</a>
 <ul>
-<li><a href="#sec-3_1">Movement Commands </a></li>
-<li><a href="#sec-3_2">Deleting text </a></li>
-<li><a href="#sec-3_3">Killing and Yanking </a>
+<li><a href="#sec-3-1">Movement Commands</a></li>
+<li><a href="#sec-3-2">Deleting text</a></li>
+<li><a href="#sec-3-3">Killing and Yanking</a>
 <ul>
-<li><a href="#sec-3_3_1">Marking regions </a></li>
+<li><a href="#sec-3-3-1">Marking regions</a></li>
 </ul>
 </li>
-<li><a href="#sec-3_4">Undoing </a></li>
-<li><a href="#sec-3_5">Files, Buffers, and Windows </a>
+<li><a href="#sec-3-4">Undoing</a></li>
+<li><a href="#sec-3-5">Files, Buffers, and Windows</a>
 <ul>
-<li><a href="#sec-3_5_1">Files </a></li>
-<li><a href="#sec-3_5_2">Buffer: </a></li>
-<li><a href="#sec-3_5_3">Window </a></li>
-<li><a href="#sec-3_5_4">Frame </a></li>
+<li><a href="#sec-3-5-1">Files</a></li>
+<li><a href="#sec-3-5-2">Buffer:</a></li>
+<li><a href="#sec-3-5-3">Window</a></li>
+<li><a href="#sec-3-5-4">Frame</a></li>
 </ul>
 </li>
-<li><a href="#sec-3_6">Working with Line Numbers </a></li>
-<li><a href="#sec-3_7">Major Modes &amp; Minor Modes </a></li>
+<li><a href="#sec-3-6">Working with Line Numbers</a></li>
+<li><a href="#sec-3-7">Major Modes &amp; Minor Modes</a></li>
 </ul>
 </li>
-<li><a href="#sec-4">Advanced Editing </a>
+<li><a href="#sec-4">Advanced Editing</a>
 <ul>
-<li><a href="#sec-4_1">Search and Replace </a></li>
-<li><a href="#sec-4_2">Keyboard Macros </a></li>
-<li><a href="#sec-4_3">Spell Checking </a></li>
+<li><a href="#sec-4-1">Search and Replace</a></li>
+<li><a href="#sec-4-2">Keyboard Macros</a></li>
+<li><a href="#sec-4-3">Spell Checking</a></li>
 </ul>
 </li>
-<li><a href="#sec-5">Emacs and Unix </a>
+<li><a href="#sec-5">Emacs and Unix</a>
 <ul>
-<li><a href="#sec-5_1">Shell </a></li>
-<li><a href="#sec-5_2">Managing Files and Dirs with Dired </a></li>
-<li><a href="#sec-5_3">File backups </a></li>
+<li><a href="#sec-5-1">Shell</a></li>
+<li><a href="#sec-5-2">Managing Files and Dirs with Dired</a></li>
+<li><a href="#sec-5-3">File backups</a></li>
 </ul>
 </li>
 </ul>
@@ -171,56 +181,50 @@ Prima Tech 2000.
 </div>
 
 <div id="outline-container-1" class="outline-2">
-<h2 id="sec-1">Why choose emacs </h2>
+<h2 id="sec-1">Why choose emacs</h2>
 <div class="outline-text-2" id="text-1">
 
 
 <ul>
-<li>
-Emacs is good for powerful text editing
+<li>Emacs is good for powerful text editing
 </li>
-<li>
-Know which editor is good for the job. Emacs might not always be
-the best choice.
+<li>Know which editor is good for the job. Emacs might not always be
+    the best choice.
 </li>
-<li>
-Emacs can radically change the way you do certain jobs. You do not
-yet realize how, because you have most likely adapted to certain
-inefficiencies in your current workflow. 
+<li>Emacs can radically change the way you do certain jobs. You do not
+    yet realize how, because you have most likely adapted to certain
+    inefficiencies in your current workflow. 
 </li>
-<li>
-Emacs requires time, but, if you are willing, you will find that
-it profoundly improves the way you do some of your work. 
-
+<li>Emacs requires time, but, if you are willing, you will find that
+    it profoundly improves the way you do some of your work. 
 </li>
 </ul>
+
+
 
 </div>
 
 </div>
 
 <div id="outline-container-2" class="outline-2">
-<h2 id="sec-2">Emacs Conventions </h2>
+<h2 id="sec-2">Emacs Conventions</h2>
 <div class="outline-text-2" id="text-2">
 
 
 <ul>
-<li>
-Emacs assumes you are smart. You will have to learn things.
+<li>Emacs assumes you are smart. You will have to learn things.
 </li>
-<li>
-Is built to run at 100% within terminal. Do not assume any GUI for
-emacs when you learn it.
+<li>Is built to run at 100% within terminal. Do not assume any GUI for
+    emacs when you learn it.
 <ul>
-<li>
-Example of -nw vs. GUI.
+<li>Example of -nw vs. GUI.
 </li>
 </ul>
+
 </li>
-<li>
-Keyboard commands. Most have reasonable mnemonics. The benefit is
-that your hands will never have to leave the keyboard to perform
-extremely complex commands. 
+<li>Keyboard commands. Most have reasonable mnemonics. The benefit is
+    that your hands will never have to leave the keyboard to perform
+    extremely complex commands. 
 </li>
 </ul>
 
@@ -228,28 +232,24 @@ extremely complex commands.
 
 </div>
 
-<div id="outline-container-2_1" class="outline-3">
-<h3 id="sec-2_1">Control combinations </h3>
-<div class="outline-text-3" id="text-2_1">
+<div id="outline-container-2-1" class="outline-3">
+<h3 id="sec-2-1">Control combinations</h3>
+<div class="outline-text-3" id="text-2-1">
 
 
 <ul>
-<li>
-A combination of the CTRL key and some other key. 
+<li>A combination of the CTRL key and some other key. 
 </li>
-<li>
-Remember C-g
+<li>Remember C-g
 </li>
-<li>
-Multi-key sequences
+<li>Multi-key sequences
 <ul>
-<li>
-C-x C-f example
+<li>C-x C-f example
 </li>
-<li>
-All file mgmt commands start with C-x
+<li>All file mgmt commands start with C-x
 </li>
 </ul>
+
 </li>
 </ul>
 
@@ -258,35 +258,31 @@ All file mgmt commands start with C-x
 
 </div>
 
-<div id="outline-container-2_2" class="outline-3">
-<h3 id="sec-2_2">Meta combinations </h3>
-<div class="outline-text-3" id="text-2_2">
+<div id="outline-container-2-2" class="outline-3">
+<h3 id="sec-2-2">Meta combinations</h3>
+<div class="outline-text-3" id="text-2-2">
 
 
 <ul>
-<li>
-Control combos are not enough to encompass all of emacs' commands.
+<li>Control combos are not enough to encompass all of emacs' commands.
 </li>
-<li>
-Meta on various systems: I know how mac works, figure out your OS
-meta key. 
+<li>Meta on various systems: I know how mac works, figure out your OS
+     meta key. 
 <ul>
-<li>
-ESC works as Meta on any system. You don't hold it down
-though. 
+<li>ESC works as Meta on any system. You don't hold it down
+         though. 
 </li>
 </ul>
+
 </li>
-<li>
-Meta as amplifier of CTRL. 
+<li>Meta as amplifier of CTRL. 
 <ul>
-<li>
-Example, C-f, M-f.
+<li>Example, C-f, M-f.
 </li>
 </ul>
+
 </li>
-<li>
-M-x and command names. 
+<li>M-x and command names. 
 </li>
 </ul>
 
@@ -295,30 +291,26 @@ M-x and command names.
 
 </div>
 
-<div id="outline-container-2_3" class="outline-3">
-<h3 id="sec-2_3">Help and Documentation </h3>
-<div class="outline-text-3" id="text-2_3">
+<div id="outline-container-2-3" class="outline-3">
+<h3 id="sec-2-3">Help and Documentation</h3>
+<div class="outline-text-3" id="text-2-3">
 
 
 <ul>
-<li>
-Before going online, check emacs for help. It is always better. 
+<li>Before going online, check emacs for help. It is always better. 
 </li>
-<li>
-If you don't know how to ask for help, use C-h ? or C-h C-h
+<li>If you don't know how to ask for help, use C-h ? or C-h C-h
 
 <ul>
-<li>
-<code>C-h c</code> Defines a key combination (eg <code>C-x C-f</code>)
+<li><code>C-h c</code> Defines a key combination (eg <code>C-x C-f</code>)
 </li>
-<li>
-<code>C-h i</code> Opens the info pages (Fantastic source for Emacs and
-Elisp documentation)
+<li><code>C-h i</code> Opens the info pages (Fantastic source for Emacs and
+       Elisp documentation)
 </li>
-<li>
-<code>C-h t</code> Opens the tutorial
+<li><code>C-h t</code> Opens the tutorial
 </li>
 </ul>
+
 </li>
 </ul>
 
@@ -326,35 +318,35 @@ Elisp documentation)
 
 </div>
 
-<div id="outline-container-2_3_1" class="outline-4">
-<h4 id="sec-2_3_1">Apropos Help (<code>C-h a</code>) </h4>
-<div class="outline-text-4" id="text-2_3_1">
+<div id="outline-container-2-3-1" class="outline-4">
+<h4 id="sec-2-3-1">Apropos Help (<code>C-h a</code>)</h4>
+<div class="outline-text-4" id="text-2-3-1">
 
 
-<p>
-Similar to searching an index. Provides info on any matching
-command. 
+<p>    
+    Similar to searching an index. Provides info on any matching
+    command. 
 </p>
 </div>
 
 </div>
 
-<div id="outline-container-2_3_2" class="outline-4">
-<h4 id="sec-2_3_2">Refcards </h4>
-<div class="outline-text-4" id="text-2_3_2">
+<div id="outline-container-2-3-2" class="outline-4">
+<h4 id="sec-2-3-2">Refcards</h4>
+<div class="outline-text-4" id="text-2-3-2">
 
 
 <p>
-All emacs installations come with refcards for your
-convenience. These are pdfs with a list of common commands for
-certain modes in emacs. In my Mac installation of emacs, I can
-find these refcards in 
+    All emacs installations come with refcards for your
+    convenience. These are pdfs with a list of common commands for
+    certain modes in emacs. In my Mac installation of emacs, I can
+    find these refcards in 
 </p>
-<p>
-<code>/Applications/Emacs.app/Contents/Resources/etc/refcards</code>
+<p>    
+    <code>/Applications/Emacs.app/Contents/Resources/etc/refcards</code>
 </p>
-<p>
-They are likely in a similar location in your installation. 
+<p>    
+    They are likely in a similar location in your installation. 
 </p>
 </div>
 </div>
@@ -363,35 +355,29 @@ They are likely in a similar location in your installation.
 </div>
 
 <div id="outline-container-3" class="outline-2">
-<h2 id="sec-3">Editing </h2>
+<h2 id="sec-3">Editing</h2>
 <div class="outline-text-2" id="text-3">
 
 
 </div>
 
-<div id="outline-container-3_1" class="outline-3">
-<h3 id="sec-3_1">Movement Commands </h3>
-<div class="outline-text-3" id="text-3_1">
+<div id="outline-container-3-1" class="outline-3">
+<h3 id="sec-3-1">Movement Commands</h3>
+<div class="outline-text-3" id="text-3-1">
 
 
 <ul>
-<li>
-<code>C-f</code> <code>C-b</code> <code>C-p</code> <code>C-n</code> Move Forward, Backward, Previous-line, Next-line
+<li><code>C-f</code> <code>C-b</code> <code>C-p</code> <code>C-n</code> Move Forward, Backward, Previous-line, Next-line
 </li>
-<li>
-<code>M-f</code> <code>M-b</code> Move Forward by word, Backward by word
+<li><code>M-f</code> <code>M-b</code> Move Forward by word, Backward by word
 </li>
-<li>
-<code>C-v</code> <code>M-v</code> Scroll Vertically down, Scroll Vertically up
+<li><code>C-v</code> <code>M-v</code> Scroll Vertically down, Scroll Vertically up
 </li>
-<li>
-<code>C-a</code> <code>C-e</code> Go to beginning of line, end of line.
+<li><code>C-a</code> <code>C-e</code> Go to beginning of line, end of line.
 </li>
-<li>
-<code>M-&lt;</code> <code>M-&gt;</code> Go to beginning of buffer, end of buffer.
+<li><code>M-&lt;</code> <code>M-&gt;</code> Go to beginning of buffer, end of buffer.
 </li>
-<li>
-<code>C-l</code> Center the cursor
+<li><code>C-l</code> Center the cursor
 </li>
 </ul>
 
@@ -400,23 +386,19 @@ They are likely in a similar location in your installation.
 
 </div>
 
-<div id="outline-container-3_2" class="outline-3">
-<h3 id="sec-3_2">Deleting text </h3>
-<div class="outline-text-3" id="text-3_2">
+<div id="outline-container-3-2" class="outline-3">
+<h3 id="sec-3-2">Deleting text</h3>
+<div class="outline-text-3" id="text-3-2">
 
 
 <ul>
-<li>
-<code>C-d</code> Delete character to the front of point.
+<li><code>C-d</code> Delete character to the front of point.
 </li>
-<li>
-<code>M-d</code> Delete word to the front of point.
+<li><code>M-d</code> Delete word to the front of point.
 </li>
-<li>
-<code>&lt;DEL&gt;</code> Delete character to the back of point (normal).
+<li><code>&lt;DEL&gt;</code> Delete character to the back of point (normal).
 </li>
-<li>
-<code>M-&lt;DEL&gt;</code> Delete word to the back of point.
+<li><code>M-&lt;DEL&gt;</code> Delete word to the back of point.
 </li>
 </ul>
 
@@ -425,25 +407,22 @@ They are likely in a similar location in your installation.
 
 </div>
 
-<div id="outline-container-3_3" class="outline-3">
-<h3 id="sec-3_3">Killing and Yanking </h3>
-<div class="outline-text-3" id="text-3_3">
+<div id="outline-container-3-3" class="outline-3">
+<h3 id="sec-3-3">Killing and Yanking</h3>
+<div class="outline-text-3" id="text-3-3">
 
-<p>Copy/paste doesn't work the exact same way in Emacs as it does in
-most editors. At first this might be confusing, but later you will
-begin to see the advantages of doing it this way.
+<p>   Copy/paste doesn't work the exact same way in Emacs as it does in
+   most editors. At first this might be confusing, but later you will
+   begin to see the advantages of doing it this way.
 </p>
 <ul>
-<li>
-<code>C-k</code> Kill the line after cursor.
+<li><code>C-k</code> Kill the line after cursor.
 </li>
-<li>
-<code>C-y</code> Yank the last thing that was killed.
+<li><code>C-y</code> Yank the last thing that was killed.
 </li>
-<li>
-<code>M-y</code> After using <code>C-y</code>, yanks the last thing that was killed
-before that, and so on through the kill ring. Cycles through each
-of the previous things that were killed one at a time.
+<li><code>M-y</code> After using <code>C-y</code>, yanks the last thing that was killed
+     before that, and so on through the kill ring. Cycles through each
+     of the previous things that were killed one at a time.
 </li>
 </ul>
 
@@ -451,20 +430,18 @@ of the previous things that were killed one at a time.
 
 </div>
 
-<div id="outline-container-3_3_1" class="outline-4">
-<h4 id="sec-3_3_1">Marking regions </h4>
-<div class="outline-text-4" id="text-3_3_1">
+<div id="outline-container-3-3-1" class="outline-4">
+<h4 id="sec-3-3-1">Marking regions</h4>
+<div class="outline-text-4" id="text-3-3-1">
 
 
 <ul>
-<li>
-<code>C-SPACE</code> Set/unset the mark. After the first <code>C-&lt;SPACE&gt;</code>, move
-the cursor to where you want to highlight the appropriate region,
-then use one of the kill commands below on this region.
+<li><code>C-SPACE</code> Set/unset the mark. After the first <code>C-&lt;SPACE&gt;</code>, move
+     the cursor to where you want to highlight the appropriate region,
+     then use one of the kill commands below on this region.
 </li>
-<li>
-<code>C-w</code> <code>M-w</code> Kill the current region, "copy" the current region
-into the kill ring.
+<li><code>C-w</code> <code>M-w</code> Kill the current region, "copy" the current region
+     into the kill ring.
 </li>
 </ul>
 
@@ -474,14 +451,13 @@ into the kill ring.
 
 </div>
 
-<div id="outline-container-3_4" class="outline-3">
-<h3 id="sec-3_4">Undoing </h3>
-<div class="outline-text-3" id="text-3_4">
+<div id="outline-container-3-4" class="outline-3">
+<h3 id="sec-3-4">Undoing</h3>
+<div class="outline-text-3" id="text-3-4">
 
 <ul>
-<li>
-<code>C-_</code> (That's Control + Underscore, so the keys are Ctrl, Shift,
-and Minus "-") Undo's the last action
+<li><code>C-_</code> (That's Control + Underscore, so the keys are Ctrl, Shift,
+     and Minus "-") Undo's the last action
 </li>
 </ul>
 
@@ -490,33 +466,29 @@ and Minus "-") Undo's the last action
 
 </div>
 
-<div id="outline-container-3_5" class="outline-3">
-<h3 id="sec-3_5">Files, Buffers, and Windows </h3>
-<div class="outline-text-3" id="text-3_5">
+<div id="outline-container-3-5" class="outline-3">
+<h3 id="sec-3-5">Files, Buffers, and Windows</h3>
+<div class="outline-text-3" id="text-3-5">
 
 
 
 </div>
 
-<div id="outline-container-3_5_1" class="outline-4">
-<h4 id="sec-3_5_1">Files </h4>
-<div class="outline-text-4" id="text-3_5_1">
+<div id="outline-container-3-5-1" class="outline-4">
+<h4 id="sec-3-5-1">Files</h4>
+<div class="outline-text-4" id="text-3-5-1">
 
-<p>Actual file on disk. This is only written to upon request. 
+<p>    Actual file on disk. This is only written to upon request. 
 </p>
 <ul>
-<li>
-<code>C-x C-f</code> Find file. Will look for a file if it exists,
-otherwise will create the file for you. 
+<li><code>C-x C-f</code> Find file. Will look for a file if it exists,
+      otherwise will create the file for you. 
 </li>
-<li>
-<code>C-x C-s</code> Save current buffer to file. 
+<li><code>C-x C-s</code> Save current buffer to file. 
 </li>
-<li>
-<code>C-x s</code> Prompt to save each buffer. 
+<li><code>C-x s</code> Prompt to save each buffer. 
 </li>
-<li>
-<code>C-x C-w</code> Write the current buffer to specified file (same as save-as).
+<li><code>C-x C-w</code> Write the current buffer to specified file (same as save-as).
 </li>
 </ul>
 
@@ -525,28 +497,24 @@ otherwise will create the file for you.
 
 </div>
 
-<div id="outline-container-3_5_2" class="outline-4">
-<h4 id="sec-3_5_2">Buffer: </h4>
-<div class="outline-text-4" id="text-3_5_2">
+<div id="outline-container-3-5-2" class="outline-4">
+<h4 id="sec-3-5-2">Buffer:</h4>
+<div class="outline-text-4" id="text-3-5-2">
 
-<p>A copy of the file being edited in emacs. The actual file
-does not change until you ask emacs to save the buffer. You can
-save a buffer to a different file with 
+<p>    A copy of the file being edited in emacs. The actual file
+    does not change until you ask emacs to save the buffer. You can
+    save a buffer to a different file with 
 </p>
 <ul>
-<li>
-<code>C-x b</code> Switch buffer to &hellip; (default is the last buffer you had
-open).
+<li><code>C-x b</code> Switch buffer to &hellip; (default is the last buffer you had
+      open).
 </li>
-<li>
-<code>C-x k</code> Kill the current buffer. 
+<li><code>C-x k</code> Kill the current buffer. 
 </li>
-<li>
-<code>C-x C-b</code> Show list of all current buffers. You can navigate
-this list to open, kill, save, etc.. on any or some buffers.
+<li><code>C-x C-b</code> Show list of all current buffers. You can navigate
+      this list to open, kill, save, etc.. on any or some buffers.
 </li>
-<li>
-<code>M-x kill-some-buffers</code> Prompts to kill each buffer currently open.
+<li><code>M-x kill-some-buffers</code> Prompts to kill each buffer currently open.
 </li>
 </ul>
 
@@ -555,43 +523,36 @@ this list to open, kill, save, etc.. on any or some buffers.
 
 </div>
 
-<div id="outline-container-3_5_3" class="outline-4">
-<h4 id="sec-3_5_3">Window </h4>
-<div class="outline-text-4" id="text-3_5_3">
+<div id="outline-container-3-5-3" class="outline-4">
+<h4 id="sec-3-5-3">Window</h4>
+<div class="outline-text-4" id="text-3-5-3">
 
-<p>Where buffers are shown. "Current window" refers to the one your
-cursor is currently in.
+<p>    Where buffers are shown. "Current window" refers to the one your
+    cursor is currently in.
 </p>
 <ul>
-<li>
-Working with multiple windows
+<li>Working with multiple windows
 </li>
-<li>
-The difference between windows and frames
+<li>The difference between windows and frames
 
 <ul>
-<li>
-<code>C-x 0</code> Delete the current window. 
+<li><code>C-x 0</code> Delete the current window. 
 </li>
-<li>
-<code>C-x 1</code> Make the current window the only visible one
-(full-screen it).
+<li><code>C-x 1</code> Make the current window the only visible one
+       (full-screen it).
 </li>
-<li>
-<code>C-x 2</code> Split the current window into two horizontally.
+<li><code>C-x 2</code> Split the current window into two horizontally.
 </li>
-<li>
-<code>C-x 3</code> Split the current window into two vertically.
+<li><code>C-x 3</code> Split the current window into two vertically.
 </li>
-<li>
-<code>C-x o</code> Move cursor to the next window (order is up to down,
-left to right).
+<li><code>C-x o</code> Move cursor to the next window (order is up to down,
+       left to right).
 </li>
-<li>
-<code>C-M-v</code> <code>scroll-other-window</code> Scroll the "other" window, really
-useful when you have only two windows.
+<li><code>C-M-v</code> <code>scroll-other-window</code> Scroll the "other" window, really
+       useful when you have only two windows.
 </li>
 </ul>
+
 </li>
 </ul>
 
@@ -600,12 +561,12 @@ useful when you have only two windows.
 
 </div>
 
-<div id="outline-container-3_5_4" class="outline-4">
-<h4 id="sec-3_5_4">Frame </h4>
-<div class="outline-text-4" id="text-3_5_4">
+<div id="outline-container-3-5-4" class="outline-4">
+<h4 id="sec-3-5-4">Frame</h4>
+<div class="outline-text-4" id="text-3-5-4">
 
-<p>Holds windows, only useful with Gris. Not much to be said. There
-is no concept of a frame when you use Emacs in terminal.
+<p>    Holds windows, only useful with Gris. Not much to be said. There
+    is no concept of a frame when you use Emacs in terminal.
 </p>
 
 </div>
@@ -613,38 +574,37 @@ is no concept of a frame when you use Emacs in terminal.
 
 </div>
 
-<div id="outline-container-3_6" class="outline-3">
-<h3 id="sec-3_6">Working with Line Numbers </h3>
-<div class="outline-text-3" id="text-3_6">
+<div id="outline-container-3-6" class="outline-3">
+<h3 id="sec-3-6">Working with Line Numbers</h3>
+<div class="outline-text-3" id="text-3-6">
 
 
 <ul>
-<li>
-<code>M-x goto-line</code> <code>M-g g</code> Go to the specified line number (it will
-prompt you for the line you want).
-
+<li><code>M-x goto-line</code> <code>M-g g</code> Go to the specified line number (it will
+     prompt you for the line you want).
 </li>
 </ul>
+
+
 
 </div>
 
 </div>
 
-<div id="outline-container-3_7" class="outline-3">
-<h3 id="sec-3_7">Major Modes &amp; Minor Modes </h3>
-<div class="outline-text-3" id="text-3_7">
+<div id="outline-container-3-7" class="outline-3">
+<h3 id="sec-3-7">Major Modes &amp; Minor Modes</h3>
+<div class="outline-text-3" id="text-3-7">
 
 
 <ul>
-<li>
-<code>C-h m</code> Display help on current modes
+<li><code>C-h m</code> Display help on current modes
 </li>
-<li>
-<code>C-c</code> The usual key combination prefix before minor-mode specific
-commands. For instance <code>C-c C-c</code> in C will comment a region.
-
+<li><code>C-c</code> The usual key combination prefix before minor-mode specific
+     commands. For instance <code>C-c C-c</code> in C will comment a region.
 </li>
 </ul>
+
+
 
 
 </div>
@@ -653,37 +613,31 @@ commands. For instance <code>C-c C-c</code> in C will comment a region.
 </div>
 
 <div id="outline-container-4" class="outline-2">
-<h2 id="sec-4">Advanced Editing </h2>
+<h2 id="sec-4">Advanced Editing</h2>
 <div class="outline-text-2" id="text-4">
 
 
 </div>
 
-<div id="outline-container-4_1" class="outline-3">
-<h3 id="sec-4_1">Search and Replace </h3>
-<div class="outline-text-3" id="text-4_1">
+<div id="outline-container-4-1" class="outline-3">
+<h3 id="sec-4-1">Search and Replace</h3>
+<div class="outline-text-3" id="text-4-1">
 
 
 <ul>
-<li>
-<code>C-s</code> Search for string forwards through current buffer. Each repeated
-execution of <code>C-s</code> will repeat that search for the same string
-until you press <code>&lt;RET&gt;</code> or <code>C-g</code>.
+<li><code>C-s</code> Search for string forwards through current buffer. Each repeated
+     execution of <code>C-s</code> will repeat that search for the same string
+     until you press <code>&lt;RET&gt;</code> or <code>C-g</code>.
 </li>
-<li>
-<code>C-r</code> Same as <code>C-s</code> but goes backwards through your buffer instead.
+<li><code>C-r</code> Same as <code>C-s</code> but goes backwards through your buffer instead.
 </li>
-<li>
-<code>M-x replace-string</code> 
+<li><code>M-x replace-string</code> 
 </li>
-<li>
-<code>M-x query-replace-string</code> 
+<li><code>M-x query-replace-string</code> 
 </li>
-<li>
-<code>M-x replace-regexp</code>
+<li><code>M-x replace-regexp</code>
 </li>
-<li>
-<code>M-x query-replace-regexp</code>   
+<li><code>M-x query-replace-regexp</code>   
 </li>
 </ul>
 
@@ -692,23 +646,20 @@ until you press <code>&lt;RET&gt;</code> or <code>C-g</code>.
 
 </div>
 
-<div id="outline-container-4_2" class="outline-3">
-<h3 id="sec-4_2">Keyboard Macros </h3>
-<div class="outline-text-3" id="text-4_2">
+<div id="outline-container-4-2" class="outline-3">
+<h3 id="sec-4-2">Keyboard Macros</h3>
+<div class="outline-text-3" id="text-4-2">
 
 
 <ul>
-<li>
-<code>C-x (</code> Start recording macro
+<li><code>C-x (</code> Start recording macro
 </li>
-<li>
-<code>C-x )</code> Stop recording macro
+<li><code>C-x )</code> Stop recording macro
 </li>
-<li>
-<code>C-x e</code> <code>M-x call-last-kbd-macro</code> Execute the last recorded macro.
-
+<li><code>C-x e</code> <code>M-x call-last-kbd-macro</code> Execute the last recorded macro.
 </li>
 </ul>
+
 
 <blockquote>
 
@@ -718,8 +669,7 @@ until you press <code>&lt;RET&gt;</code> or <code>C-g</code>.
 
 
 <ul>
-<li>
-Example of macro: Indent every other line by two spaces.
+<li>Example of macro: Indent every other line by two spaces.
 </li>
 </ul>
 
@@ -728,23 +678,22 @@ Example of macro: Indent every other line by two spaces.
 
 </div>
 
-<div id="outline-container-4_3" class="outline-3">
-<h3 id="sec-4_3">Spell Checking </h3>
-<div class="outline-text-3" id="text-4_3">
+<div id="outline-container-4-3" class="outline-3">
+<h3 id="sec-4-3">Spell Checking</h3>
+<div class="outline-text-3" id="text-4-3">
 
 
 <ul>
-<li>
-Installing ispell
+<li>Installing ispell
 </li>
-<li>
-Using ispell (M-x ispell-buffer)
+<li>Using ispell (M-x ispell-buffer)
 
 <p>
-flyspell-mode
-</p>
-</li>
+     flyspell-mode
+</p></li>
 </ul>
+
+
 
 </div>
 </div>
@@ -752,96 +701,93 @@ flyspell-mode
 </div>
 
 <div id="outline-container-5" class="outline-2">
-<h2 id="sec-5">Emacs and Unix </h2>
+<h2 id="sec-5">Emacs and Unix</h2>
 <div class="outline-text-2" id="text-5">
 
 
 </div>
 
-<div id="outline-container-5_1" class="outline-3">
-<h3 id="sec-5_1">Shell </h3>
-<div class="outline-text-3" id="text-5_1">
+<div id="outline-container-5-1" class="outline-3">
+<h3 id="sec-5-1">Shell</h3>
+<div class="outline-text-3" id="text-5-1">
 
 
 <p>
-M-x shell
+   M-x shell
 </p>
 </div>
 
 </div>
 
-<div id="outline-container-5_2" class="outline-3">
-<h3 id="sec-5_2">Managing Files and Dirs with Dired </h3>
-<div class="outline-text-3" id="text-5_2">
+<div id="outline-container-5-2" class="outline-3">
+<h3 id="sec-5-2">Managing Files and Dirs with Dired</h3>
+<div class="outline-text-3" id="text-5-2">
 
 
-<p>
-Directory Editor
+<p>   
+   Directory Editor
 </p>
 <p>
-C-x d, or C-x C-f on a directory
+   C-x d, or C-x C-f on a directory
 </p>
 <p>
-Most editing commands supported, such as C-s
+   Most editing commands supported, such as C-s
 </p>
 <p>
-Specific dired commands are a single key. 
+   Specific dired commands are a single key. 
 </p>
 <ul>
-<li>
-Rename file: R
+<li>Rename file: R
 </li>
-<li>
-Copy file: C
+<li>Copy file: C
 </li>
-<li>
-Set permission on file: M
+<li>Set permission on file: M
 </li>
-<li>
-Mark files for deletion: d
+<li>Mark files for deletion: d
 </li>
-<li>
-Delete marked files: x
+<li>Delete marked files: x
 </li>
-<li>
-Unmark files: u
-
+<li>Unmark files: u
 </li>
 </ul>
 
-<p>Remember C-h m. Let's try this now and see what else we can do. 
+
+<p>
+   Remember C-h m. Let's try this now and see what else we can do. 
 </p>
 </div>
 
 </div>
 
-<div id="outline-container-5_3" class="outline-3">
-<h3 id="sec-5_3">File backups </h3>
-<div class="outline-text-3" id="text-5_3">
+<div id="outline-container-5-3" class="outline-3">
+<h3 id="sec-5-3">File backups</h3>
+<div class="outline-text-3" id="text-5-3">
 
 
 <p>
-Emacs automatically creates timely backups of your files. You will
-see these in the directory of the file being edited. 
+   Emacs automatically creates timely backups of your files. You will
+   see these in the directory of the file being edited. 
 </p>
 <p>
-Backup Files: Previous copy of the file. Tilda (~) 
+   Backup Files: Previous copy of the file. Tilda (~) 
 </p>
 <p>
-Auto-Save files: Current copy of the file prior to saving
-explicitly. Gets updated frequently and on system errors. Hashes
-surround files. #filename#
+   Auto-Save files: Current copy of the file prior to saving
+   explicitly. Gets updated frequently and on system errors. Hashes
+   surround files. #filename#
 </p>
 
 </div>
 </div>
 </div>
+</div>
+
 <div id="postamble">
-<p class="author"> Author: Mishal Awadah
-</p>
-<p class="date"> Date: 2012-10-02 19:11:02 EDT</p>
-<p class="creator">HTML generated by org-mode 7.3 in emacs 24</p>
-</div>
+<p class="date">Date: 2012-11-02 15:53:57 EDT</p>
+<p class="author">Author: Mishal Awadah</p>
+<p class="creator">Org version 7.8.11 with Emacs version 24</p>
+<a href="http://validator.w3.org/check?uri=referer">Validate XHTML 1.0</a>
+
 </div>
 </body>
 </html>

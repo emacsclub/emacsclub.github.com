@@ -1,5 +1,6 @@
 #+TITLE: Meeting Notes Directory
 
+   + [[file:2012-10-16.org][Meeting Notes 10-16-12]]
    + [[file:2012-01-19.org][Meeting Notes 2012-01-19]]
    + [[file:2012-01-31.org][Meeting Notes 2012-01-31]]
    + [[file:2012-02-07.org][Meeting Notes 2012-02-07]]
@@ -14,5 +15,5 @@
    + [[file:2012-04-24.org][Meeting Notes 2012-04-24]]
    + [[file:2012-05-01.org][Meeting Notes 2012-05-01]]
    + [[file:2012-09-11.org][Meeting Notes 2012-09-11]]
-   + [[file:last_meeting.org][Meeting Notes 2012-09-25]]
+   + [[file:last_meeting.org][Meeting Notes 10-16-12]]
    + [[file:2012-09-25.org][Meeting Notes 2012-09-25]]

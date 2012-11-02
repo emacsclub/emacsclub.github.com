@@ -7,7 +7,7 @@
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
 <meta name="title" content="Org-mode Tutorial / Cheat Sheet"/>
 <meta name="generator" content="Org-mode"/>
-<meta name="generated" content="2012-10-15 16:09:04 EDT"/>
+<meta name="generated" content="2012-11-02 15:53:55 EDT"/>
 <meta name="author" content="Mishal Awadah"/>
 <meta name="description" content=""/>
 <meta name="keywords" content=""/>
@@ -332,11 +332,11 @@
 
 
 
-<pre class="src src-org">Matlab is a funny language. 
- - <span style="font-weight: bold;">Scope ::</span> Scope doesn't work as expected, and messes everything up
+<pre class="example">Matlab is a funny language. 
+ - Scope :: Scope doesn't work as expected, and messes everything up
    when loops mix variables up in recursive functions.
- - <span style="font-weight: bold;">Namespaces ::</span> You wish. 
- - <span style="font-weight: bold;">Header Files ::</span> Nope.
+ - Namespaces :: You wish. 
+ - Header Files :: Nope.
 </pre>
 
 
@@ -392,7 +392,7 @@ Matlab is a funny language.
   seperator; <code>&lt;TAB&gt;</code> after inserting it to expand the separator.  
 </p>
 
-<table border="2" cellspacing="0" cellpadding="6">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
 <caption></caption>
 <colgroup><col class="left" /><col class="left" /><col class="left" /><col class="left" /><col class="left" />
 </colgroup>
@@ -410,7 +410,7 @@ Matlab is a funny language.
   Some tips: 
 </p><ul>
 <li><code>&lt;TAB&gt;</code> realigns the columns, and moves to the next column. 
-        If at end of line, it will create a new row. 
+                If at end of line, it will create a new row. 
 </li>
 <li><code>C-c C-c</code> will realign the columns without moving or creating new ones.
 </li>
@@ -458,9 +458,9 @@ Matlab is a funny language.
 
 
 
-<pre class="src src-c"><span class="linenr">1:  </span>int main() { 
-<span class="linenr">2:  </span>return 0; 
-<span class="linenr">3:  </span>}
+<pre class="example"><span class="linenr">1:  </span>int main() { 
+<span class="linenr">2:  </span>    return 0; 
+<span class="linenr">3:  </span>    }
 </pre>
 
 
@@ -473,7 +473,7 @@ Matlab is a funny language.
 
 
 <p>
-    Options: 
+        Options: 
 </p><ul>
 <li><code>-n</code> : add line numbers to the source code.
 </li>
@@ -484,15 +484,15 @@ Matlab is a funny language.
 </ul>
 
 
-<p>    
-    Commands: 
+<p>        
+        Commands: 
 </p><ul>
 <li><code>C-c [']</code> : Allows you to edit the source code at point in its native mode. 
-      Opens a new buffer where you exit after editing by the command again. 
+          Opens a new buffer where you exit after editing by the command again. 
 </li>
 <li><code>C-c l</code> : calls org-store-link when editing with ~C-c '~. This creates 
-      a label at the line currently being edited. It can be retrieved 
-      later with <code>C-c C-l</code>. 
+          a label at the line currently being edited. It can be retrieved 
+          later with <code>C-c C-l</code>. 
 </li>
 </ul>
 
@@ -630,7 +630,7 @@ I    #+include: line
 #+TEXT:        Several lines may be given.
 #+OPTIONS:     H:2 num:t toc:t \n:nil @:t ::t |:t ^:t f:t TeX:t ...
 #+BIND:        lisp-var lisp-val, e.g.: org-export-latex-low-levels itemize
-               You need to confirm using these, or configure org-export-allow-BIND
+                           You need to confirm using these, or configure org-export-allow-BIND
 #+LINK_UP:     the ``up'' link of an exported page
 #+LINK_HOME:   the ``home'' link of an exported page
 #+LATEX_HEADER: extra line(s) for the LaTeX header, like \usepackage{xyz}
@@ -702,9 +702,9 @@ d:         turn on/off inclusion of drawers
 <h4 id="sec-8-1-1">Title</h4>
 <div class="outline-text-4" id="text-8-1-1">
 
-<p>    The title is taken from the first non-comment line in the file. If there is
-    none, ie your file starts with a heading, it uses the filename. 
-    The title can be manually set using
+<p>        The title is taken from the first non-comment line in the file. If there is
+        none, ie your file starts with a heading, it uses the filename. 
+        The title can be manually set using
 </p>
 
 
@@ -721,12 +721,12 @@ d:         turn on/off inclusion of drawers
 <h4 id="sec-8-1-2">Table of Contents</h4>
 <div class="outline-text-4" id="text-8-1-2">
 
-<p>    Normally inserted after the first headline, you can set manually by
-    inserting <code>TABLE-OF-CONTENTS</code> inside square-brackets ([]) seperately on 
-    a line.
+<p>        Normally inserted after the first headline, you can set manually by
+        inserting <code>TABLE-OF-CONTENTS</code> inside square-brackets ([]) seperately on 
+        a line.
 </p>
-<p>    
-    Some useful options are: 
+<p>        
+        Some useful options are: 
 </p>
 
 
@@ -774,8 +774,8 @@ d:         turn on/off inclusion of drawers
 <div class="outline-text-4" id="text-8-3-1">
 
 
-<p>    
-    You can include a stylesheet by using
+<p>        
+        You can include a stylesheet by using
 </p>
 
 
@@ -785,8 +785,8 @@ d:         turn on/off inclusion of drawers
 
 
 <p>
-    The styles used by org-mode to export specific parts of your document
-    can be set in your stylesheet with the following variables: 
+        The styles used by org-mode to export specific parts of your document
+        can be set in your stylesheet with the following variables: 
 </p>
 
 
@@ -845,12 +845,12 @@ p.footnote          footnote definition paragraph, containing a footnote
 <h4 id="sec-8-3-3">Site Navigation</h4>
 <div class="outline-text-4" id="text-8-3-3">
 
-<p>    You can verily easily add "Up" and "Home" buttons on each page with 
+<p>        You can verily easily add "Up" and "Home" buttons on each page with 
 </p>
 
 
 
-<pre class="example">#+LINK_UP: 
+<pre class="example">    #+LINK_UP: 
 #+LINK_HOME: index.html
 </pre>
 
@@ -863,8 +863,8 @@ p.footnote          footnote definition paragraph, containing a footnote
 <h4 id="sec-8-3-4">Hyperlinks</h4>
 <div class="outline-text-4" id="text-8-3-4">
 
-<p>    Hyperlinks are managed by links and automatically converted to their 
-    html counterparts. See <a href="#Linking-Files">Linking Files</a>. 
+<p>        Hyperlinks are managed by links and automatically converted to their 
+        html counterparts. See <a href="#Linking-Files">Linking Files</a>. 
 </p>
 </div>
 </div>
@@ -894,52 +894,52 @@ p.footnote          footnote definition paragraph, containing a footnote
 
 
 
-<pre class="src src-emacs-lisp">(defconst home (file-name-directory (or load-file-name buffer-file-name)))
+<pre class="example">(defconst home (file-name-directory (or load-file-name buffer-file-name)))
 
 (require 'org-publish)
 (setq org-publish-project-alist
       `(
-        <span style="color: #7f9f7f;">;; </span><span style="color: #7f9f7f;">add all the components here</span>
-        <span style="color: #7f9f7f;">;; </span><span style="color: #7f9f7f;">*notes* - publishes org files to html</span>
-        (<span style="color: #cc9393;">"main-page"</span>
-         :base-directory ,(concat home <span style="color: #cc9393;">"org/"</span>)
-         :base-extension <span style="color: #cc9393;">"org"</span>  <span style="color: #7f9f7f;">; </span><span style="color: #7f9f7f;">Filename suffix without dot</span>
-         :publishing-directory ,(concat home <span style="color: #cc9393;">"html/"</span>)
-         :recursive t           <span style="color: #7f9f7f;">; </span><span style="color: #7f9f7f;">DONT include subdirectories</span>
+        ;; add all the components here
+        ;; *notes* - publishes org files to html
+        ("main-page"
+         :base-directory ,(concat home "org/")
+         :base-extension "org"  ; Filename suffix without dot
+         :publishing-directory ,(concat home "html/")
+         :recursive t           ; DONT include subdirectories
          :publishing-function org-publish-org-to-html
-         :headline-levels 4             <span style="color: #7f9f7f;">; </span><span style="color: #7f9f7f;">Just the default for this project.</span>
-         :style <span style="color: #cc9393;">"&lt;link rel=\"stylesheet\" type=\"text/css\" href=\"../css/stylesheet.css\" /&gt;"</span>
+         :headline-levels 4             ; Just the default for this project.
+         :style "&lt;link rel=\"stylesheet\" type=\"text/css\" href=\"../css/stylesheet.css\" /&gt;"
          :auto-preamble t
-         :auto-sitemap t                <span style="color: #7f9f7f;">; </span><span style="color: #7f9f7f;">generate automagically</span>
+         :auto-sitemap t                ; generate automagically
          :sitemap-sort-folders last
-         :sitemap-title <span style="color: #cc9393;">"Main Sitemap"</span>
+         :sitemap-title "Main Sitemap"
          )
 
-        <span style="color: #7f9f7f;">;; </span><span style="color: #7f9f7f;">The meeting notes to be published</span>
-        (<span style="color: #cc9393;">"meeting-notes"</span>
-         :base-directory ,(concat home <span style="color: #cc9393;">"org/meeting-notes/"</span>)
-         :base-extension <span style="color: #cc9393;">"org"</span>
-         :publishing-directory ,(concat home <span style="color: #cc9393;">"html/meeting-notes/"</span>)
+        ;; The meeting notes to be published
+        ("meeting-notes"
+         :base-directory ,(concat home "org/meeting-notes/")
+         :base-extension "org"
+         :publishing-directory ,(concat home "html/meeting-notes/")
          :recursive nil
          :publishing-function org-publish-org-to-html
          :headline-levels 4
-         :style <span style="color: #cc9393;">"&lt;link rel=\"stylesheet\" type=\"text/css\" href=\"../../css/stylesheet.css\" /&gt;"</span>
+         :style "&lt;link rel=\"stylesheet\" type=\"text/css\" href=\"../../css/stylesheet.css\" /&gt;"
          :auto-preamble t
          :auto-sitemap t
-         :sitemap-title <span style="color: #cc9393;">"Meeting Notes Directory"</span>
+         :sitemap-title "Meeting Notes Directory"
          )
 
-        <span style="color: #7f9f7f;">;; </span><span style="color: #7f9f7f;">*static* - copies files to directories</span>
-        (<span style="color: #cc9393;">"org-static"</span>
-         :base-directory ,(concat home <span style="color: #cc9393;">"org/"</span>)
-         :base-extension <span style="color: #cc9393;">"css\\|js\\|png\\|jpg\\|gif\\|pdf\\|mp3\\|ogg\\|swf"</span>
-         :publishing-directory ,(concat home <span style="color: #cc9393;">"html/"</span>)
+        ;; *static* - copies files to directories
+        ("org-static"
+         :base-directory ,(concat home "org/")
+         :base-extension "css\\|js\\|png\\|jpg\\|gif\\|pdf\\|mp3\\|ogg\\|swf"
+         :publishing-directory ,(concat home "html/")
          :recursive t
          :publishing-function org-publish-attachment
          )
 
-        <span style="color: #7f9f7f;">;; </span><span style="color: #7f9f7f;">*publish* with M-x org-publish-project RET emacsclub RET</span>
-        (<span style="color: #cc9393;">"emacsclub"</span> :components (<span style="color: #cc9393;">"main-page"</span> <span style="color: #cc9393;">"meeting-notes"</span> <span style="color: #cc9393;">"org-static"</span>))
+        ;; *publish* with M-x org-publish-project RET emacsclub RET
+        ("emacsclub" :components ("main-page" "meeting-notes" "org-static"))
         ))
 
 </pre>
@@ -952,7 +952,7 @@ p.footnote          footnote definition paragraph, containing a footnote
 </div>
 
 <div id="postamble">
-<p class="date">Date: 2012-10-15 16:09:04 EDT</p>
+<p class="date">Date: 2012-11-02 15:53:55 EDT</p>
 <p class="author">Author: Mishal Awadah</p>
 <p class="creator">Org version 7.8.11 with Emacs version 24</p>
 <a href="http://validator.w3.org/check?uri=referer">Validate XHTML 1.0</a>

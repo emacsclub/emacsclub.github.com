@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
                "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml"
-lang="en" xml:lang="en">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
 <title>emacs24 goodies</title>
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+<meta name="title" content="emacs24 goodies"/>
 <meta name="generator" content="Org-mode"/>
-<meta name="generated" content="2012-10-02 19:11:01 EDT"/>
+<meta name="generated" content="2012-11-02 15:53:55 EDT"/>
 <meta name="author" content="Nikos Vasilakis"/>
 <meta name="description" content=""/>
 <meta name="keywords" content=""/>
@@ -44,6 +44,12 @@ lang="en" xml:lang="en">
   dt { font-weight: bold; }
   div.figure { padding: 0.5em; }
   div.figure p { text-align: center; }
+  div.inlinetask {
+    padding:10px;
+    border:2px solid gray;
+    margin:10px;
+    background: #ffffcc;
+  }
   textarea { overflow-x: auto; }
   .linenr { font-size:smaller }
   .code-highlighted {background-color:#ffff00;}
@@ -80,13 +86,17 @@ lang="en" xml:lang="en">
 
 </head>
 <body>
-<div id="content">
 <div id="org-div-home-and-up" style="text-align:right;font-size:70%;white-space:nowrap;">
  <a accesskey="h" href="index.html"> UP </a>
  |
  <a accesskey="H" href="index.html"> HOME </a>
 </div>
 
+<div id="preamble">
+
+</div>
+
+<div id="content">
 <h1 class="title">emacs24 goodies</h1>
 
 
@@ -110,24 +120,22 @@ lang="en" xml:lang="en">
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#sec-1">Get emacs 24 </a></li>
-<li><a href="#sec-2">Install Prelude </a></li>
-<li><a href="#sec-3">Interlude &ndash; or what to do next </a></li>
-<li><a href="#sec-4">Postlude </a></li>
+<li><a href="#sec-1">Get emacs 24</a></li>
+<li><a href="#sec-2">Install Prelude</a></li>
+<li><a href="#sec-3">Interlude &ndash; or what to do next</a></li>
+<li><a href="#sec-4">Postlude</a></li>
 </ul>
 </div>
 </div>
 
 <div id="outline-container-1" class="outline-2">
-<h2 id="sec-1">Get emacs 24 </h2>
+<h2 id="sec-1">Get emacs 24</h2>
 <div class="outline-text-2" id="text-1">
 
 <ul>
-<li>
-Linux
+<li>Linux
 <ul>
-<li>
-Debian and derivatives &ndash; grab the debian ppa
+<li>Debian and derivatives &ndash; grab the debian ppa
 
 
 
@@ -135,20 +143,16 @@ Debian and derivatives &ndash; grab the debian ppa
 sudo apt-get update
 </pre>
 
-
 </li>
-<li>
-Fedora 17+ has emacs 24 in the repos
+<li>Fedora 17+ has emacs 24 in the repos
 
 
 
 <pre class="example">sudo yum install emacs 
 </pre>
 
-
 </li>
-<li>
-Build from source 
+<li>Build from source 
 
 
 
@@ -160,37 +164,32 @@ cd !!:$
 make
 </pre>
 
-
 </li>
 </ul>
+
 </li>
-<li>
-OSX
+<li>OSX
 <ul>
-<li>
-Either grab emacs for osx
+<li>Either grab emacs for osx
 
 
 
 <pre class="example">wget http://emacsformacosx.com/emacs-builds/Emacs-24.2-universal-10.6.8.dmg
 </pre>
 
-
 </li>
-<li>
-Or use homebrew
+<li>Or use homebrew
 
 
 
 <pre class="example">brew install emacs --cocoa --use-git-head --HEAD
 </pre>
 
-
 </li>
-<li>
-Windows (?)
+<li>Windows (?)
 </li>
 </ul>
+
 </li>
 </ul>
 
@@ -200,16 +199,14 @@ Windows (?)
 </div>
 
 <div id="outline-container-2" class="outline-2">
-<h2 id="sec-2">Install Prelude </h2>
+<h2 id="sec-2">Install Prelude</h2>
 <div class="outline-text-2" id="text-2">
 
 <ul>
-<li>
-Prelude is an enhanced Emacs configuration; More info can be found ‘<a href="http://batsov.com/prelude/">here</a>
-while the repo lives on ‘<a href="https://github.com/bbatsov/prelude">github</a>
+<li>Prelude is an enhanced Emacs configuration; More info can be found ‘<a href="http://batsov.com/prelude/">here</a>
+    while the repo lives on ‘<a href="https://github.com/bbatsov/prelude">github</a>
 </li>
-<li>
-First backup your previous configuration
+<li>First backup your previous configuration
 
 
 
@@ -217,10 +214,8 @@ First backup your previous configuration
 mv .emacs.d{,_BK}
 </pre>
 
-
 </li>
-<li>
-Grab prelude isntaller from github and execute
+<li>Grab prelude isntaller from github and execute
 
 
 
@@ -228,22 +223,18 @@ Grab prelude isntaller from github and execute
 ll .emacs
 </pre>
 
-
 </li>
-<li>
-Now launch emacs 24
+<li>Now launch emacs 24
 <ul>
-<li>
-It should start downloading and compiling packages
+<li>It should start downloading and compiling packages
 </li>
-<li>
-If seems stuck: 1. Move your cursor or click 2. close and open
-again
+<li>If seems stuck: 1. Move your cursor or click 2. close and open
+      again
 </li>
-<li>
-(wait.. and go to step above if necessary)
+<li>(wait.. and go to step above if necessary)
 </li>
 </ul>
+
 </li>
 </ul>
 
@@ -253,25 +244,23 @@ again
 </div>
 
 <div id="outline-container-3" class="outline-2">
-<h2 id="sec-3">Interlude &ndash; or what to do next </h2>
+<h2 id="sec-3">Interlude &ndash; or what to do next</h2>
 <div class="outline-text-2" id="text-3">
 
 <ul>
-<li>
-Launch and maybe install even more packages 
+<li>Launch and maybe install even more packages 
 <ul>
-<li>
-M-x list-packages shows all available packages
+<li>M-x list-packages shows all available packages
 <ul>
-<li>
-For instance, install solarized theme
+<li>For instance, install solarized theme
 </li>
 </ul>
+
 </li>
 </ul>
+
 </li>
-<li>
-Put your own .el customizations in ~/.emacs.d/personal
+<li>Put your own .el customizations in ~/.emacs.d/personal
 </li>
 </ul>
 
@@ -280,27 +269,27 @@ Put your own .el customizations in ~/.emacs.d/personal
 </div>
 
 <div id="outline-container-4" class="outline-2">
-<h2 id="sec-4">Postlude </h2>
+<h2 id="sec-4">Postlude</h2>
 <div class="outline-text-2" id="text-4">
 
 <ul>
-<li>
-Example high-octane .emacs file from Zach 
-<a href="https://gist.github.com/3785014">https://gist.github.com/3785014</a>
+<li>Example high-octane .emacs file from Zach 
+    <a href="https://gist.github.com/3785014">https://gist.github.com/3785014</a>
 </li>
-<li>
-Keep sending interesting stuff
+<li>Keep sending interesting stuff
 </li>
 </ul>
 
 </div>
 </div>
-<div id="postamble">
-<p class="author"> Author: Nikos Vasilakis
-</p>
-<p class="date"> Date: 2012-10-02 19:11:01 EDT</p>
-<p class="creator">HTML generated by org-mode 7.3 in emacs 24</p>
 </div>
+
+<div id="postamble">
+<p class="date">Date: 2012-11-02 15:53:55 EDT</p>
+<p class="author">Author: Nikos Vasilakis</p>
+<p class="creator">Org version 7.8.11 with Emacs version 24</p>
+<a href="http://validator.w3.org/check?uri=referer">Validate XHTML 1.0</a>
+
 </div>
 </body>
 </html>
