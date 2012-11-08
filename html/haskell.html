@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
                "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<html xmlns="http://www.w3.org/1999/xhtml"
+lang="en" xml:lang="en">
 <head>
 <title>Getting Started with Haskell</title>
 <meta http-equiv="Content-Type" content="text/html;charset=iso-8859-1"/>
-<meta name="title" content="Getting Started with Haskell"/>
 <meta name="generator" content="Org-mode"/>
-<meta name="generated" content="2012-11-02 15:53:56 EDT"/>
+<meta name="generated" content="2012-11-08 10:27:27 EST"/>
 <meta name="author" content="Mishal Awadah"/>
 <meta name="description" content=""/>
 <meta name="keywords" content="haskell-mode haskell emacs major mode setup configuration init"/>
@@ -44,12 +44,6 @@
   dt { font-weight: bold; }
   div.figure { padding: 0.5em; }
   div.figure p { text-align: center; }
-  div.inlinetask {
-    padding:10px;
-    border:2px solid gray;
-    margin:10px;
-    background: #ffffcc;
-  }
   textarea { overflow-x: auto; }
   .linenr { font-size:smaller }
   .code-highlighted {background-color:#ffff00;}
@@ -86,17 +80,13 @@
 
 </head>
 <body>
+<div id="content">
 <div id="org-div-home-and-up" style="text-align:right;font-size:70%;white-space:nowrap;">
  <a accesskey="h" href="index.html"> UP </a>
  |
  <a accesskey="H" href="index.html"> HOME </a>
 </div>
 
-<div id="preamble">
-
-</div>
-
-<div id="content">
 <h1 class="title">Getting Started with Haskell</h1>
 
 
@@ -120,64 +110,64 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#sec-1">1 The Haskell Platform</a></li>
-<li><a href="#sec-2">2 Install haskell-mode</a>
+<li><a href="#sec-1">1 The Haskell Platform </a></li>
+<li><a href="#sec-2">2 Install haskell-mode </a>
 <ul>
-<li><a href="#sec-2-1">Using the Emacs Package Manager</a></li>
-<li><a href="#sec-2-2">Manually</a></li>
+<li><a href="#sec-2_1">2.1 Using the Emacs Package Manager </a></li>
+<li><a href="#sec-2_2">2.2 Manually </a></li>
 </ul>
 </li>
-<li><a href="#sec-3">3 Configure Haskell-Mode</a></li>
-<li><a href="#sec-4">4 Using haskell-mode</a>
+<li><a href="#sec-3">3 Configure Haskell-Mode </a></li>
+<li><a href="#sec-4">4 Using haskell-mode </a>
 <ul>
-<li><a href="#sec-4-1">The Haskell Interpreter <code>C-c C-l</code></a></li>
+<li><a href="#sec-4_1">4.1 The Haskell Interpreter <code>C-c C-l</code> </a></li>
 </ul>
 </li>
-<li><a href="#sec-5">5 References</a></li>
+<li><a href="#sec-5">5 References </a></li>
 </ul>
 </div>
 </div>
 
 <div id="outline-container-1" class="outline-2">
-<h2 id="sec-1"><span class="section-number-2">1</span> <a href="http://www.haskell.org/platform/">The Haskell Platform</a></h2>
+<h2 id="sec-1"><span class="section-number-2">1</span> <a href="http://www.haskell.org/platform/">The Haskell Platform</a> </h2>
 <div class="outline-text-2" id="text-1">
 
 
 <p>
-  Install the platform for your respective operating system <a href="http://www.haskell.org/platform/">here</a>.
+Install the platform for your respective operating system <a href="http://www.haskell.org/platform/">here</a>.
 </p>
 </div>
 
 </div>
 
 <div id="outline-container-2" class="outline-2">
-<h2 id="sec-2"><span class="section-number-2">2</span> Install haskell-mode</h2>
+<h2 id="sec-2"><span class="section-number-2">2</span> Install haskell-mode </h2>
 <div class="outline-text-2" id="text-2">
 
 
 <p>
-  The haskell-mode package is a set of major modes for Emacs for
-  writing Haskell code and working with Haskell projects. Features
-  syntax highlighting, intelligent indentation, interaction with
-  inferior Haskell interpreter, code browsing, and Cabal project
-  integration. It support Hugs, GHCi, Cabal and hslint, hoogle,
-  cabal-dev, and other utilities.
+The haskell-mode package is a set of major modes for Emacs for
+writing Haskell code and working with Haskell projects. Features
+syntax highlighting, intelligent indentation, interaction with
+inferior Haskell interpreter, code browsing, and Cabal project
+integration. It support Hugs, GHCi, Cabal and hslint, hoogle,
+cabal-dev, and other utilities.
 </p>
 <p>
-  Find out more about it here
-  <a href="http://www.haskell.org/haskellwiki/Haskell_mode_for_Emacs">http://www.haskell.org/haskellwiki/Haskell_mode_for_Emacs</a>
+Find out more about it here
+<a href="http://www.haskell.org/haskellwiki/Haskell_mode_for_Emacs">http://www.haskell.org/haskellwiki/Haskell_mode_for_Emacs</a>
 </p>
 
 </div>
 
-<div id="outline-container-2-1" class="outline-3">
-<h3 id="sec-2-1"><span class="section-number-3"></span> Using the Emacs Package Manager</h3>
-<div class="outline-text-3" id="text-2-1">
+<div id="outline-container-2_1" class="outline-3">
+<h3 id="sec-2_1"><span class="section-number-3">2.1</span> Using the Emacs Package Manager </h3>
+<div class="outline-text-3" id="text-2_1">
 
-<p>   If you have Emacs 24, or have installed the Emacs package manager,
-   you can simply use that to get haskell-mode. This is the best way
-   to get haskell-mode, especially if you have semantic setup on your
-   Emacs installation, as you will get Haskell library auto-completion too.
+<p>If you have Emacs 24, or have installed the Emacs package manager,
+you can simply use that to get haskell-mode. This is the best way
+to get haskell-mode, especially if you have semantic setup on your
+Emacs installation, as you will get Haskell library auto-completion too.
 </p>
 
 
@@ -186,26 +176,27 @@
 </pre>
 
 
-</div>
 
 </div>
 
-<div id="outline-container-2-2" class="outline-3">
-<h3 id="sec-2-2"><span class="section-number-3"></span> Manually</h3>
-<div class="outline-text-3" id="text-2-2">
+</div>
 
-<p>   If you don't have the package manager, you'll need to get
-   haskell-mode yourself and tell Emacs about it manually. 
+<div id="outline-container-2_2" class="outline-3">
+<h3 id="sec-2_2"><span class="section-number-3">2.2</span> Manually </h3>
+<div class="outline-text-3" id="text-2_2">
+
+<p>If you don't have the package manager, you'll need to get
+haskell-mode yourself and tell Emacs about it manually. 
 </p>
 <p>
-   Download haskell-mode from the <a href="https://github.com/haskell/haskell-mode">github source</a> and place it in
-   your emacs configuration directory (default is ~/emacs.d/ but you
-   can put it anywhere really). You will reference this below.
+Download haskell-mode from the <a href="https://github.com/haskell/haskell-mode">github source</a> and place it in
+your emacs configuration directory (default is ~/emacs.d/ but you
+can put it anywhere really). You will reference this below.
 </p>
 <p>
-   Then, add the following line to your emacs configuration file, the
-   default is <code>~/.emacs</code>, or <code>~/.emacs.d/init.el</code> depending on your
-   setup. Here, I've placed the package under <code>~/emacs/plugins/</code>
+Then, add the following line to your emacs configuration file, the
+default is <code>~/.emacs</code>, or <code>~/.emacs.d/init.el</code> depending on your
+setup. Here, I've placed the package under <code>~/emacs/plugins/</code>
 </p>
 
 
@@ -214,28 +205,29 @@
 </pre>
 
 
+
 </div>
 </div>
 
 </div>
 
 <div id="outline-container-3" class="outline-2">
-<h2 id="sec-3"><span class="section-number-2">3</span> Configure Haskell-Mode</h2>
+<h2 id="sec-3"><span class="section-number-2">3</span> Configure Haskell-Mode </h2>
 <div class="outline-text-2" id="text-3">
 
-<p>  Like many major modes in Emacs, Haskell-mode is extremely
-  configurable. Look at the details of what you can configure at the
-  full how-to <a href="http://www.haskell.org/haskellwiki/Emacs/Installing_haskell-mode">here</a>.
+<p>Like many major modes in Emacs, Haskell-mode is extremely
+configurable. Look at the details of what you can configure at the
+full how-to <a href="http://www.haskell.org/haskellwiki/Emacs/Installing_haskell-mode">here</a>.
 </p>
 <p>
-  The recommended configuration is to enable doc-mode and
-  indentation. This will give you access to built-in documentation of
-  Haskell library functions, as well as smart indentation of your
-  Haskell code just as Emacs does with most languages. 
+The recommended configuration is to enable doc-mode and
+indentation. This will give you access to built-in documentation of
+Haskell library functions, as well as smart indentation of your
+Haskell code just as Emacs does with most languages. 
 </p>
-<p>  
-  To configure this, add the following lines to your emacs
-  configuration file (<code>~/.emacs</code> or <code>~/.emacs.d/init.el</code>):
+<p>
+To configure this, add the following lines to your emacs
+configuration file (<code>~/.emacs</code> or <code>~/.emacs.d/init.el</code>):
 </p>
 
 
@@ -245,31 +237,32 @@
 </pre>
 
 
+
 <p>
-  And you're done!
+And you're done!
 </p>
 </div>
 
 </div>
 
 <div id="outline-container-4" class="outline-2">
-<h2 id="sec-4"><span class="section-number-2">4</span> Using haskell-mode</h2>
+<h2 id="sec-4"><span class="section-number-2">4</span> Using haskell-mode </h2>
 <div class="outline-text-2" id="text-4">
 
-<p>  Haskell-mode's most useful features are all passively enabled, and
-  you should feel at home programming in Haskell with just the <code>TAB</code>
-  key. 
+<p>Haskell-mode's most useful features are all passively enabled, and
+you should feel at home programming in Haskell with just the <code>TAB</code>
+key. 
 </p>
 
 </div>
 
-<div id="outline-container-4-1" class="outline-3">
-<h3 id="sec-4-1"><span class="section-number-3"></span> The Haskell Interpreter <code>C-c C-l</code></h3>
-<div class="outline-text-3" id="text-4-1">
+<div id="outline-container-4_1" class="outline-3">
+<h3 id="sec-4_1"><span class="section-number-3">4.1</span> The Haskell Interpreter <code>C-c C-l</code> </h3>
+<div class="outline-text-3" id="text-4_1">
 
-<p>   Launch a Haskell interpreter that loads the current file you are
-   editing with the shortcut <code>C-c C-l</code>. This is very useful for
-   dynamically interacting with your code within Emacs. 
+<p>Launch a Haskell interpreter that loads the current file you are
+editing with the shortcut <code>C-c C-l</code>. This is very useful for
+dynamically interacting with your code within Emacs. 
 </p>
 </div>
 </div>
@@ -277,27 +270,27 @@
 </div>
 
 <div id="outline-container-5" class="outline-2">
-<h2 id="sec-5"><span class="section-number-2">5</span> References</h2>
+<h2 id="sec-5"><span class="section-number-2">5</span> References </h2>
 <div class="outline-text-2" id="text-5">
 
 <ul>
-<li>The Haskell Platform: <a href="http://www.haskell.org/platform/">http://www.haskell.org/platform/</a>
+<li>
+The Haskell Platform: <a href="http://www.haskell.org/platform/">http://www.haskell.org/platform/</a>
 </li>
-<li>Official Haskell Mode Page:
-    <a href="http://www.haskell.org/haskellwiki/Haskell_mode_for_Emacs">http://www.haskell.org/haskellwiki/Haskell_mode_for_Emacs</a>
+<li>
+Official Haskell Mode Page:
+<a href="http://www.haskell.org/haskellwiki/Haskell_mode_for_Emacs">http://www.haskell.org/haskellwiki/Haskell_mode_for_Emacs</a>
 </li>
 </ul>
 
 </div>
 </div>
-</div>
-
 <div id="postamble">
-<p class="date">Date: 2012-11-02 15:53:56 EDT</p>
-<p class="author">Author: Mishal Awadah</p>
-<p class="creator">Org version 7.8.11 with Emacs version 24</p>
-<a href="http://validator.w3.org/check?uri=referer">Validate XHTML 1.0</a>
-
+<p class="author"> Author: Mishal Awadah
+</p>
+<p class="date"> Date: 2012-11-08 10:27:27 EST</p>
+<p class="creator">HTML generated by org-mode 7.3 in emacs 24</p>
+</div>
 </div>
 </body>
 </html>

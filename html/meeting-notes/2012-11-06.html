@@ -1,14 +1,14 @@
-<?xml version="1.0" encoding="iso-8859-1"?>
+<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
                "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
 lang="en" xml:lang="en">
 <head>
-<title>Meeting Notes 2012-10-16</title>
-<meta http-equiv="Content-Type" content="text/html;charset=iso-8859-1"/>
+<title>Meeting Notes 2012-11-06</title>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
 <meta name="generator" content="Org-mode"/>
-<meta name="generated" content="2012-11-08 10:27:28 EST"/>
-<meta name="author" content="Andrew Braunstein"/>
+<meta name="generated" content="2012-11-08 10:31:46 EST"/>
+<meta name="author" content="Rafe Kettler"/>
 <meta name="description" content=""/>
 <meta name="keywords" content=""/>
 <style type="text/css">
@@ -87,7 +87,7 @@ lang="en" xml:lang="en">
  <a accesskey="H" href="../index.html"> HOME </a>
 </div>
 
-<h1 class="title">Meeting Notes 2012-10-16</h1>
+<h1 class="title">Meeting Notes 2012-11-06</h1>
 
 
 <script type="text/javascript">
@@ -111,176 +111,70 @@ lang="en" xml:lang="en">
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#sec-1">Perry Metzger </a></li>
-<li><a href="#sec-2">Elisp </a></li>
-<li><a href="#sec-3">No meeting next week (fall break) </a></li>
-<li><a href="#sec-4">Andrew will get food for the week after </a></li>
-<li><a href="#sec-5">More pages on the website for specific courses at penn </a></li>
-<li><a href="#sec-6">o-blog </a></li>
-<li><a href="#sec-7">exec-path-from-shell </a></li>
-<li><a href="#sec-8">Mish guarantees a good time </a></li>
-<li><a href="#sec-9">Hongling shows off auctex </a></li>
-<li><a href="#sec-10">Mish shows off yasnippets </a></li>
+<li><a href="#sec-1">Andrew's Introduction to Elisp &ndash; https://gist.github.com/4028417 </a></li>
+<li><a href="#sec-2">The notetaker must leave due to an interview. </a></li>
 </ul>
 </div>
 </div>
 
 <div id="outline-container-1" class="outline-2">
-<h2 id="sec-1">Perry Metzger </h2>
+<h2 id="sec-1">Andrew's Introduction to Elisp &ndash; <a href="https://gist.github.com/4028417">https://gist.github.com/4028417</a> </h2>
 <div class="outline-text-2" id="text-1">
 
 <ul>
 <li>
-We should get him to talk
+Andrew has put together a basic introduction to Emacs Lisp. The format is a "literate" elisp source file that you can edit and run interactively as you learn.
+</li>
+<li>
+Zach: I write "elsip" a lot too.
+</li>
+<li>
+Polish notation (one area where Lisp lacks polish)
+<ul>
+<li>
+Mish: So there's no infix for anything.
+</li>
+<li>
+Andrew: Right.
+</li>
+<li>
+Mish: Great.
 </li>
 </ul>
-
+</li>
+<li>
+Zach suggests that we try eldoc-mode (this is on by default in Prelude)
+</li>
+<li>
+C-M-x evaluates an entire expression, no matter where you are in the expression (perhaps we should use this instead of C-x C-e in most cases)
+</li>
+<li>
+The number of square brackets around the mode line indicates how many debugger frames you are currently in&hellip;
+<ul>
+<li>
+Andrew: @#$!
+</li>
+<li>
+c exits the current frame, q exits the debugger altogether
+</li>
+</ul>
+</li>
+</ul>
 
 </div>
 
 </div>
 
 <div id="outline-container-2" class="outline-2">
-<h2 id="sec-2">Elisp </h2>
+<h2 id="sec-2">The notetaker must leave due to an interview. </h2>
 <div class="outline-text-2" id="text-2">
-
-<ul>
-<li>
-elisp hw from ocaml
-</li>
-<li>
-maybe not the best idea
-<ul>
-<li>
-Antony "shit may hit the fan"
-</li>
-</ul>
-</li>
-</ul>
-
-
-</div>
-
-</div>
-
-<div id="outline-container-3" class="outline-2">
-<h2 id="sec-3">No meeting next week (fall break) </h2>
-<div class="outline-text-2" id="text-3">
-
-
-</div>
-
-</div>
-
-<div id="outline-container-4" class="outline-2">
-<h2 id="sec-4">Andrew will get food for the week after </h2>
-<div class="outline-text-2" id="text-4">
-
-
-</div>
-
-</div>
-
-<div id="outline-container-5" class="outline-2">
-<h2 id="sec-5">More pages on the website for specific courses at penn </h2>
-<div class="outline-text-2" id="text-5">
-
-<ul>
-<li>
-240 "c"
-</li>
-<li>
-Machine Learning "matlab"
-</li>
-<li>
-DP site will link
-</li>
-<li>
-120 and higher
-</li>
-</ul>
-
-
-</div>
-
-</div>
-
-<div id="outline-container-6" class="outline-2">
-<h2 id="sec-6">o-blog </h2>
-<div class="outline-text-2" id="text-6">
-
-<ul>
-<li>
-Org mode -&gt; blog
-</li>
-<li>
-Try this out for the emacs club website
-</li>
-<li>
-Bootstrap support
-</li>
-<li>
-More robust than simple org mode export
-</li>
-</ul>
-
-
-</div>
-
-</div>
-
-<div id="outline-container-7" class="outline-2">
-<h2 id="sec-7">exec-path-from-shell </h2>
-<div class="outline-text-2" id="text-7">
-
-<ul>
-<li>
-Make sure your emacs path is your OSX path
-</li>
-<li>
-package-install is broken, need to list packages to install
-</li>
-</ul>
-
-
-</div>
-
-</div>
-
-<div id="outline-container-8" class="outline-2">
-<h2 id="sec-8">Mish guarantees a good time </h2>
-<div class="outline-text-2" id="text-8">
-
-
-</div>
-
-</div>
-
-<div id="outline-container-9" class="outline-2">
-<h2 id="sec-9">Hongling shows off auctex </h2>
-<div class="outline-text-2" id="text-9">
-
-<ul>
-<li>
-It's awesome
-</li>
-</ul>
-
-
-</div>
-
-</div>
-
-<div id="outline-container-10" class="outline-2">
-<h2 id="sec-10">Mish shows off yasnippets </h2>
-<div class="outline-text-2" id="text-10">
 
 </div>
 </div>
 <div id="postamble">
-<p class="author"> Author: Andrew Braunstein
+<p class="author"> Author: Rafe Kettler
 </p>
-<p class="date"> Date: 2012-11-08 10:27:28 EST</p>
+<p class="date"> Date: 2012-11-08 10:31:46 EST</p>
 <p class="creator">HTML generated by org-mode 7.3 in emacs 24</p>
 </div>
 </div>

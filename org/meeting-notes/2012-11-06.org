@@ -1,0 +1,19 @@
+#+SETUPFILE: ../../org-templates/meeting-notes.org
+#+INCLUDE:   "../../org-templates/analytics.org"
+#+AUTHOR: Rafe Kettler
+
+Meeting Notes 2012-11-06
+
+* Andrew's Introduction to Elisp -- https://gist.github.com/4028417
+  - Andrew has put together a basic introduction to Emacs Lisp. The format is a "literate" elisp source file that you can edit and run interactively as you learn.
+  - Zach: I write "elsip" a lot too.
+  - Polish notation (one area where Lisp lacks polish)
+    - Mish: So there's no infix for anything.
+    - Andrew: Right.
+    - Mish: Great.
+  - Zach suggests that we try eldoc-mode (this is on by default in Prelude)
+  - C-M-x evaluates an entire expression, no matter where you are in the expression (perhaps we should use this instead of C-x C-e in most cases)
+  - The number of square brackets around the mode line indicates how many debugger frames you are currently in...
+    - Andrew: @#$!
+    - c exits the current frame, q exits the debugger altogether
+* The notetaker must leave due to an interview.

@@ -25,4 +25,5 @@
      + [[file:meeting-notes/2012-09-11.org][Meeting Notes 2012-09-11]]
      + [[file:meeting-notes/2012-09-25.org][Meeting Notes 2012-09-25]]
      + [[file:meeting-notes/2012-10-16.org][Meeting Notes 2012-10-16]]
+     + [[file:meeting-notes/2012-11-06.org][Meeting Notes 2012-11-6]]
      + [[file:meeting-notes/sitemap.org][Meeting Notes Directory]]
