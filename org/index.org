@@ -34,6 +34,9 @@ at the University of Pennsylvania, Dept. of Computer Science
   - [[file:emerge.org][Git Merge Conflict Resolution with Emerge]]
   - [[file:haskell.org][Haskell in Emacs]]
 
+* Elisp
+  - [[file:elisp_intro.el][Elisp Intro]]
+
 * Favorites
 ** [[http://doxymacs.sourceforge.net/][Doxymacs]]
    This will auto-generate [[http://www.stack.nl/~dimitri/doxygen/][Doxygen]] style comments for your source code
