@@ -21,7 +21,7 @@ Fixing GDB in Emacs on Mac OS 10.8 (Mountain Lion)
   - Install a newer gdb:
 
     #+begin_src shell
-    $ brew install gdb
+    $ brew install https://raw.github.com/Homebrew/homebrew-dupes/master/gdb.rb
     #+end_src
 
   - You're going to have to change your paths to make your machine prefer the newer gdb to the one that came preinstalled. Edit ~/etc/paths~ and make sure ~/usr/local/bin~ is at the top of the file (if not, remove it from elsewhere and put it on the first line)
