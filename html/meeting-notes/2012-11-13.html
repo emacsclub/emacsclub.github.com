@@ -4,11 +4,11 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
 lang="en" xml:lang="en">
 <head>
-<title>Meeting Notes 2012-02-14</title>
+<title>Meeting Notes 2012-11-13</title>
 <meta http-equiv="Content-Type" content="text/html;charset=iso-8859-1"/>
 <meta name="generator" content="Org-mode"/>
-<meta name="generated" content="2012-11-14 17:49:55 EST"/>
-<meta name="author" content="Matthew Croop"/>
+<meta name="generated" content="2012-11-14 17:49:52 EST"/>
+<meta name="author" content="Rafe Kettler"/>
 <meta name="description" content=""/>
 <meta name="keywords" content=""/>
 <style type="text/css">
@@ -87,7 +87,7 @@ lang="en" xml:lang="en">
  <a accesskey="H" href="../index.html"> HOME </a>
 </div>
 
-<h1 class="title">Meeting Notes 2012-02-14</h1>
+<h1 class="title">Meeting Notes 2012-11-13</h1>
 
 
 <script type="text/javascript">
@@ -106,171 +106,96 @@ lang="en" xml:lang="en">
 
 
 
+
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#sec-1">The Emacs Club C tutorial </a></li>
+<li><a href="#sec-2">GDB, Mountain Lion, and Emacs: The Final Countdown </a></li>
+<li><a href="#sec-3">Using emacsclient as a collaborative editing tool </a></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-1" class="outline-2">
+<h2 id="sec-1">The Emacs Club C tutorial </h2>
+<div class="outline-text-2" id="text-1">
+
 <ul>
 <li>
-According to github, emacsclub is 95.6% JavaScript and 4.4% Emacs
-Lisp. Bootstrap, y u no in elisp?
+Tomorrow
 </li>
 <li>
-According to the SEAS calendars, "Pulak Mittal Vim Club" has a meeting
-scheduled simultaneously with us. However, they didn't send out
-any advertisement.
+Mish needs a partner to teach &ndash; Andrew volunteers
+</li>
+<li>
+We'll package a starter .emacs that will do some basic C configuration
+</li>
+<li>
+Time budget is an issue &ndash; we want to introduce people to Emacs, but too much introductory material might prevent us from talking about specific things about C development in Emacs
 <ul>
 <li>
-<b>Alexey</b> : They were going to but they forgot to hit i first.
+Benjamin's plan: spend 15 minutes demonstrating Emacs basics through C development and then dive into more advanced features
 </li>
 </ul>
 </li>
 <li>
-<b>Mish</b> : I'm going to do everything in emacs.
-</li>
-<li>
-<b>Mish</b> : Emacs assumes you are smart. 
-</li>
-<li>
-<b>Mish</b> : You can type M-x followed by any elisp function. Let's try
-zone, which is Zach's favorite. 
+Do we do it on Eniac:
 <ul>
 <li>
-<b>Mish</b> : I don't even know what it's doing.
+Pros: this is what many 240 students (Windows users) have to use; it will force learning
 </li>
 <li>
-It's doing the martini swan dive.
+Cons: we don't know what people come in knowing
 </li>
 </ul>
 </li>
 <li>
-Emacs comes with pdf reference cards.
-<ul>
-<li>
-<b>Zach</b> : Print it and keep it next to you.
-</li>
-</ul>
-</li>
-<li>
-Mish turns to the audience, and then turns back to his
-laptop. Suddenly, the projector screen withdraws and the lights dim.
-<ul>
-<li>
-<b>Andrew</b> : It's the vim club!
-</li>
-</ul>
-</li>
-<li>
-<b>Andrew</b> : Editing is the heart of what emacs is used for. What we do all
-day is programming, which is editing text.
-<ul>
-<li>
-Emacs is designed for coding.
-</li>
-<li>
-<b>Andrew</b> : If you're writing an English paper, killing a line makes no
-sense.
-</li>
-<li>
-<a href="http://vanemden.wordpress.com/2009/01/01/ventilated-prose/">Unless you're Buckminster Fuller.</a>
-</li>
-</ul>
-</li>
-<li>
-<b>Andrew</b> : This is my favorite command. C-k kills a line.
-</li>
-<li>
-<b>Mish</b> : You can open one of my files!
-<ul>
-<li>
-Andrew opens OCaml Practice, and instead gets a letter from Mish to
-whom it may concern.
-</li>
-</ul>
-</li>
-<li>
-No one uses M-k.
-<ul>
-<li>
-<b>Andrew</b> : That makes sense if you're writing papers!
-<ul>
-<li>
-No one writes papers.
-</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>
-<b>Zach</b> : This is probably Mish's coq homework.
-</li>
-<li>
-Mish discusses undoing the undoing of the undo.
-<ul>
-<li>
-<b>Mish</b> : It'll undo your undos if you go back to when you were undoing
-things.
-</li>
-<li>
-<b>Andrew</b> : You need to figure out what it's doing when you're undoing.
-</li>
-</ul>
-</li>
-<li>
-Andrew starts typing. Hello people of the world!
-</li>
-<li>
-<b>Andrew</b> : It opens a buffer with all of the buffers.
-</li>
-<li>
-Nick and Rafe arrive an hour late. Welcome!
-</li>
-<li>
-<b>Andrew</b> : This is a frame.
-<ul>
-<li>
-Andrew drags the window around.
-</li>
-</ul>
-</li>
-<li>
-Rafe is a expert on emacs' LaTeX mode.
-<ul>
-<li>
-(Maybe Rafe writes papers?)
-</li>
-<li>
-<b>Mish</b> : You should give a talk on it.
-</li>
-<li>
-<b>Rafe</b> : I followed a tutorial online.
-</li>
-</ul>
-</li>
-<li>
-<b>Andrew</b> : Emacs is never wrong with indentation. If it indents
-improperly, you messed up somewhere.
-</li>
-<li>
-Mish attempts to produce a regex to find emacs key shortcuts.
-<ul>
-<li>
-<b>Mish</b> : This is getting out of control.
-</li>
-</ul>
-</li>
-<li>
-Rafe points out that people not in SEAS might feel excluded by our
-mailing list signup form.
-</li>
-<li>
-Github wished Rafe an octotastic day!
-</li>
-<li>
-We browse <code>/usr/share/emacs/22.1/etc/JOKES</code>
+Should we show them multiple windows? Yes, but in a simplified form
 </li>
 </ul>
 
+</div>
+
+</div>
+
+<div id="outline-container-2" class="outline-2">
+<h2 id="sec-2">GDB, Mountain Lion, and Emacs: The Final Countdown </h2>
+<div class="outline-text-2" id="text-2">
+
+<ul>
+<li>
+Mountain Lion apparently breaks GDB in Emacs 24.
+</li>
+<li>
+See <a href="http://stackoverflow.com/questions/8336433/gdb-on-macosx-lion">http://stackoverflow.com/questions/8336433/gdb-on-macosx-lion</a> and <a href="http://stackoverflow.com/questions/10221448/emacs-24-and-gdb-6-3-on-mac-os-lion">http://stackoverflow.com/questions/10221448/emacs-24-and-gdb-6-3-on-mac-os-lion</a>
+</li>
+</ul>
+
+</div>
+
+</div>
+
+<div id="outline-container-3" class="outline-2">
+<h2 id="sec-3">Using emacsclient as a collaborative editing tool </h2>
+<div class="outline-text-2" id="text-3">
+
+<ul>
+<li>
+Building the .emacs for the C tutorial
+</li>
+<li>
+Surprisingly, it doesn't work very well
+</li>
+</ul>
+
+</div>
+</div>
 <div id="postamble">
-<p class="author"> Author: Matthew Croop
+<p class="author"> Author: Rafe Kettler
 </p>
-<p class="date"> Date: 2012-11-14 17:49:55 EST</p>
+<p class="date"> Date: 2012-11-14 17:49:52 EST</p>
 <p class="creator">HTML generated by org-mode 7.3 in emacs 24</p>
 </div>
 </div>

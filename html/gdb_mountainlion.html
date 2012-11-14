@@ -4,11 +4,11 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
 lang="en" xml:lang="en">
 <head>
-<title>Flymake Tutorial</title>
+<title>Fixing GDB in Emacs on Mac OS 10.8 (Mountain Lion)</title>
 <meta http-equiv="Content-Type" content="text/html;charset=iso-8859-1"/>
 <meta name="generator" content="Org-mode"/>
 <meta name="generated" content="2012-11-14 17:49:50 EST"/>
-<meta name="author" content="Mishal Awadah"/>
+<meta name="author" content="Rafe Kettler"/>
 <meta name="description" content=""/>
 <meta name="keywords" content=""/>
 <style type="text/css">
@@ -87,7 +87,7 @@ lang="en" xml:lang="en">
  <a accesskey="H" href="index.html"> HOME </a>
 </div>
 
-<h1 class="title">Flymake Tutorial</h1>
+<h1 class="title">Fixing GDB in Emacs on Mac OS 10.8 (Mountain Lion)</h1>
 
 
 <script type="text/javascript">
@@ -106,103 +106,107 @@ lang="en" xml:lang="en">
 
 
 
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#sec-1">Getting a new GDB </a></li>
+<li><a href="#sec-2">Codesigning </a></li>
+<li><a href="#sec-3">Restart your computer. GDB should work properly now. </a></li>
+</ul>
+</div>
+</div>
 
 <div id="outline-container-1" class="outline-2">
-<h2 id="sec-1">Requirements </h2>
+<h2 id="sec-1">Getting a new GDB </h2>
 <div class="outline-text-2" id="text-1">
 
-<p>You will need Flymake to be installed in Emacs, which is already
-the case if you have Emacs version 23 or higher.
-</p></div>
+<ul>
+<li>
+With the update to Mountain Lion, Emacs can no longer correctly interact with gdb. The easiest way to solve this is to install a newer version of GDB.
+</li>
+<li>
+First, you must install HomeBrew (<a href="https://github.com/mxcl/homebrew">https://github.com/mxcl/homebrew</a>). HomeBrew is a package manager for OSX that installs programs from source (similar to ports on BSD). You can install HomeBrew by running
+
+
+
+
+<pre class="example">$ ruby -e "$(curl -fsSkL raw.github.com/mxcl/homebrew/go)"
+</pre>
+
+
+
+</li>
+<li>
+Pay attention to what brew tells you. You may need to follow some additional instructions to get brew working. When in doubt, ask brew:
+
+
+
+
+<pre class="example">$ brew doctor
+</pre>
+
+
+
+</li>
+<li>
+Install a newer gdb:
+
+
+
+
+<pre class="example">$ brew install gdb
+</pre>
+
+
+
+</li>
+<li>
+You're going to have to change your paths to make your machine prefer the newer gdb to the one that came preinstalled. Edit <code>/etc/paths</code> and make sure <code>/usr/local/bin</code> is at the top of the file (if not, remove it from elsewhere and put it on the first line)
+</li>
+</ul>
+
+</div>
 
 </div>
 
 <div id="outline-container-2" class="outline-2">
-<h2 id="sec-2">Setup </h2>
+<h2 id="sec-2">Codesigning </h2>
 <div class="outline-text-2" id="text-2">
 
-
-
-</div>
-
-<div id="outline-container-2_1" class="outline-3">
-<h3 id="sec-2_1">C Files </h3>
-<div class="outline-text-3" id="text-2_1">
-
-<p>You need to have a C file you will be editing, with its respective
-Makefile already in the directory. Your Makefile should include 
-the following for flymake to use
-</p>
+<ul>
+<li>
+Since gdb has to have more privilege than most programs to manipulate other running programs, it has to be signed.
+</li>
+<li>
+Follow the instructions under "Creating a Certificate" at <a href="http://sourceware.org/gdb/wiki/BuildingOnDarwin#Creating_a_certificate">http://sourceware.org/gdb/wiki/BuildingOnDarwin#Creating_a_certificate</a>. Call it gdb-cert.
+</li>
+<li>
+Now run:
 
 
 
-<pre class="example">.PHONY: check-syntax
 
-check-syntax:
-    $(CC) $(CFLAGS) -Wall -Wextra -0pedantic -fsyntax-only $(SRCS)
+<pre class="example">$ codesign -s gdb-cert gdb
 </pre>
 
 
-
-<p>
-Make sure you use a <code>&lt;TAB&gt;</code> under the target!
-</p>
-</div>
-
-</div>
-
-<div id="outline-container-2_2" class="outline-3">
-<h3 id="sec-2_2">Init file configuration </h3>
-<div class="outline-text-3" id="text-2_2">
-
-<p>Place the following code in your emacs init file 
-</p>
+</li>
+</ul>
 
 
-
-<pre class="example">;; Customize how flymake displays the errors
-'(flymake-errline ((((class color)) (:underline "OrangeRed"))))
-'(flymake-warnline ((((class color)) (:underline "yellow"))))
-
-;; Define our own flymake error function
-(defun my-flymake-show-next-error ()
-  (interactive)
-  (flymake-goto-next-error)
-  (flymake-display-err-menu-for-current-line))
-
-;; And set it to the shortcut C-c C-v
-(add-hook 'c-mode-common-hook
-  (lambda ()
-    (flymake-mode t)
-    (global-set-key "\C-c\C-v" 'my-flymake-show-next-error)))
-</pre>
-
-
-
-<p>
-This will set <code>C-c C-v</code> to show the next error in your c files,
-and makes the errors display a little more clearly. 
-</p>
-</div>
 </div>
 
 </div>
 
 <div id="outline-container-3" class="outline-2">
-<h2 id="sec-3">References </h2>
+<h2 id="sec-3">Restart your computer. GDB should work properly now. </h2>
 <div class="outline-text-2" id="text-3">
-
-
-<ul>
-<li>
-<a href="http://www.credmp.org/?p=53">http://www.credmp.org/?p=53</a>
-</li>
-</ul>
 
 </div>
 </div>
 <div id="postamble">
-<p class="author"> Author: Mishal Awadah
+<p class="author"> Author: Rafe Kettler
 </p>
 <p class="date"> Date: 2012-11-14 17:49:50 EST</p>
 <p class="creator">HTML generated by org-mode 7.3 in emacs 24</p>

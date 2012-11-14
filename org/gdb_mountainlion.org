@@ -1,0 +1,37 @@
+#+SETUPFILE: ../org-templates/level-0.org
+#+OPTIONS:   author:t email:nil toc:t f:nil
+#+INCLUDE: "../org-templates/analytics.org"
+#+AUTHOR: Rafe Kettler
+
+Fixing GDB in Emacs on Mac OS 10.8 (Mountain Lion)
+* Getting a new GDB
+  - With the update to Mountain Lion, Emacs can no longer correctly interact with gdb. The easiest way to solve this is to install a newer version of GDB.
+  - First, you must install HomeBrew (https://github.com/mxcl/homebrew). HomeBrew is a package manager for OSX that installs programs from source (similar to ports on BSD). You can install HomeBrew by running
+
+    #+begin_src shell
+    $ ruby -e "$(curl -fsSkL raw.github.com/mxcl/homebrew/go)"
+    #+end_src
+
+  - Pay attention to what brew tells you. You may need to follow some additional instructions to get brew working. When in doubt, ask brew:
+
+    #+begin_src shell
+    $ brew doctor
+    #+end_src
+
+  - Install a newer gdb:
+
+    #+begin_src shell
+    $ brew install gdb
+    #+end_src
+
+  - You're going to have to change your paths to make your machine prefer the newer gdb to the one that came preinstalled. Edit ~/etc/paths~ and make sure ~/usr/local/bin~ is at the top of the file (if not, remove it from elsewhere and put it on the first line)
+* Codesigning
+  - Since gdb has to have more privilege than most programs to manipulate other running programs, it has to be signed.
+  - Follow the instructions under "Creating a Certificate" at http://sourceware.org/gdb/wiki/BuildingOnDarwin#Creating_a_certificate. Call it gdb-cert.
+  - Now run:
+
+    #+begin_src shell
+    $ codesign -s gdb-cert gdb
+    #+end_src
+
+* Restart your computer. GDB should work properly now.

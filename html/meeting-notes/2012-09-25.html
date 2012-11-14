@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
                "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<html xmlns="http://www.w3.org/1999/xhtml"
+lang="en" xml:lang="en">
 <head>
 <title>Meeting Notes 2012-09-25</title>
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
-<meta name="title" content="Meeting Notes 2012-09-25"/>
 <meta name="generator" content="Org-mode"/>
-<meta name="generated" content="2012-11-02 15:54:00 EDT"/>
+<meta name="generated" content="2012-11-14 17:49:52 EST"/>
 <meta name="author" content="Rafe Kettler"/>
 <meta name="description" content=""/>
 <meta name="keywords" content=""/>
@@ -44,12 +44,6 @@
   dt { font-weight: bold; }
   div.figure { padding: 0.5em; }
   div.figure p { text-align: center; }
-  div.inlinetask {
-    padding:10px;
-    border:2px solid gray;
-    margin:10px;
-    background: #ffffcc;
-  }
   textarea { overflow-x: auto; }
   .linenr { font-size:smaller }
   .code-highlighted {background-color:#ffff00;}
@@ -86,17 +80,13 @@
 
 </head>
 <body>
+<div id="content">
 <div id="org-div-home-and-up" style="text-align:right;font-size:70%;white-space:nowrap;">
  <a accesskey="h" href="sitemap.html"> UP </a>
  |
  <a accesskey="H" href="../index.html"> HOME </a>
 </div>
 
-<div id="preamble">
-
-</div>
-
-<div id="content">
 <h1 class="title">Meeting Notes 2012-09-25</h1>
 
 
@@ -121,25 +111,28 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#sec-1">Food and attendance</a></li>
-<li><a href="#sec-2">Emacs prelude</a></li>
-<li><a href="#sec-3">Color themes</a></li>
-<li><a href="#sec-4">Control vs. caps lock &ndash; welcome to the Thunderdome</a></li>
-<li><a href="#sec-5">Finally: as Zach leaves, he mentions dongles. This meeting can finally rest in peace.</a></li>
+<li><a href="#sec-1">Food and attendance </a></li>
+<li><a href="#sec-2">Emacs prelude </a></li>
+<li><a href="#sec-3">Color themes </a></li>
+<li><a href="#sec-4">Control vs. caps lock &ndash; welcome to the Thunderdome </a></li>
+<li><a href="#sec-5">Finally: as Zach leaves, he mentions dongles. This meeting can finally rest in peace. </a></li>
 </ul>
 </div>
 </div>
 
 <div id="outline-container-1" class="outline-2">
-<h2 id="sec-1">Food and attendance</h2>
+<h2 id="sec-1">Food and attendance </h2>
 <div class="outline-text-2" id="text-1">
 
 <ul>
-<li>We have 14 people here. This might be a record for a non-{tutorial,interest} meeting.
+<li>
+We have 14 people here. This might be a record for a non-{tutorial,interest} meeting.
 </li>
-<li>Nicos emails beforehand to tell us he's "brining a power strip." Could be handy if we run out of Potbelly.
+<li>
+Nicos emails beforehand to tell us he's "brining a power strip." Could be handy if we run out of Potbelly.
 </li>
-<li>10 sandwiches from Potbelly may not be enough for this crowd. Pizza might be the new Potbelly.
+<li>
+10 sandwiches from Potbelly may not be enough for this crowd. Pizza might be the new Potbelly.
 </li>
 </ul>
 
@@ -148,42 +141,51 @@
 </div>
 
 <div id="outline-container-2" class="outline-2">
-<h2 id="sec-2">Emacs prelude</h2>
+<h2 id="sec-2">Emacs prelude </h2>
 <div class="outline-text-2" id="text-2">
 
 <ul>
-<li>Like starter kit, but better for Emacs 24?
+<li>
+Like starter kit, but better for Emacs 24?
 </li>
-<li>Emacs takes a long time to start up and throws errors the first few times after Prelude is installed. Why the first <b>few</b> times? ¯_(ツ)_/¯
+<li>
+Emacs takes a long time to start up and throws errors the first few times after Prelude is installed. Why the first <b>few</b> times? ¯_(ツ)_/¯
 </li>
-<li>Prelude by default comes with guru-mode, which complains every time you use the arrow keys. Good choice for beginners.
+<li>
+Prelude by default comes with guru-mode, which complains every time you use the arrow keys. Good choice for beginners.
 <ul>
-<li>Benjamin wants to know how to unbind the arrow keys. This is a solved problem with a mechanical keyboard &ndash; just pull the keys out
+<li>
+Benjamin wants to know how to unbind the arrow keys. This is a solved problem with a mechanical keyboard &ndash; just pull the keys out
 </li>
 </ul>
-
 </li>
-<li>Zach should make his instructions on Prelude available online for reference
+<li>
+Zach should make his instructions on Prelude available online for reference
 </li>
-<li>Prelude installs clojure-mode and goodies the first time a file with a .clj extension is opened. Nifty.
+<li>
+Prelude installs clojure-mode and goodies the first time a file with a .clj extension is opened. Nifty.
 </li>
-<li>Someone wants to know how to paste in Putty:
+<li>
+Someone wants to know how to paste in Putty:
 <ul>
-<li>Benjamin: You kiss your computer screen three times&hellip;
+<li>
+Benjamin: You kiss your computer screen three times&hellip;
 </li>
 </ul>
-
 </li>
-<li>Apparently, Prelude's smex equivalent is vastly superior to normal smex
+<li>
+Apparently, Prelude's smex equivalent is vastly superior to normal smex
 </li>
-<li>Orren tries to install prelude using wget without having wget installed
+<li>
+Orren tries to install prelude using wget without having wget installed
 <ul>
-<li>Andrew: You don't have wget installed.
+<li>
+Andrew: You don't have wget installed.
 </li>
-<li>Orren: But it did a thing!
+<li>
+Orren: But it did a thing!
 </li>
 </ul>
-
 </li>
 </ul>
 
@@ -192,23 +194,25 @@
 </div>
 
 <div id="outline-container-3" class="outline-2">
-<h2 id="sec-3">Color themes</h2>
+<h2 id="sec-3">Color themes </h2>
 <div class="outline-text-2" id="text-3">
 
 <ul>
-<li>Benjamin wants a light color theme &ndash; suggestions include solarized-light and tomorrow.
+<li>
+Benjamin wants a light color theme &ndash; suggestions include solarized-light and tomorrow.
 <ul>
-<li>End result? Light themes that look "nice" are too hard to read. Benjamin is sticking with the default theme.
+<li>
+End result? Light themes that look "nice" are too hard to read. Benjamin is sticking with the default theme.
 </li>
 </ul>
-
 </li>
-<li>Are dark themes better for your eyes?
+<li>
+Are dark themes better for your eyes?
 <ul>
-<li>Answer: nobody has any clue
+<li>
+Answer: nobody has any clue
 </li>
 </ul>
-
 </li>
 </ul>
 
@@ -217,22 +221,26 @@
 </div>
 
 <div id="outline-container-4" class="outline-2">
-<h2 id="sec-4">Control vs. caps lock &ndash; welcome to the Thunderdome</h2>
+<h2 id="sec-4">Control vs. caps lock &ndash; welcome to the Thunderdome </h2>
 <div class="outline-text-2" id="text-4">
 
 <ul>
-<li>Benjamin wants to know what everyone's preferences are for using control vs. something else with Emacs.
+<li>
+Benjamin wants to know what everyone's preferences are for using control vs. something else with Emacs.
 </li>
-<li>Only Zach and Rafe <b>don't</b> use caps lock
+<li>
+Only Zach and Rafe <b>don't</b> use caps lock
 </li>
-<li>An existential debate on the usefulness of caps lock arises:
+<li>
+An existential debate on the usefulness of caps lock arises:
 <ul>
-<li>Rafe: When do you ever use caps lock?
+<li>
+Rafe: When do you ever use caps lock?
 </li>
-<li>Benjamin: When I'm really angry.
+<li>
+Benjamin: When I'm really angry.
 </li>
 </ul>
-
 </li>
 </ul>
 
@@ -241,19 +249,17 @@
 </div>
 
 <div id="outline-container-5" class="outline-2">
-<h2 id="sec-5">Finally: as Zach leaves, he mentions dongles. This meeting can finally rest in peace.</h2>
+<h2 id="sec-5">Finally: as Zach leaves, he mentions dongles. This meeting can finally rest in peace. </h2>
 <div class="outline-text-2" id="text-5">
 
 </div>
 </div>
-</div>
-
 <div id="postamble">
-<p class="date">Date: 2012-11-02 15:54:00 EDT</p>
-<p class="author">Author: Rafe Kettler</p>
-<p class="creator">Org version 7.8.11 with Emacs version 24</p>
-<a href="http://validator.w3.org/check?uri=referer">Validate XHTML 1.0</a>
-
+<p class="author"> Author: Rafe Kettler
+</p>
+<p class="date"> Date: 2012-11-14 17:49:52 EST</p>
+<p class="creator">HTML generated by org-mode 7.3 in emacs 24</p>
+</div>
 </div>
 </body>
 </html>

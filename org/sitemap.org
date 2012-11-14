@@ -3,6 +3,7 @@
    + [[file:emacs_intro.org][An Introduction to Emacs]]
    + [[file:index.org][Emacs Club]]
    + [[file:emerge.org][Emerge]]
+   + [[file:gdb_mountainlion.org][Fixing GDB in Emacs on Mac OS 10.8 (Mountain Lion)]]
    + [[file:flymake.org][Flymake Tutorial]]
    + [[file:haskell.org][Getting Started with Haskell]]
    + [[file:matlab.org][Matlab Dev in Emacs]]
@@ -26,4 +27,5 @@
      + [[file:meeting-notes/2012-09-25.org][Meeting Notes 2012-09-25]]
      + [[file:meeting-notes/2012-10-16.org][Meeting Notes 2012-10-16]]
      + [[file:meeting-notes/2012-11-06.org][Meeting Notes 2012-11-06]]
+     + [[file:meeting-notes/2012-11-13.org][Meeting Notes 2012-11-13]]
      + [[file:meeting-notes/sitemap.org][Meeting Notes Directory]]

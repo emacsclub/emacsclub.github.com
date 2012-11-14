@@ -1,0 +1,23 @@
+#+SETUPFILE: ../../org-templates/meeting-notes.org
+#+INCLUDE:   "../../org-templates/analytics.org"
+#+AUTHOR: Rafe Kettler
+
+Meeting Notes 2012-11-13
+
+* The Emacs Club C tutorial
+  - Tomorrow
+  - Mish needs a partner to teach -- Andrew volunteers
+  - We'll package a starter .emacs that will do some basic C configuration
+  - Time budget is an issue -- we want to introduce people to Emacs, but too much introductory material might prevent us from talking about specific things about C development in Emacs
+    - Benjamin's plan: spend 15 minutes demonstrating Emacs basics through C development and then dive into more advanced features
+  - Do we do it on Eniac:
+    - Pros: this is what many 240 students (Windows users) have to use; it will force learning
+    - Cons: we don't know what people come in knowing
+  - Should we show them multiple windows? Yes, but in a simplified form
+* GDB, Mountain Lion, and Emacs: The Final Countdown
+  - Mountain Lion apparently breaks GDB in Emacs 24.
+  - See http://stackoverflow.com/questions/8336433/gdb-on-macosx-lion and http://stackoverflow.com/questions/10221448/emacs-24-and-gdb-6-3-on-mac-os-lion
+* Using emacsclient as a collaborative editing tool
+  - Building the .emacs for the C tutorial
+  - Surprisingly, it doesn't work very well
+  - 

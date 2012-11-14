@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
                "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<html xmlns="http://www.w3.org/1999/xhtml"
+lang="en" xml:lang="en">
 <head>
 <title>Meeting Notes 2012-03-13</title>
 <meta http-equiv="Content-Type" content="text/html;charset=iso-8859-1"/>
-<meta name="title" content="Meeting Notes 2012-03-13"/>
 <meta name="generator" content="Org-mode"/>
-<meta name="generated" content="2012-11-02 15:54:03 EDT"/>
+<meta name="generated" content="2012-11-14 17:49:54 EST"/>
 <meta name="author" content="Rafe Kettler"/>
 <meta name="description" content=""/>
 <meta name="keywords" content=""/>
@@ -44,12 +44,6 @@
   dt { font-weight: bold; }
   div.figure { padding: 0.5em; }
   div.figure p { text-align: center; }
-  div.inlinetask {
-    padding:10px;
-    border:2px solid gray;
-    margin:10px;
-    background: #ffffcc;
-  }
   textarea { overflow-x: auto; }
   .linenr { font-size:smaller }
   .code-highlighted {background-color:#ffff00;}
@@ -86,17 +80,13 @@
 
 </head>
 <body>
+<div id="content">
 <div id="org-div-home-and-up" style="text-align:right;font-size:70%;white-space:nowrap;">
  <a accesskey="h" href="sitemap.html"> UP </a>
  |
  <a accesskey="H" href="../index.html"> HOME </a>
 </div>
 
-<div id="preamble">
-
-</div>
-
-<div id="content">
 <h1 class="title">Meeting Notes 2012-03-13</h1>
 
 
@@ -121,42 +111,52 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#sec-1">Doxymacs</a></li>
-<li><a href="#sec-2">Fiddling around with c-common-mode</a></li>
-<li><a href="#sec-3">Postmortem</a></li>
+<li><a href="#sec-1">Doxymacs </a></li>
+<li><a href="#sec-2">Fiddling around with c-common-mode </a></li>
+<li><a href="#sec-3">Postmortem </a></li>
 </ul>
 </div>
 </div>
 
 <div id="outline-container-1" class="outline-2">
-<h2 id="sec-1">Doxymacs</h2>
+<h2 id="sec-1">Doxymacs </h2>
 <div class="outline-text-2" id="text-1">
 
 <ul>
-<li>Zach is about to introduce a plugin to create Doxygen comments. John begs the question: what is Doxygen? Emacs club becomes Doxygen club.
+<li>
+Zach is about to introduce a plugin to create Doxygen comments. John begs the question: what is Doxygen? Emacs club becomes Doxygen club.
 </li>
-<li>Zach believes that hyperlinks and manpages are hardcore.
+<li>
+Zach believes that hyperlinks and manpages are hardcore.
 </li>
-<li>Mish remarks on Homebrew's viability on WTF Lion, where W = whatever
+<li>
+Mish remarks on Homebrew's viability on WTF Lion, where W = whatever
 </li>
-<li>John is happy that make took only 84 seconds to compile Doxygen. Rafe asserts that apt-get only took 5 seconds. John says "that's a good one." Mish then says "Doxygen is available on the App Store"
+<li>
+John is happy that make took only 84 seconds to compile Doxygen. Rafe asserts that apt-get only took 5 seconds. John says "that's a good one." Mish then says "Doxygen is available on the App Store"
 </li>
-<li>Obligatory dongle reference.
+<li>
+Obligatory dongle reference.
 </li>
-<li>We discuss possible package projects.
+<li>
+We discuss possible package projects.
 <ul>
-<li>Actually making a new directory when you find a file in a directory that doesn't exist?
+<li>
+Actually making a new directory when you find a file in a directory that doesn't exist?
 </li>
-<li>Saying M-x some-command-that-doesn't-exist runs it in bash?
+<li>
+Saying M-x some-command-that-doesn't-exist runs it in bash?
 </li>
 </ul>
-
 </li>
-<li>As we marvel at the simplicity of package installation in Debian, John loses all excitement when he realizes Doxymacs didn't link on his Mac.
+<li>
+As we marvel at the simplicity of package installation in Debian, John loses all excitement when he realizes Doxymacs didn't link on his Mac.
 </li>
-<li><b>Zach</b>: you're doing it old-school? Like MacPorts?
+<li>
+<b>Zach</b>: you're doing it old-school? Like MacPorts?
 </li>
-<li>Rafe realizes that in half an hour, we've done nothing but try to install software on Mac
+<li>
+Rafe realizes that in half an hour, we've done nothing but try to install software on Mac
 </li>
 </ul>
 
@@ -165,26 +165,32 @@
 </div>
 
 <div id="outline-container-2" class="outline-2">
-<h2 id="sec-2">Fiddling around with c-common-mode</h2>
+<h2 id="sec-2">Fiddling around with c-common-mode </h2>
 <div class="outline-text-2" id="text-2">
 
 <ul>
-<li>Rafe sees the "Please clean filter" message projected and tells Zach that he thinks Zach's computer is dirty
+<li>
+Rafe sees the "Please clean filter" message projected and tells Zach that he thinks Zach's computer is dirty
 </li>
-<li><b>Mish</b> Why are you raising the blinds? It's very hard to see.
+<li>
+<b>Mish</b> Why are you raising the blinds? It's very hard to see.
 <ul>
-<li><b>Zach</b>: It's really nice, but it is really hard to see
+<li>
+<b>Zach</b>: It's really nice, but it is really hard to see
 </li>
 </ul>
-
 </li>
-<li>We learn of c-toggle-auto-newline
+<li>
+We learn of c-toggle-auto-newline
 </li>
-<li><b>Mish</b>: It's fun to kill whitespace
+<li>
+<b>Mish</b>: It's fun to kill whitespace
 </li>
-<li>We complain about Eclipse and Java #ToughPennLife
+<li>
+We complain about Eclipse and Java #ToughPennLife
 </li>
-<li>Rafe leaves to teach students how to write classes in Java. Meeting notetaking ends.
+<li>
+Rafe leaves to teach students how to write classes in Java. Meeting notetaking ends.
 </li>
 </ul>
 
@@ -193,24 +199,23 @@
 </div>
 
 <div id="outline-container-3" class="outline-2">
-<h2 id="sec-3">Postmortem</h2>
+<h2 id="sec-3">Postmortem </h2>
 <div class="outline-text-2" id="text-3">
 
 <ul>
-<li>The notetaker, Rafe, realizes that his notes pale in comparison to the almighty Croop.
+<li>
+The notetaker, Rafe, realizes that his notes pale in comparison to the almighty Croop.
 </li>
 </ul>
 
 </div>
 </div>
-</div>
-
 <div id="postamble">
-<p class="date">Date: 2012-11-02 15:54:03 EDT</p>
-<p class="author">Author: Rafe Kettler</p>
-<p class="creator">Org version 7.8.11 with Emacs version 24</p>
-<a href="http://validator.w3.org/check?uri=referer">Validate XHTML 1.0</a>
-
+<p class="author"> Author: Rafe Kettler
+</p>
+<p class="date"> Date: 2012-11-14 17:49:54 EST</p>
+<p class="creator">HTML generated by org-mode 7.3 in emacs 24</p>
+</div>
 </div>
 </body>
 </html>

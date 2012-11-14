@@ -18,7 +18,7 @@ at the University of Pennsylvania, Dept. of Computer Science
 
 * Meetings
   Every Tuesday at 6:00pm.
-  - [[file:meeting-notes/2012-11-06.org][Last Meeting's Notes]]
+  - [[file:meeting-notes/2012-11-13.org][Last Meeting's Notes]]
 
 * Links
  - [[file:meeting-notes/sitemap.org][Meeting Notes]]
@@ -33,6 +33,7 @@ at the University of Pennsylvania, Dept. of Computer Science
   - [[file:matlab.org][Matlab in Emacs]]
   - [[file:emerge.org][Git Merge Conflict Resolution with Emerge]]
   - [[file:haskell.org][Haskell in Emacs]]
+  - [[file:gdb_mountainlion.org][Fixing GDB in Emacs on OSX Mountain Lion]]
 
 * Elisp
   - [[file:elisp_intro.el][Elisp Intro]]
