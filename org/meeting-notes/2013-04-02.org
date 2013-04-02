@@ -1,0 +1,70 @@
+#+SETUPFILE: ../../org-templates/meeting-notes.org
+#+INCLUDE:   "../../org-templates/analytics.org"
+#+AUTHOR: Mishal Awadah
+
+Meeting Notes 2012-01-19
+
+* Dinner before business
+  As the Dining Philosophers have decided to terminate our dinner
+  funding, we are forced to bring our own food. 
+* Bars, Garbage Chutes, and Tap House
+* The Emacs Club Dotfiles Party
+  - Next Tuesday. 
+  - We need a venue. All the usual rooms are unavailable.
+  - The discussion immediately switches to bars again. And which bar could
+    host Emacs Club. They would need to have a projector. 
+  - We decide to postpone to the week after. 
+* Dotfiles Party Planning
+  - Levine 307, April 16th
+* The Content
+  - What are dotfiles? 
+  - Symlinking dotfiles to a git repo. 
+  - ssh executing a check on your dotfiles before logging you to your
+    machine.
+  - Zach is opposed to adding more indirection to managing
+    dotfiles. 
+  - *Zach* : These kids don't understand what these things are that
+    they're using.
+  - We want the vim club kids to join this. They tried to start
+    something but couldn't get out of movement mode. 
+* Matt's Meeting Notes
+  - Where's Matt Croop? We miss his meeting notes.
+* Soy Foam
+  - *Zach* : The foam after shaking a packet of soy sauce is gross.
+  - Zach is able to halt all conversation by displaying more soy foam.
+* The Basics
+** Dotfiles
+  - What is a dotfile?
+  - What is Bash?
+  - The order files are loaded in (depends on OS).
+** Environment vars
+  - Environment variables, the important ones. 
+    - PATH
+    - HOME
+    - CLASSPATH
+    - USER
+    - EDITOR
+      Just call env and talk about some. 
+  - Can set your own environment variables and use them later. 
+  - Demonstrate what happens when you screw up PATH. 
+** Aliases
+   - How to
+   - Necessary mv and rm aliases to -i.
+** Functions
+   - cd-ls -> cl
+   - Rafe's untar-ing function.
+
+* Practical uses
+** Potluck
+   - Get audience to provide their dotfiles and share with others. 
+   - Make sure Ceasar attends.
+   - Start out with Rafe.
+   - Go through our dotfiles. 
+   - zsh.
+
+* There must be a mode!
+  - We talk of newsticker, for an alternative to Google Reader. 
+  - fci-mode, a subtle 80 char limit line.
+* Zach writes a custom delete-line-up-to-next-line function.
+* The new crack
+  - http://emacsredux.com/

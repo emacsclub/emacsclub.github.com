@@ -112,6 +112,18 @@ Matlab is a funny language.
 	  - ~C-c C-c~ will realign the columns without moving or creating new ones.
 	  - ~<RET>~ moves to the next row. 
 
+** Table Formatting
+ When exporting, tables are drawn without cell borders or frames. Here are 
+ useful table formatting commands which you place immediately before a table.
+ 
+ #+CAPTION: This is a table with lines around and between cells
+ #+ATTR_HTML: border="2" rules="all" frame="border"
+
+   | this | is    | a    | sample  | table       |
+   |------+-------+------+---------+-------------|
+   | move | from  | one  | col     | to          |
+   | the  | other | with | ~<TAB>~ | this column |
+
 * Literal Examples
   Literal examples are snippets of text or source code that need to be 
   unformatted on org export. Put this text between ~#+begin-example~ and 
@@ -347,14 +359,6 @@ Matlab is a funny language.
 	.footnum            footnote number in footnote definition (always <sup>)
 	#+end_example
 
-*** Table Formatting
-  When exporting, tables are drawn without cell borders or frames. Here are 
-  useful table formatting commands which you place immediately before a table.
-  
-  #+begin_example
-  #+CAPTION: This is a table with lines around and between cells
-  #+ATTR_HTML: border="2" rules="all" frame="border"
-  #+end_example
 *** Site Navigation
 	You can verily easily add "Up" and "Home" buttons on each page with 
 
